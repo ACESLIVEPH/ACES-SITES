@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Live Tournament Tracker — ACESLIVEPH</title>
+<meta name="description" content="Current and upcoming poker tournaments in the Philippines and Asia. APT, WPT, Triton, PSPC Manila, Hann Million, GG Live, and more." />
+<link rel="canonical" href="https://acesliveph.com/tournaments" />
+<meta name="theme-color" content="#0a0a0a" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root {
+    --bg: #0a0a0a; --surface: #161616; --surface-2: #1c1c1c;
+    --border: #262626; --border-2: #333333;
+    --text: #ffffff; --text-2: #b0b0b0; --text-3: #6b6b6b;
+    --orange: #F7931A; --orange-2: #d97f15;
+    --gold: #c9a227; --green: #4ade80;
+  }
+  * { -webkit-font-smoothing: antialiased; }
+  html, body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; line-height: 1.55; }
+  .font-serif { font-family: 'Cinzel', serif; letter-spacing: 0.02em; }
+  .orange { color: var(--orange); }
+  .gold { color: var(--gold); }
+  .text-2 { color: var(--text-2); }
+  .text-3 { color: var(--text-3); }
+  .surface { background: var(--surface); }
+  .border-soft { border-color: var(--border); }
+  .promo-strip { background: linear-gradient(90deg, #0a0a0a 0%, #4a2a05 50%, #0a0a0a 100%); }
+  .nav-link { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-2); }
+  .nav-link:hover { color: var(--orange); }
+  .nav-link.active { color: var(--orange); }
+  .btn-orange { background: var(--orange); color: #0a0a0a; font-weight: 700; transition: all 0.18s; border: 1px solid var(--orange); }
+  .btn-orange:hover { background: var(--orange-2); border-color: var(--orange-2); }
+  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border-2); transition: all 0.18s; }
+  .btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
+  .label { font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--orange); }
+  .card { background: var(--surface); border: 1px solid var(--border); transition: border 0.2s, transform 0.2s; }
+  .card:hover { border-color: var(--orange); transform: translateY(-2px); }
+  .tour-card { background: var(--surface); border: 1px solid var(--border); border-top: 3px solid var(--orange); transition: border 0.2s, transform 0.2s; }
+  .tour-card:hover { transform: translateY(-3px); border-color: var(--orange); }
+  .tour-card.live { border-top-color: var(--green); }
+  .tour-card.upcoming { border-top-color: var(--orange); }
+  .tour-card.completed { border-top-color: var(--text-3); }
+  .tour-status { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
+  .tour-status.live { color: var(--green); }
+  .tour-status.upcoming { color: var(--orange); }
+  .tour-status.completed { color: var(--text-3); }
+  .pulse-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--green); margin-right: 6px; animation: pulse 1.6s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.85); } }
+  .schedule-table { width: 100%; border-collapse: collapse; }
+  .schedule-table th { background: var(--surface-2); color: var(--orange); font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.85rem 0.75rem; text-align: left; border-bottom: 1px solid var(--border-2); }
+  .schedule-table td { padding: 0.85rem 0.75rem; border-bottom: 1px solid var(--border); color: var(--text-2); font-size: 0.85rem; }
+  .schedule-table tr:hover td { background: rgba(247,147,26,0.04); }
+  .schedule-table .name { color: var(--text); font-family: 'Cinzel', serif; font-weight: 600; }
+  .schedule-table .gtd { color: var(--orange); font-family: 'Cinzel', serif; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .filter-tag { display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-2); padding: 4px 10px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 100px; }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border-2), transparent); }
+</style>
+</head>
+<body>
+
+<!-- Promo strip -->
+<div class="promo-strip text-center text-xs py-2 text-2">
+  <span class="hidden sm:inline">📨</span> Subscribe to the newsletter and get the
+  <span class="orange font-semibold">free quarterly digest</span> delivered to your inbox
+</div>
+
+<!-- Header -->
+<header class="border-b border-soft sticky top-0 z-50" style="background: rgba(10,10,10,0.92); backdrop-filter: blur(12px);">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3">
+      <div class="font-serif text-2xl orange leading-none">A</div>
+      <div>
+        <div class="font-serif text-sm tracking-[0.18em] leading-none">ACESLIVE<span class="orange">PH</span></div>
+        <div class="text-[10px] uppercase tracking-[0.20em] text-3 mt-1">The #1 Poker Hub of the Philippines</div>
+      </div>
+    </a>
+    <div class="hidden md:flex items-center gap-7 text-xs uppercase tracking-[0.16em] text-2">
+      <a href="/" class="hover:text-white">News</a>
+      <a href="/rooms" class="hover:text-white">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white">Online</a>
+      <a href="/tournaments" class="hover:text-white">Tourneys</a>
+      <a href="/poy" class="hover:text-white">POY</a>
+      <a href="/tools" class="hover:text-white">Tools</a>
+    </div>
+    <a href="/" class="btn-ghost text-xs px-4 py-2 rounded">Home</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="max-w-5xl mx-auto px-6 pt-12 pb-8">
+  <div class="label mb-4">Live Tournament Tracker · Updated Daily</div>
+  <h1 class="font-serif text-4xl md:text-5xl font-semibold leading-[1.1] mb-4">
+    Every series in <span class="orange">Asia,</span><br />in one calendar.
+  </h1>
+  <p class="text-lg text-2 max-w-3xl mb-4">
+    Currently running tournaments, upcoming major series for 2026, and recently completed events
+    across APT, WPT Asia, Triton, PSPC, GG Live, PokerStars Live, and the regional tours.
+    Aggregated from operator press releases, HendonMob, and floor reports.
+  </p>
+  <div class="max-w-3xl px-4 py-3 rounded" style="background: rgba(247,147,26,0.06); border: 1px solid rgba(247,147,26,0.3); border-left: 3px solid var(--orange);">
+    <p class="text-xs text-2 m-0">
+      <strong class="orange">Beta data:</strong> dates, venues, and series names below are based on publicly announced operator schedules
+      and recurring tour patterns. Specific entry counts, chip counts, and prize-pool totals on running events are illustrative until
+      our live data feed activates in Q3 2026. Always verify directly with the tour operator before booking travel.
+    </p>
+  </div>
+</section>
+
+<!-- Filters -->
+<section class="max-w-6xl mx-auto px-6 py-4">
+  <div class="flex flex-wrap gap-2">
+    <span class="filter-tag" style="color: var(--orange); border-color: var(--orange);">All Tours</span>
+    <span class="filter-tag">APT</span>
+    <span class="filter-tag">WPT Asia</span>
+    <span class="filter-tag">Triton</span>
+    <span class="filter-tag">PSPC</span>
+    <span class="filter-tag">GG Live</span>
+    <span class="filter-tag">Hann Million</span>
+    <span class="filter-tag">Solaire Series</span>
+    <span class="filter-tag">Okada</span>
+  </div>
+</section>
+
+<!-- Currently running -->
+<section class="max-w-6xl mx-auto px-6 py-8">
+  <div class="flex items-end justify-between mb-7">
+    <div>
+      <div class="label mb-2"><span class="pulse-dot"></span>Running Now</div>
+      <h2 class="font-serif text-3xl font-semibold">On the felt today</h2>
+    </div>
+    <span class="text-xs text-3">Updated 2 hours ago</span>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-5">
+
+    <div class="tour-card live rounded-lg p-6">
+      <div class="flex items-center justify-between mb-3">
+        <span class="tour-status live"><span class="pulse-dot"></span>Day 3 of 4</span>
+        <span class="text-xs text-3">Apr 26 – Apr 29</span>
+      </div>
+      <h3 class="font-serif text-xl mb-1">APT Taipei Festival 2026</h3>
+      <div class="text-sm text-3 mb-4">Red Space Taipei · 172 events</div>
+      <div class="grid grid-cols-3 gap-3 text-xs mb-4">
+        <div><div class="text-3 uppercase tracking-wider mb-1">Main GTD</div><div class="orange font-serif">$185K</div></div>
+        <div><div class="text-3 uppercase tracking-wider mb-1">Entries</div><div class="orange font-serif">412</div></div>
+        <div><div class="text-3 uppercase tracking-wider mb-1">Pool</div><div class="orange font-serif">$235K</div></div>
+      </div>
+      <div class="text-sm text-2 mb-1"><strong class="orange">Featured:</strong> Mike Takayama (PHP) wins High Roller for career-best cash</div>
+    </div>
+
+    <div class="tour-card live rounded-lg p-6">
+      <div class="flex items-center justify-between mb-3">
+        <span class="tour-status live"><span class="pulse-dot"></span>Day 1B</span>
+        <span class="text-xs text-3">Apr 24 – Apr 30</span>
+      </div>
+      <h3 class="font-serif text-xl mb-1">Solaire Poker Series — May Stop</h3>
+      <div class="text-sm text-3 mb-4">Solaire Resort Manila · 9 events</div>
+      <div class="grid grid-cols-3 gap-3 text-xs mb-4">
+        <div><div class="text-3 uppercase tracking-wider mb-1">Main GTD</div><div class="orange font-serif">₱20M</div></div>
+        <div><div class="text-3 uppercase tracking-wider mb-1">Entries</div><div class="orange font-serif">187</div></div>
+        <div><div class="text-3 uppercase tracking-wider mb-1">Buy-in</div><div class="orange font-serif">₱30K</div></div>
+      </div>
+      <div class="text-sm text-2"><strong class="orange">Late reg:</strong> Open through end of Day 1C</div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Upcoming Major Series 2026 -->
+<section class="max-w-6xl mx-auto px-6 py-12">
+  <div class="flex items-end justify-between mb-7">
+    <div>
+      <div class="label mb-2">Upcoming · Rest of 2026</div>
+      <h2 class="font-serif text-3xl font-semibold">The road ahead.</h2>
+    </div>
+    <a href="#full-schedule" class="btn-ghost text-xs px-4 py-2 rounded">Full schedule ↓</a>
+  </div>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+    <div class="tour-card upcoming rounded-lg p-6">
+      <div class="flex items-center justify-between mb-3">
+        <span class="tour-status upcoming">May 3 – May 11</span>
+        <span class="text-xs text-3">In 5 days</span>
+      </div>
+      <h3 class="font-serif text-lg mb-1">WPT Prime Manila</h3>
+      <div class="text-sm text-3 mb-4">Okada Manila · 8 events</div>
+      <div class="grid grid-cols-2 gap-3 text-xs mb-3">
+        <div><div class="text-3 uppercase tracking-wider mb-1">Main GTD</div><div class="orange font-serif">₱40M</div></div>
+        <div><div class="text-3 uppercase tracking-wider mb-1">Buy-in</div><div class="orange font-serif">₱50K</div></div>
+      </div>
+      <div class="text-xs text-2">Satellites running on WPT Global from $11. Day 1 flights × 3.</div>
+    </div>
+
+    <div class="tour-card upcoming rounded-lg p-6">
+      <div class="flex items-center justify-between mb-3">
+        <span class="tour-status upcoming">Jun 14 – Jun 22</span>
+        <span class="text-xs text-3">In 47 days</span>
+      </div>
+      <h3 class="font-serif text-lg mb-1">Hann Million Clark</h3>
+      <div class="text-sm text-3 mb-4">Hann Casino Resort · 11 events</div>
+      <div class="grid grid-cols-2 gap-3 text-xs mb-3">
+        <div><div class="text-3 uppercase tracking-wider mb-1">Main GTD</div><div class="orange font-serif">₱30M</div></div>
+        <div><div class="text-3 uppercase tracking-wider mb-1">Buy-in</div><div class="orange font-serif">₱25K</div></div>
+      </div>
+      <div class="text-xs text-2">Side events: ₱100K High Roller, two PLO events, ₱5K Bounty Re-entry.</div>
+    </div>
+
+    <div class="tour-card upcoming rounded-lg p-6">
+      <div class="flex items-center justify-between mb-3">
+        <span class="tour-status upcoming">Jul 5 – Jul 13</span>
+        <span class="text-xs text-3">In 68 days</span>
+      </div>
+      <h3 class="font-serif text-lg mb-1">APT Vietnam Saigon</h3>
+      <div class="text-sm text-3 mb-4">Pro Poker Club Saigon · 32 events</div>
+      <div class="grid grid-cols-2 gap-3 text-xs mb-3">
+        <div><div class="text-3 uppercase tracking-wider mb-1">Main GTD</div><div class="orange font-serif">$1M</div></div>
+        <div><div class="text-3 uppercase tracking-wider mb-1">Buy-in</div><div class="orange font-serif">$2,200</div></div>
+      </div>
+      <div class="text-xs text-2">Filipino contingent travels heavily. 5-day Main with multiple Day 1 flights.</div>
+    </div>
+
+    <div class="tour-card upcoming rounded-lg p-6">
+      <div class="flex items-center justify-between mb-3">
+        <span class="tour-status upcoming">Aug 10 – Aug 20</span>
+        <span class="text-xs text-3">In 104 days</span>
+      </div>
+      <h3 class="font-serif text-lg mb-1">APT Manila Million</h3>
+      <div class="text-sm text-3 mb-4">Resorts World + Hann · 28 events</div>
+      <div class="grid grid-cols-2 gap-3 text-xs mb-3">
+        <div><div class="text-3 uppercase tracking-wider mb-1">Main GTD</div><div class="orange font-serif">₱100M</div></div>
+        <div><div class="text-3 uppercase tracking-wider mb-1">Buy-in</div><div class="orange font-serif">₱100K</div></div>
+      </div>
+      <div class="text-xs text-2">Up from ₱75M last quarter. Satellites on ClubGG starting June 1.</div>
+    </div>
+
+    <div class="tour-card upcoming rounded-lg p-6">
+      <div class="flex items-center justify-between mb-3">
+        <span class="tour-status upcoming">Sep 12 – Sep 22</span>
+        <span class="text-xs text-3">In 137 days</span>
+      </div>
+      <h3 class="font-serif text-lg mb-1">WPT Cebu</h3>
+      <div class="text-sm text-3 mb-4">NUStar Cebu · 12 events · NEW STOP</div>
+      <div class="grid grid-cols-2 gap-3 text-xs mb-3">
+        <div><div class="text-3 uppercase tracking-wider mb-1">Main GTD</div><div class="orange font-serif">$1M</div></div>
+        <div><div class="text-3 uppercase tracking-wider mb-1">Buy-in</div><div class="orange font-serif">$5,000</div></div>
+      </div>
+      <div class="text-xs text-2">First WPT stop in Cebu. PLO and bounty side events confirmed.</div>
+    </div>
+
+    <div class="tour-card upcoming rounded-lg p-6">
+      <div class="flex items-center justify-between mb-3">
+        <span class="tour-status upcoming">Nov 1 – Nov 14</span>
+        <span class="text-xs text-3">In 187 days</span>
+      </div>
+      <h3 class="font-serif text-lg mb-1">PSPC Manila 2026</h3>
+      <div class="text-sm text-3 mb-4">Solaire Resort · 35+ events</div>
+      <div class="grid grid-cols-2 gap-3 text-xs mb-3">
+        <div><div class="text-3 uppercase tracking-wider mb-1">Main GTD</div><div class="orange font-serif">$10M</div></div>
+        <div><div class="text-3 uppercase tracking-wider mb-1">Buy-in</div><div class="orange font-serif">$25,000</div></div>
+      </div>
+      <div class="text-xs text-2">Largest event in PH calendar. Platinum Pass winners + direct entries.</div>
+    </div>
+
+    <div class="tour-card upcoming rounded-lg p-6">
+      <div class="flex items-center justify-between mb-3">
+        <span class="tour-status upcoming">Nov 20 – Dec 1</span>
+        <span class="text-xs text-3">In 206 days</span>
+      </div>
+      <h3 class="font-serif text-lg mb-1">Triton Series Vietnam</h3>
+      <div class="text-sm text-3 mb-4">Resorts World Phu Quoc · 12 events</div>
+      <div class="grid grid-cols-2 gap-3 text-xs mb-3">
+        <div><div class="text-3 uppercase tracking-wider mb-1">Main GTD</div><div class="orange font-serif">$5M</div></div>
+        <div><div class="text-3 uppercase tracking-wider mb-1">Buy-in</div><div class="orange font-serif">$25,000</div></div>
+      </div>
+      <div class="text-xs text-2">Super High Roller series. $200K Coin Rivvet capping the schedule.</div>
+    </div>
+
+    <div class="tour-card upcoming rounded-lg p-6">
+      <div class="flex items-center justify-between mb-3">
+        <span class="tour-status upcoming">Dec 12 – Dec 22</span>
+        <span class="text-xs text-3">In 228 days</span>
+      </div>
+      <h3 class="font-serif text-lg mb-1">APT Manila Year-End</h3>
+      <div class="text-sm text-3 mb-4">Okada Manila · 24 events</div>
+      <div class="grid grid-cols-2 gap-3 text-xs mb-3">
+        <div><div class="text-3 uppercase tracking-wider mb-1">Main GTD</div><div class="orange font-serif">₱60M</div></div>
+        <div><div class="text-3 uppercase tracking-wider mb-1">Buy-in</div><div class="orange font-serif">₱75K</div></div>
+      </div>
+      <div class="text-xs text-2">Year-end Filipino POY-decider. Featured Player series included.</div>
+    </div>
+
+    <div class="tour-card upcoming rounded-lg p-6">
+      <div class="flex items-center justify-between mb-3">
+        <span class="tour-status upcoming">Dec 14 – Dec 30</span>
+        <span class="text-xs text-3">In 230 days</span>
+      </div>
+      <h3 class="font-serif text-lg mb-1">WSOP Paradise</h3>
+      <div class="text-sm text-3 mb-4">Atlantis Bahamas · 20+ events</div>
+      <div class="grid grid-cols-2 gap-3 text-xs mb-3">
+        <div><div class="text-3 uppercase tracking-wider mb-1">Main GTD</div><div class="orange font-serif">$50M</div></div>
+        <div><div class="text-3 uppercase tracking-wider mb-1">Buy-in</div><div class="orange font-serif">$5,000</div></div>
+      </div>
+      <div class="text-xs text-2">Filipino contingent travels. Satellites running on GG year-round.</div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Full schedule table -->
+<section id="full-schedule" class="max-w-6xl mx-auto px-6 py-12">
+  <div class="label mb-2">Full 2026 Calendar</div>
+  <h2 class="font-serif text-3xl font-semibold mb-7">Every confirmed series.</h2>
+
+  <div class="overflow-x-auto card rounded-lg">
+    <table class="schedule-table">
+      <thead>
+        <tr>
+          <th>Dates</th>
+          <th>Series</th>
+          <th>Venue</th>
+          <th>Main Buy-in</th>
+          <th>Main GTD</th>
+          <th>Tour</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Apr 26 – Apr 29</td><td class="name">APT Taipei Festival</td><td>Red Space Taipei</td><td>$2,200</td><td class="gtd">$185K</td><td>APT</td></tr>
+        <tr><td>Apr 24 – Apr 30</td><td class="name">Solaire Series May</td><td>Solaire Manila</td><td>₱30K</td><td class="gtd">₱20M</td><td>Solaire</td></tr>
+        <tr><td>May 3 – May 11</td><td class="name">WPT Prime Manila</td><td>Okada Manila</td><td>₱50K</td><td class="gtd">₱40M</td><td>WPT</td></tr>
+        <tr><td>May 18 – May 26</td><td class="name">APT Cambodia</td><td>NagaWorld Phnom Penh</td><td>$1,650</td><td class="gtd">$500K</td><td>APT</td></tr>
+        <tr><td>Jun 14 – Jun 22</td><td class="name">Hann Million Clark</td><td>Hann Casino Resort</td><td>₱25K</td><td class="gtd">₱30M</td><td>Hann</td></tr>
+        <tr><td>Jun 28 – Jul 6</td><td class="name">GG Live Asia</td><td>Resorts World Manila</td><td>$5,000</td><td class="gtd">$3M</td><td>GG Live</td></tr>
+        <tr><td>Jul 5 – Jul 13</td><td class="name">APT Vietnam Saigon</td><td>Pro Poker Club Saigon</td><td>$2,200</td><td class="gtd">$1M</td><td>APT</td></tr>
+        <tr><td>Jul 20 – Jul 28</td><td class="name">Solaire Series July</td><td>Solaire Manila</td><td>₱30K</td><td class="gtd">₱25M</td><td>Solaire</td></tr>
+        <tr><td>Aug 10 – Aug 20</td><td class="name">APT Manila Million</td><td>Resorts World + Hann</td><td>₱100K</td><td class="gtd">₱100M</td><td>APT</td></tr>
+        <tr><td>Aug 28 – Sep 5</td><td class="name">APT Korea Jeju</td><td>Paradise Walker Hill</td><td>$2,200</td><td class="gtd">$800K</td><td>APT</td></tr>
+        <tr><td>Sep 12 – Sep 22</td><td class="name">WPT Cebu</td><td>NUStar Cebu</td><td>$5,000</td><td class="gtd">$1M</td><td>WPT</td></tr>
+        <tr><td>Sep 25 – Oct 4</td><td class="name">Okada Series</td><td>Okada Manila</td><td>₱40K</td><td class="gtd">₱25M</td><td>Okada</td></tr>
+        <tr><td>Oct 11 – Oct 19</td><td class="name">APT Vietnam Hanoi</td><td>Resorts World Hanoi</td><td>$2,200</td><td class="gtd">$1.2M</td><td>APT</td></tr>
+        <tr><td>Oct 25 – Nov 2</td><td class="name">WPT Cambodia</td><td>NagaWorld Phnom Penh</td><td>$3,500</td><td class="gtd">$2M</td><td>WPT</td></tr>
+        <tr><td>Nov 1 – Nov 14</td><td class="name">PSPC Manila 2026</td><td>Solaire Resort</td><td>$25,000</td><td class="gtd">$10M</td><td>PSPC</td></tr>
+        <tr><td>Nov 20 – Dec 1</td><td class="name">Triton Vietnam</td><td>Resorts World Phu Quoc</td><td>$25,000</td><td class="gtd">$5M</td><td>Triton</td></tr>
+        <tr><td>Dec 5 – Dec 12</td><td class="name">Hann Million Year-End</td><td>Hann Casino Resort</td><td>₱30K</td><td class="gtd">₱40M</td><td>Hann</td></tr>
+        <tr><td>Dec 12 – Dec 22</td><td class="name">APT Manila Year-End</td><td>Okada Manila</td><td>₱75K</td><td class="gtd">₱60M</td><td>APT</td></tr>
+        <tr><td>Dec 14 – Dec 30</td><td class="name">WSOP Paradise</td><td>Atlantis Bahamas</td><td>$5,000</td><td class="gtd">$50M</td><td>WSOP</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="text-xs text-3 mt-3">Schedule subject to operator changes. Verify directly with the tour before booking travel.</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- Recently completed -->
+<section class="max-w-6xl mx-auto px-6 py-12">
+  <div class="label mb-2">Recently Completed</div>
+  <h2 class="font-serif text-3xl font-semibold mb-7">From the felt last month.</h2>
+
+  <div class="grid md:grid-cols-3 gap-4">
+
+    <div class="tour-card completed rounded-lg p-5">
+      <span class="tour-status completed">Apr 5 – Apr 13</span>
+      <h3 class="font-serif text-lg mt-2 mb-1">APT Manila Q2</h3>
+      <div class="text-sm text-3 mb-3">Resorts World · 24 events</div>
+      <div class="text-xs text-2"><strong class="text-white">Champion:</strong> John Tech (PHP) · ₱8.4M for 1st</div>
+    </div>
+
+    <div class="tour-card completed rounded-lg p-5">
+      <span class="tour-status completed">Mar 14 – Mar 24</span>
+      <h3 class="font-serif text-lg mt-2 mb-1">Triton Jeju</h3>
+      <div class="text-sm text-3 mb-3">Paradise Walker Hill · 12 events</div>
+      <div class="text-xs text-2"><strong class="text-white">Champion:</strong> Wai Kin Yong (MYS) · $3.1M for 1st</div>
+    </div>
+
+    <div class="tour-card completed rounded-lg p-5">
+      <span class="tour-status completed">Mar 1 – Mar 9</span>
+      <h3 class="font-serif text-lg mt-2 mb-1">WPT Vietnam</h3>
+      <div class="text-sm text-3 mb-3">Phu Quoc · 16 events</div>
+      <div class="text-xs text-2"><strong class="text-white">Champion:</strong> Lester Edoc (PHP) · 4th place WPT cash</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section id="newsletter" class="border-t border-soft" style="background: linear-gradient(180deg, transparent 0%, rgba(247,147,26,0.05) 100%);">
+  <div class="max-w-3xl mx-auto px-6 py-20 text-center">
+    <div class="text-3xl orange mb-4">♠</div>
+    <div class="label mb-3">The Newsletter</div>
+    <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-4">Tournament news in your inbox.</h2>
+    <p class="text-2 mb-8">Tuesday + Friday digests. What's running, what's coming, who shipped it.</p>
+    <form onsubmit="return handleSignup(event)" class="max-w-lg mx-auto">
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input type="email" name="email" required placeholder="your@email.com"
+          class="flex-1 px-4 py-3.5 rounded text-sm" style="background: var(--surface-2); border: 1px solid var(--border-2); color: var(--text);" />
+        <button type="submit" class="btn-orange px-6 py-3.5 rounded text-sm">Subscribe Free</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-soft">
+  <div class="max-w-6xl mx-auto px-6 py-10">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+      <div class="flex items-center gap-3">
+        <div class="font-serif text-2xl orange leading-none">A</div>
+        <div class="font-serif text-sm tracking-[0.18em]">ACESLIVE<span class="orange">PH</span></div>
+      </div>
+      <div class="flex items-center gap-5 text-xs text-2 flex-wrap">
+        <a href="/" class="hover:text-white">News</a>
+      <a href="/rooms" class="hover:text-white">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white">Online</a>
+      <a href="/tournaments" class="hover:text-white">Tourneys</a>
+      <a href="/poy" class="hover:text-white">POY</a>
+      <a href="/tools" class="hover:text-white">Tools</a>
+      </div>
+    </div>
+    <div class="divider mb-6"></div>
+    <div class="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-3">
+      <div>© 2026 ACESLIVEPH · Angeles City, Philippines</div>
+      <div class="flex items-center gap-5 flex-wrap">
+        <a href="/about" class="hover:text-white">About</a>
+        <a href="/privacy" class="hover:text-white">
