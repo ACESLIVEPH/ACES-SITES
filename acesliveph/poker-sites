@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Best Online Poker Sites for Filipino Players — ACESLIVEPH</title>
+<meta name="description" content="The complete guide to the best online poker sites for Filipino players in 2026. Reviews, rankings, bonuses, and banking — all from the floor in Manila." />
+<link rel="canonical" href="https://acesliveph.com/poker-sites" />
+<meta name="theme-color" content="#0a0a0a" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root {
+    --bg: #0a0a0a; --surface: #161616; --surface-2: #1c1c1c;
+    --border: #262626; --border-2: #333333;
+    --text: #ffffff; --text-2: #b0b0b0; --text-3: #6b6b6b;
+    --orange: #F7931A; --orange-2: #d97f15;
+    --gold: #c9a227; --green: #4ade80;
+  }
+  * { -webkit-font-smoothing: antialiased; }
+  html, body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; line-height: 1.55; }
+  .font-serif { font-family: 'Cinzel', serif; letter-spacing: 0.02em; }
+  .orange { color: var(--orange); }
+  .gold { color: var(--gold); }
+  .text-2 { color: var(--text-2); }
+  .text-3 { color: var(--text-3); }
+  .surface { background: var(--surface); }
+  .border-soft { border-color: var(--border); }
+  .promo-strip { background: linear-gradient(90deg, #0a0a0a 0%, #4a2a05 50%, #0a0a0a 100%); }
+  .nav-link { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-2); }
+  .nav-link:hover { color: var(--orange); }
+  .nav-link.active { color: var(--orange); }
+  .btn-orange { background: var(--orange); color: #0a0a0a; font-weight: 700; transition: all 0.18s; border: 1px solid var(--orange); }
+  .btn-orange:hover { background: var(--orange-2); border-color: var(--orange-2); transform: translateY(-1px); }
+  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border-2); transition: all 0.18s; }
+  .btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
+  .label { font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--orange); }
+  .card { background: var(--surface); border: 1px solid var(--border); transition: border 0.2s, transform 0.2s; }
+  .card:hover { border-color: var(--orange); transform: translateY(-2px); }
+  .site-card { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--orange); transition: border 0.2s; }
+  .site-card:hover { border-color: var(--orange); border-left-color: var(--orange); }
+  .site-card.gold-tier { border-left-color: var(--gold); }
+  .star { color: var(--gold); }
+  .star.empty { color: var(--text-3); }
+  .compare-table { width: 100%; border-collapse: collapse; }
+  .compare-table th { background: var(--surface-2); color: var(--orange); font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.85rem 0.75rem; text-align: left; border-bottom: 1px solid var(--border-2); }
+  .compare-table td { padding: 1rem 0.75rem; border-bottom: 1px solid var(--border); color: var(--text-2); font-size: 0.9rem; }
+  .compare-table tr:hover td { background: rgba(247,147,26,0.04); }
+  .compare-table .site-name { color: var(--text); font-family: 'Cinzel', serif; font-weight: 600; }
+  .compare-table .score { color: var(--orange); font-family: 'Cinzel', serif; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border-2), transparent); }
+</style>
+</head>
+<body>
+
+<!-- Promo strip -->
+<div class="promo-strip text-center text-xs py-2 text-2">
+  <span class="hidden sm:inline">📨</span> Subscribe to the newsletter and get the
+  <span class="orange font-semibold">free quarterly digest</span> delivered to your inbox
+</div>
+
+<!-- Header -->
+<header class="border-b border-soft sticky top-0 z-50" style="background: rgba(10,10,10,0.92); backdrop-filter: blur(12px);">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3">
+      <div class="font-serif text-2xl orange leading-none">A</div>
+      <div>
+        <div class="font-serif text-sm tracking-[0.18em] leading-none">ACESLIVE<span class="orange">PH</span></div>
+        <div class="text-[10px] uppercase tracking-[0.20em] text-3 mt-1">The #1 Poker Hub of the Philippines</div>
+      </div>
+    </a>
+    <div class="hidden md:flex items-center gap-7 text-xs uppercase tracking-[0.16em] text-2">
+      <a href="/" class="hover:text-white">News</a>
+      <a href="/rooms" class="hover:text-white">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white">Online</a>
+      <a href="/tournaments" class="hover:text-white">Tourneys</a>
+      <a href="/poy" class="hover:text-white">POY</a>
+      <a href="/tools" class="hover:text-white">Tools</a>
+    </div>
+    <a href="#newsletter" class="btn-ghost text-xs px-4 py-2 rounded">Subscribe</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="max-w-5xl mx-auto px-6 pt-16 pb-12 text-center">
+  <div class="label mb-4">Online Poker · 2026 Reviews</div>
+  <h1 class="font-serif text-4xl md:text-6xl font-semibold leading-[1.05] mb-5">
+    Best Online Poker Sites<br /><span class="orange">for Filipino Players</span>
+  </h1>
+  <p class="text-lg text-2 max-w-2xl mx-auto">
+    Six rooms tested for traffic, mobile experience, banking, bonuses, and the Filipino-specific factors
+    that nobody else writes about. Reviews updated quarterly.
+  </p>
+</section>
+
+<!-- Quick comparison -->
+<section class="max-w-6xl mx-auto px-6 pb-12">
+  <div class="overflow-x-auto card rounded-lg p-1">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Site</th>
+          <th>Score</th>
+          <th>Bonus</th>
+          <th>Best For</th>
+          <th>PH Banking</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="site-name">Natural8</td>
+          <td class="score">9.5</td>
+          <td>200% up to $1,000</td>
+          <td>Cash games, biggest MTTs</td>
+          <td>BTC · E-wallets</td>
+          <td><a href="/poker-sites-philippines-2026#natural8" class="orange text-xs">Read →</a></td>
+        </tr>
+        <tr>
+          <td class="site-name">ClubGG</td>
+          <td class="score">9.4</td>
+          <td>100% up to $1,000</td>
+          <td>Live tour qualifiers</td>
+          <td>BTC · E-wallets</td>
+          <td><a href="/poker-sites-philippines-2026#clubgg" class="orange text-xs">Read →</a></td>
+        </tr>
+        <tr>
+          <td class="site-name">ACR Poker</td>
+          <td class="score">8.7</td>
+          <td>100% up to $2,000</td>
+          <td>High stakes, crypto</td>
+          <td>BTC · ETH · USDT</td>
+          <td><a href="/poker-sites-philippines-2026#acr" class="orange text-xs">Read →</a></td>
+        </tr>
+        <tr>
+          <td class="site-name">WPT Global</td>
+          <td class="score">8.5</td>
+          <td>100% up to $1,200</td>
+          <td>Live WPT qualifiers</td>
+          <td>Cards · BTC · E-wallets</td>
+          <td><a href="/poker-sites-philippines-2026#wpt-global" class="orange text-xs">Read →</a></td>
+        </tr>
+        <tr>
+          <td class="site-name">CoinPoker</td>
+          <td class="score">8.3</td>
+          <td>150% Crypto Bonus</td>
+          <td>Crypto-natives</td>
+          <td>BTC · ETH · USDT · CHP</td>
+          <td><a href="/poker-sites-philippines-2026#coinpoker" class="orange text-xs">Read →</a></td>
+        </tr>
+        <tr>
+          <td class="site-name">PokerStars</td>
+          <td class="score">8.0</td>
+          <td>100% up to $600</td>
+          <td>Tournament legacy</td>
+          <td>Limited — geo-dependent</td>
+          <td><a href="/poker-sites-philippines-2026#pokerstars" class="orange text-xs">Read →</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="text-center mt-6">
+    <a href="/poker-sites-philippines-2026" class="btn-orange inline-flex px-6 py-3 rounded text-sm">
+      Read the full 2026 review →
+    </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Categorized -->
+<section class="max-w-6xl mx-auto px-6 py-16">
+  <div class="text-center mb-12">
+    <div class="label mb-3">Pick Your Use Case</div>
+    <h2 class="font-serif text-3xl md:text-4xl font-semibold">Not all rooms are equal.<br /><span class="orange">Choose based on how you play.</span></h2>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-5">
+
+    <a href="/poker-sites-philippines-2026#natural8" class="site-card gold-tier rounded-lg p-6 block">
+      <div class="flex items-center justify-between mb-3">
+        <div class="label">Best for Cash Games</div>
+        <span class="text-[10px] text-3 uppercase tracking-wider">Top Pick</span>
+      </div>
+      <h3 class="font-serif text-xl mb-2">Natural8 (GGPoker)</h3>
+      <p class="text-2 text-sm mb-4">Largest player pool in Asia by far. Best modern poker client. Cash games run 24/7 from $0.05/$0.10 up through $25/$50.</p>
+      <div class="flex items-center justify-between">
+        <span class="orange text-xs font-semibold">Read review →</span>
+        <span class="star">★★★★★ <span class="text-3 text-xs ml-1">9.5</span></span>
+      </div>
+    </a>
+
+    <a href="/poker-sites-philippines-2026#clubgg" class="site-card rounded-lg p-6 block">
+      <div class="flex items-center justify-between mb-3">
+        <div class="label">Best for Live Qualifiers</div>
+        <span class="text-[10px] text-3 uppercase tracking-wider">PH Top Pick</span>
+      </div>
+      <h3 class="font-serif text-xl mb-2">ClubGG</h3>
+      <p class="text-2 text-sm mb-4">The discount path into PSPC Manila, APT, Hann Million, and WPT Asia stops. Mobile-first experience. Best satellite ecosystem.</p>
+      <div class="flex items-center justify-between">
+        <span class="orange text-xs font-semibold">Read review →</span>
+        <span class="star">★★★★★ <span class="text-3 text-xs ml-1">9.4</span></span>
+      </div>
+    </a>
+
+    <a href="/poker-sites-philippines-2026#acr" class="site-card rounded-lg p-6 block">
+      <div class="flex items-center justify-between mb-3">
+        <div class="label">Best for High Stakes</div>
+        <span class="text-[10px] text-3 uppercase tracking-wider">Pro Tier</span>
+      </div>
+      <h3 class="font-serif text-xl mb-2">ACR Poker</h3>
+      <p class="text-2 text-sm mb-4">$2/$5 and up cash games. Venom $10M+ MTT series. Cleanest crypto banking on a major room. Lifetime rakeback.</p>
+      <div class="flex items-center justify-between">
+        <span class="orange text-xs font-semibold">Read review →</span>
+        <span class="star">★★★★<span class="empty">★</span> <span class="text-3 text-xs ml-1">8.7</span></span>
+      </div>
+    </a>
+
+    <a href="/poker-sites-philippines-2026#coinpoker" class="site-card rounded-lg p-6 block">
+      <div class="flex items-center justify-between mb-3">
+        <div class="label">Best for Crypto-Natives</div>
+        <span class="text-[10px] text-3 uppercase tracking-wider">BTC First</span>
+      </div>
+      <h3 class="font-serif text-xl mb-2">CoinPoker</h3>
+      <p class="text-2 text-sm mb-4">Crypto-only banking. Anonymous-friendly. No fiat conversion friction. Growing high-stakes scene.</p>
+      <div class="flex items-center justify-between">
+        <span class="orange text-xs font-semibold">Read review →</span>
+        <span class="star">★★★★<span class="empty">★</span> <span class="text-3 text-xs ml-1">8.3</span></span>
+      </div>
+    </a>
+
+    <a href="/poker-sites-philippines-2026#wpt-global" class="site-card rounded-lg p-6 block">
+      <div class="flex items-center justify-between mb-3">
+        <div class="label">Best for Tour Qualifiers</div>
+        <span class="text-[10px] text-3 uppercase tracking-wider">WPT Direct</span>
+      </div>
+      <h3 class="font-serif text-xl mb-2">WPT Global</h3>
+      <p class="text-2 text-sm mb-4">Direct satellites to every WPT live stop. Cards or BTC deposit. Aggressive promotions because the room is in growth mode.</p>
+      <div class="flex items-center justify-between">
+        <span class="orange text-xs font-semibold">Read review →</span>
+        <span class="star">★★★★<span class="empty">★</span> <span class="text-3 text-xs ml-1">8.5</span></span>
+      </div>
+    </a>
+
+    <a href="/poker-sites-philippines-2026#pokerstars" class="site-card rounded-lg p-6 block">
+      <div class="flex items-center justify-between mb-3">
+        <div class="label">The Legacy Option</div>
+        <span class="text-[10px] text-3 uppercase tracking-wider">Geo-Dependent</span>
+      </div>
+      <h3 class="font-serif text-xl mb-2">PokerStars</h3>
+      <p class="text-2 text-sm mb-4">WCOOP, SCOOP, EPT — the iconic series. Geo-restrictions often block PH access. Existing accounts only really.</p>
+      <div class="flex items-center justify-between">
+        <span class="orange text-xs font-semibold">Read review →</span>
+        <span class="star">★★★★<span class="empty">★</span> <span class="text-3 text-xs ml-1">8.0</span></span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- Affiliate disclosure -->
+<section class="max-w-3xl mx-auto px-6 pb-16">
+  <div class="card rounded-lg p-6" style="border-left: 3px solid var(--orange); background: rgba(247,147,26,0.04);">
+    <div class="label mb-2">Affiliate Disclosure</div>
+    <p class="text-sm text-2 m-0">
+      Some links on this page are affiliate links. ACESLIVEPH may earn a commission when you sign up
+      and deposit through them — at no extra cost to you. Reviews and rankings are produced independently
+      and are not influenced by affiliate relationships. Sites are ranked in the order we'd recommend them
+      to a friend, not the order that pays us most. See our full
+      <a href="/affiliate" class="orange">Affiliate Disclosure</a> for details.
+    </p>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section id="newsletter" class="border-t border-soft" style="background: linear-gradient(180deg, transparent 0%, rgba(247,147,26,0.05) 100%);">
+  <div class="max-w-3xl mx-auto px-6 py-20 text-center">
+    <div class="text-3xl orange mb-4">♠</div>
+    <div class="label mb-3">The Newsletter</div>
+    <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-4">Get notified when these reviews update.</h2>
+    <p class="text-2 mb-8">Plus the week's chismis, takes, and tournament news from the floor.</p>
+    <form onsubmit="return handleSignup(event)" class="max-w-lg mx-auto">
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input type="email" name="email" required placeholder="your@email.com"
+          class="flex-1 px-4 py-3.5 rounded text-sm" style="background: var(--surface-2); border: 1px solid var(--border-2); color: var(--text);" />
+        <button type="submit" class="btn-orange px-6 py-3.5 rounded text-sm">Subscribe Free</button>
+      </div>
+    </form>
+    <p class="text-xs text-3 mt-3">Tuesday + Friday · No spam</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-soft">
+  <div class="max-w-6xl mx-auto px-6 py-10">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+      <div class="flex items-center gap-3">
+        <div class="font-serif text-2xl orange leading-none">A</div>
+        <div class="font-serif text-sm tracking-[0.18em]">ACESLIVE<span class="orange">PH</span></div>
+      </div>
+      <div class="flex items-center gap-5 text-xs text-2 flex-wrap">
+        <a href="/" class="hover:text-white">News</a>
+      <a href="/rooms" class="hover:text-white">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white">Online</a>
+      <a href="/tournaments" class="hover:text-white">Tourneys</a>
+      <a href="/poy" class="hover:text-white">POY</a>
+      <a href="/tools" class="hover:text-white">Tools</a>
+      </div>
+    </div>
+    <div class="divider mb-6"></div>
+    <div class="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-3">
+      <div>© 2026 ACESLIVEPH · Angeles City, Philippines</div>
+      <div class="flex items-center gap-5 flex-wrap">
+        <a href="/about" class="hover:text-white">About</a>
+        <a href="/affiliate" class="hover:text-white">Affiliate Disclosure</a>
+        <a href="/privacy" class="hover:text-white">Privacy</a>
+        <a href="/responsible-play" class="hover:text-white">Responsible Play</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function handleSignup(e) {
+    e.preventDefault();
+    const form = e.target;
+    if (!form.querySelector('input[name=email]').value.trim()) return false;
+    const button = form.querySelector('button');
+    const original = button.innerHTML;
+    button.innerHTML = 'Subscribed ✓';
+    button.disabled = true;
+    setTimeout(() => { form.reset(); button.innerHTML = original; button.disabled = false; }, 2400);
+    return false;
+  }
+</script>
+
+</body>
+</html>
