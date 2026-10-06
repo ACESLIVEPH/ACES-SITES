@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /studio
+Disallow: /brain/
+Sitemap: https://btcisgto.cloud/sitemap.xml
