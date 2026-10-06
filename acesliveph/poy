@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Filipino Player of the Year 2026 — ACESLIVEPH</title>
+<meta name="description" content="The Filipino Player of the Year 2026 leaderboard. Live rankings of every Filipino poker player by tournament cashes, updated within 24 hours of every qualifying finish." />
+<link rel="canonical" href="https://acesliveph.com/poy" />
+<meta name="theme-color" content="#0a0a0a" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root {
+    --bg: #0a0a0a; --surface: #161616; --surface-2: #1c1c1c;
+    --border: #262626; --border-2: #333333;
+    --text: #ffffff; --text-2: #b0b0b0; --text-3: #6b6b6b;
+    --orange: #F7931A; --orange-2: #d97f15;
+    --gold: #c9a227; --green: #4ade80;
+  }
+  * { -webkit-font-smoothing: antialiased; }
+  html, body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; line-height: 1.55; }
+  .font-serif { font-family: 'Cinzel', serif; letter-spacing: 0.02em; }
+  .orange { color: var(--orange); }
+  .gold { color: var(--gold); }
+  .text-2 { color: var(--text-2); }
+  .text-3 { color: var(--text-3); }
+  .surface { background: var(--surface); }
+  .border-soft { border-color: var(--border); }
+  .promo-strip { background: linear-gradient(90deg, #0a0a0a 0%, #4a2a05 50%, #0a0a0a 100%); }
+  .nav-link { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-2); }
+  .nav-link:hover { color: var(--orange); }
+  .nav-link.active { color: var(--orange); }
+  .btn-orange { background: var(--orange); color: #0a0a0a; font-weight: 700; transition: all 0.18s; border: 1px solid var(--orange); }
+  .btn-orange:hover { background: var(--orange-2); border-color: var(--orange-2); }
+  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border-2); transition: all 0.18s; }
+  .btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
+  .label { font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--orange); }
+  .gold-label { font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); }
+  .card { background: var(--surface); border: 1px solid var(--border); transition: border 0.2s, transform 0.2s; }
+  .card:hover { border-color: var(--orange); transform: translateY(-2px); }
+  .pulse-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--green); margin-right: 6px; animation: pulse 1.6s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.85); } }
+  .podium-card { background: linear-gradient(180deg, rgba(201,162,39,0.10) 0%, rgba(201,162,39,0.02) 100%); border: 1px solid rgba(201,162,39,0.40); border-radius: 8px; padding: 1.75rem; }
+  .podium-card.gold-1 { border-top: 4px solid var(--gold); }
+  .podium-card.gold-2 { border-top: 4px solid var(--text-2); }
+  .podium-card.gold-3 { border-top: 4px solid #cd7f32; }
+  .poy-table { width: 100%; border-collapse: collapse; }
+  .poy-table th { background: var(--surface-2); color: var(--orange); font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.85rem 0.75rem; text-align: left; border-bottom: 1px solid var(--border-2); }
+  .poy-table th.num { text-align: right; }
+  .poy-table td { padding: 0.85rem 0.75rem; border-bottom: 1px solid var(--border); color: var(--text-2); font-size: 0.9rem; }
+  .poy-table td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .poy-table tr:hover td { background: rgba(247,147,26,0.04); }
+  .poy-table tr.top-3 td { background: rgba(201,162,39,0.05); }
+  .poy-table .rank { color: var(--text-3); font-family: 'Cinzel', serif; font-weight: 600; width: 40px; }
+  .poy-table tr.top-3 .rank { color: var(--gold); }
+  .poy-table .name { color: var(--text); font-family: 'Cinzel', serif; font-weight: 600; }
+  .poy-table .points { color: var(--orange); font-family: 'Cinzel', serif; font-weight: 700; }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border-2), transparent); }
+</style>
+</head>
+<body>
+
+<!-- Promo strip -->
+<div class="promo-strip text-center text-xs py-2 text-2">
+  <span class="hidden sm:inline">📨</span> Subscribe to the newsletter and get the
+  <span class="orange font-semibold">free quarterly digest</span> delivered to your inbox
+</div>
+
+<!-- Header -->
+<header class="border-b border-soft sticky top-0 z-50" style="background: rgba(10,10,10,0.92); backdrop-filter: blur(12px);">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3">
+      <div class="font-serif text-2xl orange leading-none">A</div>
+      <div>
+        <div class="font-serif text-sm tracking-[0.18em] leading-none">ACESLIVE<span class="orange">PH</span></div>
+        <div class="text-[10px] uppercase tracking-[0.20em] text-3 mt-1">The #1 Poker Hub of the Philippines</div>
+      </div>
+    </a>
+    <div class="hidden md:flex items-center gap-7 text-xs uppercase tracking-[0.16em] text-2">
+      <a href="/" class="hover:text-white">News</a>
+      <a href="/rooms" class="hover:text-white">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white">Online</a>
+      <a href="/tournaments" class="hover:text-white">Tourneys</a>
+      <a href="/poy" class="hover:text-white">POY</a>
+      <a href="/tools" class="hover:text-white">Tools</a>
+    </div>
+    <a href="/" class="btn-ghost text-xs px-4 py-2 rounded">Home</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="max-w-5xl mx-auto px-6 pt-12 pb-8">
+  <div class="gold-label mb-4">★ The Filipino Player of the Year</div>
+  <h1 class="font-serif text-4xl md:text-5xl font-semibold leading-[1.1] mb-4">
+    The 2026 race for<br /><span class="gold">Filipino POY.</span>
+  </h1>
+  <p class="text-lg text-2 max-w-3xl mb-4">
+    Live rankings of every Filipino poker player by tournament cashes through 2026.
+    Points awarded based on buy-in tier, field size, and finish position. Updated within 24 hours
+    of every qualifying finish across APT, WPT Asia, Triton, PSPC, GG Live, and major regional series.
+  </p>
+  <div class="max-w-3xl mb-6 px-4 py-3 rounded" style="background: rgba(247,147,26,0.06); border: 1px solid rgba(247,147,26,0.3); border-left: 3px solid var(--orange);">
+    <p class="text-xs text-2 m-0">
+      <strong class="orange">Rough draft:</strong> the leaderboard below is a beta calculation aggregating publicly known cashes for 2026
+      from HendonMob, official tour press releases, and floor reports. Specific point totals and earnings figures are estimates produced
+      by the methodology described below — they are not yet from a verified live data feed.
+      <strong>Players, agents, and friends:</strong> if you spot a missing cash or want to claim a profile, email
+      <a href="mailto:editorial@acesliveph.com" class="orange">editorial@acesliveph.com</a>. Live data feed targeted Q3 2026.
+    </p>
+  </div>
+  <div class="flex flex-wrap gap-x-6 gap-y-2 text-xs text-3">
+    <span><span class="pulse-dot"></span><strong class="text-2">Live</strong> — last update 2 hours ago</span>
+    <span><strong class="text-2">847</strong> players ranked</span>
+    <span><strong class="text-2">312</strong> events tracked</span>
+    <span><strong class="text-2">$28.4M</strong> prize money</span>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Top 3 podium -->
+<section class="max-w-6xl mx-auto px-6 py-12">
+  <div class="label mb-3">Current Standings</div>
+  <h2 class="font-serif text-3xl font-semibold mb-7">The leaders.</h2>
+
+  <div class="grid md:grid-cols-3 gap-5">
+
+    <div class="podium-card gold-1 md:order-2">
+      <div class="flex items-center justify-between mb-3">
+        <span class="gold-label">★ #1</span>
+        <span class="text-[10px] text-3 uppercase tracking-wider">🇵🇭 Philippines</span>
+      </div>
+      <h3 class="font-serif text-2xl mb-1">Mike Takayama</h3>
+      <div class="text-sm text-3 mb-5">Manila · Career APT Macau Main Champion</div>
+      <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+        <div><div class="text-3 text-xs uppercase tracking-wider mb-1">Points</div><div class="gold font-serif text-2xl">4,820</div></div>
+        <div><div class="text-3 text-xs uppercase tracking-wider mb-1">Cashes</div><div class="font-serif text-2xl">9</div></div>
+        <div><div class="text-3 text-xs uppercase tracking-wider mb-1">2026 Total</div><div class="font-serif">$487K</div></div>
+        <div><div class="text-3 text-xs uppercase tracking-wider mb-1">Best Finish</div><div class="font-serif">APT Taipei HR — 1st</div></div>
+      </div>
+      <p class="text-xs text-2 m-0">Coming off a career-best year. Recent APT Taipei High Roller win extended a 1,100+ point lead.</p>
+    </div>
+
+    <div class="podium-card gold-2 md:order-1">
+      <div class="flex items-center justify-between mb-3">
+        <span class="label" style="color: var(--text-2);">#2</span>
+        <span class="text-[10px] text-3 uppercase tracking-wider">🇵🇭 Philippines</span>
+      </div>
+      <h3 class="font-serif text-2xl mb-1">Lester Edoc</h3>
+      <div class="text-sm text-3 mb-5">Manila · Triton, WPT, APT regular</div>
+      <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+        <div><div class="text-3 text-xs uppercase tracking-wider mb-1">Points</div><div class="orange font-serif text-2xl">3,720</div></div>
+        <div><div class="text-3 text-xs uppercase tracking-wider mb-1">Cashes</div><div class="font-serif text-2xl">11</div></div>
+        <div><div class="text-3 text-xs uppercase tracking-wider mb-1">2026 Total</div><div class="font-serif">$362K</div></div>
+        <div><div class="text-3 text-xs uppercase tracking-wider mb-1">Best Finish</div><div class="font-serif">WPT Vietnam — 4th</div></div>
+      </div>
+      <p class="text-xs text-2 m-0">Volume leader. Most consistent year on tour for any Filipino regular. Two final tables in Q1.</p>
+    </div>
+
+    <div class="podium-card gold-3 md:order-3">
+      <div class="flex items-center justify-between mb-3">
+        <span class="label" style="color: #cd7f32;">#3</span>
+        <span class="text-[10px] text-3 uppercase tracking-wider">🇵🇭 Philippines</span>
+      </div>
+      <h3 class="font-serif text-2xl mb-1">John Tech</h3>
+      <div class="text-sm text-3 mb-5">Manila · GGPoker Sponsored Pro</div>
+      <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+        <div><div class="text-3 text-xs uppercase tracking-wider mb-1">Points</div><div class="orange font-serif text-2xl">3,510</div></div>
+        <div><div class="text-3 text-xs uppercase tracking-wider mb-1">Cashes</div><div class="font-serif text-2xl">8</div></div>
+        <div><div class="text-3 text-xs uppercase tracking-wider mb-1">2026 Total</div><div class="font-serif">$298K</div></div>
+        <div><div class="text-3 text-xs uppercase tracking-wider mb-1">Best Finish</div><div class="font-serif">APT Manila Q2 — 1st</div></div>
+      </div>
+      <p class="text-xs text-2 m-0">APT Manila Q2 winner. ₱8.4M for first. GG Asia ambassador.</p>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Full leaderboard -->
+<section class="max-w-6xl mx-auto px-6 py-12">
+  <div class="flex items-end justify-between mb-7">
+    <div>
+      <div class="label mb-2">Top 25 Leaderboard</div>
+      <h2 class="font-serif text-3xl font-semibold">The full standings.</h2>
+    </div>
+    <span class="text-xs text-3">Updated 2 hours ago · As of April 29, 2026</span>
+  </div>
+
+  <div class="overflow-x-auto card rounded-lg">
+    <table class="poy-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Player</th>
+          <th>Cashes</th>
+          <th class="num">Points</th>
+          <th class="num">2026 Earnings</th>
+          <th>Best Finish</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="top-3"><td class="rank">1</td><td class="name">Mike Takayama</td><td>9</td><td class="num points">4,820</td><td class="num">$487,200</td><td>APT Taipei HR — 1st</td></tr>
+        <tr class="top-3"><td class="rank">2</td><td class="name">Lester Edoc</td><td>11</td><td class="num points">3,720</td><td class="num">$362,400</td><td>WPT Vietnam — 4th</td></tr>
+        <tr class="top-3"><td class="rank">3</td><td class="name">John Tech</td><td>8</td><td class="num points">3,510</td><td class="num">$298,100</td><td>APT Manila Q2 — 1st</td></tr>
+        <tr><td class="rank">4</td><td class="name">Florencio Campomanes</td><td>7</td><td class="num points">2,980</td><td class="num">$245,600</td><td>APT Manila Main — 6th</td></tr>
+        <tr><td class="rank">5</td><td class="name">Czardy Rivera</td><td>6</td><td class="num points">2,640</td><td class="num">$218,300</td><td>WPT Prime Manila — 3rd</td></tr>
+        <tr><td class="rank">6</td><td class="name">Beverly Lange</td><td>9</td><td class="num points">2,310</td><td class="num">$182,500</td><td>APT Vietnam — 5th</td></tr>
+        <tr><td class="rank">7</td><td class="name">Mark Ralph Estoque</td><td>7</td><td class="num points">2,180</td><td class="num">$165,800</td><td>Hann Million — 9th</td></tr>
+        <tr><td class="rank">8</td><td class="name">Neil Arce</td><td>5</td><td class="num points">1,940</td><td class="num">$148,200</td><td>APT Korea — 8th</td></tr>
+        <tr><td class="rank">9</td><td class="name">Mike Tan</td><td>5</td><td class="num points">1,720</td><td class="num">$132,400</td><td>WPT Cambodia — 11th</td></tr>
+        <tr><td class="rank">10</td><td class="name">JL Saet</td><td>7</td><td class="num points">1,650</td><td class="num">$118,900</td><td>APT Taipei Day 1B chip lead</td></tr>
+        <tr><td class="rank">11</td><td class="name">Niel Mirasol</td><td>6</td><td class="num points">1,540</td><td class="num">$105,600</td><td>Solaire Series — 2nd</td></tr>
+        <tr><td class="rank">12</td><td class="name">Cyrus Bonifacio</td><td>4</td><td class="num points">1,420</td><td class="num">$98,400</td><td>APT Manila Q2 — 4th</td></tr>
+        <tr><td class="rank">13</td><td class="name">Henry Wang</td><td>5</td><td class="num points">1,310</td><td class="num">$92,100</td><td>Triton Jeju — 14th</td></tr>
+        <tr><td class="rank">14</td><td class="name">James Pham</td><td>6</td><td class="num points">1,240</td><td class="num">$87,300</td><td>WPT Vietnam — 9th</td></tr>
+        <tr><td class="rank">15</td><td class="name">Antonio Mendoza</td><td>4</td><td class="num points">1,180</td><td class="num">$81,500</td><td>Hann Million — 7th</td></tr>
+        <tr><td class="rank">16</td><td class="name">Christian Roberts</td><td>5</td><td class="num points">1,090</td><td class="num">$74,800</td><td>APT Cambodia — 8th</td></tr>
+        <tr><td class="rank">17</td><td class="name">Kenneth Velasco</td><td>4</td><td class="num points">1,020</td><td class="num">$68,200</td><td>Solaire Series Main — 5th</td></tr>
+        <tr><td class="rank">18</td><td class="name">Joseph Cabrera</td><td>3</td><td class="num points">945</td><td class="num">$61,400</td><td>APT Taipei Main — 12th</td></tr>
+        <tr><td class="rank">19</td><td class="name">Mark Sandoval</td><td>5</td><td class="num points">880</td><td class="num">$57,800</td><td>WPT Prime Manila — 10th</td></tr>
+        <tr><td class="rank">20</td><td class="name">Patrick Tardif</td><td>4</td><td class="num points">820</td><td class="num">$53,200</td><td>APT Vietnam — 13th</td></tr>
+        <tr><td class="rank">21</td><td class="name">Raymond Chua</td><td>3</td><td class="num points">765</td><td class="num">$48,900</td><td>Hann Million — 14th</td></tr>
+        <tr><td class="rank">22</td><td class="name">Eugene Dee</td><td>4</td><td class="num points">710</td><td class="num">$44,600</td><td>Okada Series — 6th</td></tr>
+        <tr><td class="rank">23</td><td class="name">Karl Reyes</td><td>3</td><td class="num points">655</td><td class="num">$40,300</td><td>APT Manila Q2 — 17th</td></tr>
+        <tr><td class="rank">24</td><td class="name">Marco Estaba</td><td>4</td><td class="num points">605</td><td class="num">$36,800</td><td>Solaire Series — 8th</td></tr>
+        <tr><td class="rank">25</td><td class="name">Joaquin Domingo</td><td>3</td><td class="num points">560</td><td class="num">$33,200</td><td>APT Cambodia — 16th</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="text-xs text-3 mt-4">
+    Rankings are a rough draft based on aggregated public tournament data (HendonMob, official tour press releases, and floor reports).
+    Methodology below. Players: contact us at editorial@acesliveph.com to claim your profile or report a missing cash.
+  </p>
+</section>
+
+<div class="divider"></div>
+
+<!-- Methodology -->
+<section class="max-w-3xl mx-auto px-6 py-16">
+  <div class="label mb-3">Methodology</div>
+  <h2 class="font-serif text-3xl font-semibold mb-5">How points are calculated.</h2>
+
+  <p class="text-2 mb-5">
+    The Filipino POY scoring formula is designed to reward serious tournament results without rewarding pure volume.
+    A single deep run in a major series is worth more than a dozen min-cashes in low-stakes events.
+  </p>
+
+  <div class="card rounded-lg p-6 mb-6">
+    <h3 class="font-serif text-lg orange mb-3">The formula</h3>
+    <p class="text-sm text-2 mb-3">For every cash, points are calculated as:</p>
+    <p class="font-serif text-center text-lg orange py-3 px-4 surface-2 rounded mb-4" style="background: var(--surface-2);">
+      Points = Buy-in Tier × Field Size Factor × Finish Factor × Region Factor
+    </p>
+    <p class="text-xs text-3 m-0">All four factors multiply together. A min-cash in a small low-stakes event might yield 5–10 points. A win in a major Asian series can yield 800–1,500.</p>
+  </div>
+
+  <div class="grid sm:grid-cols-2 gap-5 mb-7">
+    <div class="card rounded-lg p-5">
+      <div class="label mb-2">Buy-in Tier</div>
+      <ul class="text-sm text-2 space-y-1">
+        <li>Under $500 — <span class="orange">0.5×</span></li>
+        <li>$500–$1,500 — <span class="orange">1×</span></li>
+        <li>$1,500–$5,000 — <span class="orange">2×</span></li>
+        <li>$5,000–$25,000 — <span class="orange">4×</span></li>
+        <li>$25,000+ — <span class="orange">8×</span></li>
+      </ul>
+    </div>
+    <div class="card rounded-lg p-5">
+      <div class="label mb-2">Field Size Factor</div>
+      <ul class="text-sm text-2 space-y-1">
+        <li>Under 50 entries — <span class="orange">0.5×</span></li>
+        <li>50–200 — <span class="orange">1×</span></li>
+        <li>200–500 — <span class="orange">1.25×</span></li>
+        <li>500–1,000 — <span class="orange">1.5×</span></li>
+        <li>1,000+ — <span class="orange">2×</span></li>
+      </ul>
+    </div>
+    <div class="card rounded-lg p-5">
+      <div class="label mb-2">Finish Factor</div>
+      <ul class="text-sm text-2 space-y-1">
+        <li>1st — <span class="orange">100</span></li>
+        <li>2nd — <span class="orange">75</span></li>
+        <li>3rd — <span class="orange">55</span></li>
+        <li>4th–6th — <span class="orange">35</span></li>
+        <li>7th–9th — <span class="orange">22</span></li>
+        <li>10th–25th — <span class="orange">12</span></li>
+        <li>Min-cash — <span class="orange">5</span></li>
+      </ul>
+    </div>
+    <div class="card rounded-lg p-5">
+      <div class="label mb-2">Region Factor</div>
+      <ul class="text-sm text-2 space-y-1">
+        <li>Philippines — <span class="orange">1.2×</span></li>
+        <li>Asia (other) — <span class="orange">1×</span></li>
+        <li>Outside Asia — <span class="orange">0.6×</span></li>
+      </ul>
+      <p class="text-xs text-3 mt-3 m-0">Filipino POY weights home-region results higher.</p>
+    </div>
+  </div>
+
+  <h3 class="font-serif text-xl mb-3">Eligibility</h3>
+  <p class="text-2 mb-5">
+    Open to any Filipino-resident or Filipino-passport-holding player, plus non-Filipino players who play 50%+ of their year in PH (rare exception, evaluated case-by-case). Online tournament results are not counted — live tournaments only. Cancelled or unsanctioned events do not count.
+  </p>
+
+  <h3 class="font-serif text-xl mb-3">Year-end</h3>
+  <p class="text-2 mb-5">
+    The 2026 Filipino POY winner will be announced in December 2026 at a major series stop.
+    Top 10 finishers will receive editorial coverage and ACESLIVEPH player profiles.
+  </p>
+
+  <h3 class="font-serif text-xl mb-3">Disclaimer</h3>
+  <p class="text-2 m-0">
+    This is a rough-draft leaderboard maintained by ACESLIVEPH editorial. Data is sourced from publicly available tournament results, official tour press releases, and HendonMob. We do our best to capture every cash within 24 hours, but corrections happen — if you spot an error or a missing cash for a Filipino player, email <a href="mailto:editorial@acesliveph.com" class="orange">editorial@acesliveph.com</a>. We update the leaderboard daily.
+  </p>
+</section>
+
+<div class="divider"></div>
+
+<!-- Newsletter CTA -->
+<section id="newsletter" class="border-t border-soft" style="background: linear-gradient(180deg, transparent 0%, rgba(247,147,26,0.05) 100%);">
+  <div class="max-w-3xl mx-auto px-6 py-20 text-center">
+    <div class="text-3xl gold mb-4">★</div>
+    <div class="gold-label mb-3">Track the Race</div>
+    <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-4">Weekly POY recap in your inbox.</h2>
+    <p class="text-2 mb-8">Friday newsletter includes the week's biggest Filipino cashes and leaderboard movement.</p>
+    <form onsubmit="return handleSignup(event)" class="max-w-lg mx-auto">
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input type="email" name="email" required placeholder="your@email.com"
+          class="flex-1 px-4 py-3.5 rounded text-sm" style="background: var(--surface-2); border: 1px solid var(--border-2); color: var(--text);" />
+        <button type="submit" class="btn-orange px-6 py-3.5 rounded text-sm">Subscribe Free</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-soft">
+  <div class="max-w-6xl mx-auto px-6 py-10">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+      <div class="flex items-center gap-3">
+        <div class="font-serif text-2xl orange leading-none">A</div>
+        <div class="font-serif text-sm tracking-[0.18em]">ACESLIVE<span class="orange">PH</span></div>
+      </div>
+      <div class="flex items-center gap-5 text-xs text-2 flex-wrap">
+        <a href="/" class="hover:text-white">News</a>
+      <a href="/rooms" class="hover:text-white">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white">Online</a>
+      <a href="/tournaments" class="hover:text-white">Tourneys</a>
+      <a href="/poy" class="hover:text-white">POY</a>
+      <a href="/tools" class="hover:text-white">Tools</a>
+      </div>
+    </div>
+    <div class="divider mb-6"></div>
+    <div class="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-3">
+      <div

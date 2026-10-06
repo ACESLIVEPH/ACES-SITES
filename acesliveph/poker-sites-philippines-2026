@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Best Online Poker Sites for Filipinos 2026 — ACESLIVEPH</title>
+<meta name="description" content="The complete 2026 review of the best online poker sites for players in the Philippines. ClubGG, Natural8, ACR, WPT Global, CoinPoker, and PokerStars compared on traffic, bonuses, mobile, banking, and Filipino-specific features." />
+<link rel="canonical" href="https://acesliveph.com/poker-sites-philippines-2026" />
+<meta property="og:title" content="Best Online Poker Sites for Filipinos 2026" />
+<meta property="og:description" content="The 6 best online poker sites for Filipino players, ranked. Bonuses, banking, mobile, and what actually works in 2026." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://acesliveph.com/poker-sites-philippines-2026" />
+<meta name="theme-color" content="#0a0a0a" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --bg-2: #111111;
+    --surface: #161616;
+    --surface-2: #1c1c1c;
+    --border: #262626;
+    --border-2: #333333;
+    --text: #f5f5f5;
+    --text-2: #b0b0b0;
+    --text-3: #6b6b6b;
+    --orange: #F7931A;
+    --orange-2: #d97f15;
+    --orange-soft: rgba(247, 147, 26, 0.10);
+    --gold: #c9a227;
+    --gold-2: #b08e1f;
+    --green: #4ade80;
+  }
+  * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html, body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; line-height: 1.65; }
+  .font-serif { font-family: 'Cinzel', serif; letter-spacing: 0.02em; }
+  .orange { color: var(--orange); }
+  .gold { color: var(--gold); }
+  .text-2 { color: var(--text-2); }
+  .text-3 { color: var(--text-3); }
+  .surface { background: var(--surface); }
+  .surface-2 { background: var(--surface-2); }
+  .border-soft { border-color: var(--border); }
+  .border-mid { border-color: var(--border-2); }
+
+  .promo-strip { background: linear-gradient(90deg, #0a0a0a 0%, #4a2a05 50%, #0a0a0a 100%); }
+  .nav-link { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-2); transition: color 0.15s; }
+  .nav-link:hover { color: var(--orange); }
+  .nav-link.active { color: var(--orange); }
+
+  .btn-orange { background: var(--orange); color: #0a0a0a; font-weight: 700; transition: all 0.18s; border: 1px solid var(--orange); }
+  .btn-orange:hover { background: var(--orange-2); border-color: var(--orange-2); transform: translateY(-1px); }
+  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border-2); transition: all 0.18s; }
+  .btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
+
+  .label { font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--orange); }
+  .gold-label { font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); }
+
+  /* Article styles */
+  article h2 { font-family: 'Cinzel', serif; font-size: 1.875rem; font-weight: 600; line-height: 1.2; margin: 3rem 0 1.25rem; color: var(--text); }
+  article h3 { font-family: 'Cinzel', serif; font-size: 1.4rem; font-weight: 600; line-height: 1.3; margin: 2rem 0 0.75rem; color: var(--text); }
+  article h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--orange); margin: 1.5rem 0 0.5rem; }
+  article p { margin-bottom: 1.1rem; color: var(--text-2); }
+  article p strong { color: var(--text); font-weight: 600; }
+  article ul { margin: 0 0 1.25rem 1.25rem; }
+  article ul li { margin-bottom: 0.5rem; color: var(--text-2); }
+  article ul li::marker { color: var(--orange); }
+  article a { color: var(--orange); border-bottom: 1px solid rgba(247,147,26,0.4); transition: border 0.15s, color 0.15s; }
+  article a:hover { color: var(--orange-2); border-bottom-color: var(--orange-2); }
+
+  /* Affiliate disclosure box */
+  .affiliate-box { background: rgba(247,147,26,0.06); border: 1px solid rgba(247,147,26,0.3); border-left: 3px solid var(--orange); padding: 1rem 1.25rem; border-radius: 4px; }
+
+  /* TOC */
+  .toc { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem 1.5rem; }
+  .toc a { color: var(--text-2); border-bottom: none; }
+  .toc a:hover { color: var(--orange); }
+
+  /* Comparison table */
+  .compare-table { width: 100%; border-collapse: collapse; }
+  .compare-table th { background: var(--surface-2); color: var(--orange); font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.85rem 0.75rem; text-align: left; border-bottom: 1px solid var(--border-2); }
+  .compare-table td { padding: 1rem 0.75rem; border-bottom: 1px solid var(--border); color: var(--text-2); font-size: 0.9rem; }
+  .compare-table tr:hover td { background: rgba(247,147,26,0.04); }
+  .compare-table .site-name { color: var(--text); font-family: 'Cinzel', serif; font-weight: 600; }
+  .compare-table .score { color: var(--orange); font-family: 'Cinzel', serif; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .compare-table .stars { color: var(--gold); letter-spacing: -1px; }
+
+  /* Review card */
+  .review-card { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--orange); border-radius: 6px; padding: 2rem; margin: 2.5rem 0; }
+  .review-card.gold-tier { border-left-color: var(--gold); }
+  .review-rank { display: inline-block; font-family: 'Cinzel', serif; font-size: 0.95rem; font-weight: 700; color: var(--orange); padding: 0.25rem 0.75rem; background: rgba(247,147,26,0.10); border: 1px solid rgba(247,147,26,0.3); border-radius: 4px; margin-right: 0.75rem; vertical-align: middle; letter-spacing: 0.08em; }
+  .review-rank.gold-tier { color: var(--gold); background: rgba(201,162,39,0.10); border-color: rgba(201,162,39,0.3); }
+  .review-meta { display: flex; flex-wrap: wrap; gap: 1rem 2rem; padding: 1rem 0; margin: 1rem 0 1.5rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .meta-item { font-size: 0.8rem; }
+  .meta-item .label-sm { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); margin-bottom: 0.25rem; }
+  .meta-item .value { color: var(--text); font-weight: 600; }
+  .meta-item .value.orange { color: var(--orange); }
+  .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0; }
+  @media (max-width: 640px) { .pros-cons { grid-template-columns: 1fr; } }
+  .pros, .cons { background: var(--surface-2); border: 1px solid var(--border); border-radius: 4px; padding: 1.25rem; }
+  .pros h4, .cons h4 { margin-top: 0; font-size: 0.8rem; }
+  .pros h4 { color: var(--green); }
+  .cons h4 { color: #ef4444; }
+  .pros ul, .cons ul { margin-left: 1rem; margin-bottom: 0; }
+  .pros ul li::marker { color: var(--green); }
+  .cons ul li::marker { color: #ef4444; }
+  .review-cta { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.25rem; background: linear-gradient(180deg, rgba(247,147,26,0.10) 0%, rgba(247,147,26,0.02) 100%); border: 1px solid rgba(247,147,26,0.3); border-radius: 6px; margin-top: 1.5rem; }
+  .review-cta.gold-tier { background: linear-gradient(180deg, rgba(201,162,39,0.10) 0%, rgba(201,162,39,0.02) 100%); border-color: rgba(201,162,39,0.3); }
+
+  /* FAQ */
+  details.faq { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 1rem 1.25rem; margin-bottom: 0.5rem; }
+  details.faq[open] { border-color: var(--orange); }
+  details.faq summary { font-family: 'Cinzel', serif; font-weight: 600; color: var(--text); cursor: pointer; list-style: none; padding-right: 1.5rem; position: relative; }
+  details.faq summary::after { content: '+'; position: absolute; right: 0; top: 0; color: var(--orange); font-size: 1.4rem; line-height: 1; transition: transform 0.2s; }
+  details.faq[open] summary::after { content: '−'; }
+  details.faq summary::-webkit-details-marker { display: none; }
+  details.faq[open] p { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--border); }
+
+  /* Star rating */
+  .star-rating { color: var(--gold); letter-spacing: -1px; font-size: 1rem; }
+  .star-rating .empty { color: var(--text-3); }
+
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border-2), transparent); margin: 2rem 0; }
+
+  /* Email card */
+  .newsletter-card { background: linear-gradient(180deg, rgba(247,147,26,0.10) 0%, rgba(247,147,26,0.02) 100%); border: 1px solid rgba(247,147,26,0.30); }
+</style>
+
+<!-- Schema.org markup for review article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Best Online Poker Sites for Filipinos 2026",
+  "description": "Complete review of the best online poker sites for players in the Philippines in 2026.",
+  "author": {"@type": "Organization", "name": "ACESLIVEPH"},
+  "publisher": {"@type": "Organization", "name": "ACESLIVEPH", "url": "https://acesliveph.com"},
+  "datePublished": "2026-04-29",
+  "dateModified": "2026-04-29"
+}
+</script>
+</head>
+<body>
+
+<!-- =============== PROMO STRIP =============== -->
+<div class="promo-strip text-center text-xs py-2 text-2">
+  <span class="hidden sm:inline">📨</span>
+  Subscribe to the newsletter and get the
+  <span class="orange font-semibold">free quarterly digest</span>
+  delivered to your inbox
+</div>
+
+<!-- =============== HEADER =============== -->
+<header class="border-b border-soft sticky top-0 z-50" style="background: rgba(10,10,10,0.92); backdrop-filter: blur(12px);">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3">
+      <div class="font-serif text-2xl orange leading-none">A</div>
+      <div>
+        <div class="font-serif text-sm tracking-[0.18em] leading-none">ACESLIVE<span class="orange">PH</span></div>
+        <div class="text-[10px] uppercase tracking-[0.20em] text-3 mt-1">The #1 Poker Hub of the Philippines</div>
+      </div>
+    </a>
+    <div class="hidden md:flex items-center gap-7 text-xs uppercase tracking-[0.16em] text-2">
+      <a href="/" class="hover:text-white">News</a>
+      <a href="/rooms" class="hover:text-white">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white">Online</a>
+      <a href="/tournaments" class="hover:text-white">Tourneys</a>
+      <a href="/poy" class="hover:text-white">POY</a>
+      <a href="/tools" class="hover:text-white">Tools</a>
+    </div>
+    <a href="#newsletter" class="btn-ghost text-xs px-4 py-2 rounded">Subscribe</a>
+  </div>
+</header>
+
+<!-- =============== BREADCRUMBS =============== -->
+<div class="max-w-3xl mx-auto px-6 pt-6">
+  <nav class="text-xs text-3" aria-label="Breadcrumb">
+    <a href="/" class="hover:text-white">Home</a>
+    <span class="mx-2">›</span>
+    <a href="/poker-sites" class="hover:text-white">Poker Sites</a>
+    <span class="mx-2">›</span>
+    <span class="text-2">Best Online Poker Sites for Filipinos 2026</span>
+  </nav>
+</div>
+
+<!-- =============== ARTICLE =============== -->
+<article class="max-w-3xl mx-auto px-6 py-10">
+
+  <!-- Article header -->
+  <header class="mb-8">
+    <div class="label mb-4">Online Poker Reviews · Updated quarterly</div>
+    <h1 class="font-serif text-4xl md:text-5xl font-semibold leading-[1.1] mb-5">
+      Best Online Poker Sites<br /><span class="orange">for Filipinos 2026</span>
+    </h1>
+    <p class="text-lg text-2 leading-relaxed mb-6">
+      The complete ranked review of the six online poker sites that actually work for Filipino players in 2026 —
+      tested for traffic, mobile experience, payment options, bonuses, and the things nobody else writes about
+      like rake structures, geo-restrictions, and what happens when you try to withdraw $5,000 to GCash.
+    </p>
+    <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-3">
+      <span><strong class="text-2">By</strong> ACESLIVEPH Editorial</span>
+      <span><strong class="text-2">Published</strong> April 29, 2026</span>
+      <span><strong class="text-2">Reading time</strong> 14 min</span>
+    </div>
+  </header>
+
+  <!-- Affiliate disclosure -->
+  <div class="affiliate-box mb-10">
+    <p class="text-sm m-0"><strong class="orange">Affiliate disclosure:</strong>
+      Some links in this article are affiliate links. ACESLIVEPH may earn a commission when you sign up
+      and deposit through them — at no extra cost to you. Our reviews and rankings are produced independently
+      and are not influenced by these relationships. We have ranked sites in the order we'd recommend them to
+      a friend, not in the order that pays us most. See our full
+      <a href="/affiliate">Affiliate Disclosure</a> for details.
+    </p>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc mb-12">
+    <div class="label mb-3">In this review</div>
+    <ol class="list-none m-0 space-y-1.5 text-sm">
+      <li><a href="#intro">The 2026 landscape for Filipino players</a></li>
+      <li><a href="#comparison">Quick comparison table</a></li>
+      <li><a href="#clubgg">#1 ClubGG — Best overall for Filipinos</a></li>
+      <li><a href="#natural8">#2 Natural8 (GGPoker) — Best cash games in Asia</a></li>
+      <li><a href="#acr">#3 ACR Poker — Best for high stakes and crypto</a></li>
+      <li><a href="#wpt-global">#4 WPT Global — Best for live tour qualifiers</a></li>
+      <li><a href="#coinpoker">#5 CoinPoker — Best for crypto-native players</a></li>
+      <li><a href="#pokerstars">#6 PokerStars — The legacy option</a></li>
+      <li><a href="#how-to-choose">How to choose the right site for you</a></li>
+      <li><a href="#methodology">How we reviewed</a></li>
+      <li><a href="#faq">Frequently asked questions</a></li>
+      <li><a href="#verdict">Final verdict</a></li>
+    </ol>
+  </div>
+
+  <!-- Introduction -->
+  <section id="intro">
+    <h2>The 2026 landscape for Filipino players</h2>
+    <p>
+      Online poker for Filipino players in 2026 is in a stranger place than most international rankings let on.
+      The Philippines is one of the most poker-aware countries in Asia — between PSPC Manila, the Asian Poker
+      Tour, regular WPT stops, and a dense PAGCOR-licensed live cash scene at Okada, Solaire, and Hann —
+      but online options are filtered heavily by geo-restrictions, payment-rail constraints, and the long
+      shadow of the post-POGO regulatory tightening.
+    </p>
+    <p>
+      The result is that the rankings you'll find on Cardplayer or PokerNews don't translate directly to PH players.
+      A site that's a five-star recommendation for a US grinder might be inaccessible from Manila. A "global #1"
+      by traffic might have terrible PHP banking. The rooms that actually work for Filipino players in 2026
+      are a different list than the rooms that work for Europeans or Americans.
+    </p>
+    <p>
+      This review is the list that matters if you're depositing in pesos, withdrawing to GCash or BTC,
+      grinding from a Manila condo, or qualifying for the next APT Main Event from your phone in Angeles City.
+      We've focused on six sites that meet three baseline criteria: <strong>they accept PH players, they have
+      meaningful traffic, and they have at least one workable banking option for Filipinos.</strong>
+    </p>
+    <p>
+      Everything else — bonuses, software quality, mobile experience, customer support, withdrawal speed,
+      VPN tolerance, rakeback programs — is what determines the order.
+    </p>
+  </section>
+
+  <!-- Comparison table -->
+  <section id="comparison">
+    <h2>Quick comparison table</h2>
+    <p class="text-sm text-3">Fast verdict view. Detailed reviews below.</p>
+    <div class="overflow-x-auto -mx-6 px-6 my-6">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Site</th>
+            <th>Score</th>
+            <th>Bonus</th>
+            <th>Best For</th>
+            <th>PH Banking</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="site-name">ClubGG</td>
+            <td class="score">9.4 <span class="stars">★★★★★</span></td>
+            <td>100% up to $1,000</td>
+            <td>Live tour qualifiers, mobile play</td>
+            <td>BTC, e-wallets, club deposits</td>
+          </tr>
+          <tr>
+            <td class="site-name">Natural8 (GGPoker)</td>
+            <td class="score">9.5 <span class="stars">★★★★★</span></td>
+            <td>200% up to $1,000</td>
+            <td>Cash games, biggest MTT fields</td>
+            <td>BTC, e-wallets, partial PHP</td>
+          </tr>
+          <tr>
+            <td class="site-name">ACR Poker</td>
+            <td class="score">8.7 <span class="stars">★★★★</span></td>
+            <td>100% up to $2,000</td>
+            <td>High stakes, crypto-friendly</td>
+            <td>BTC, ETH, USDT, ACH</td>
+          </tr>
+          <tr>
+            <td class="site-name">WPT Global</td>
+            <td class="score">8.5 <span class="stars">★★★★</span></td>
+            <td>100% up to $1,200</td>
+            <td>Live WPT tour qualifiers</td>
+            <td>Cards, BTC, e-wallets</td>
+          </tr>
+          <tr>
+            <td class="site-name">CoinPoker</td>
+            <td class="score">8.3 <span class="stars">★★★★</span></td>
+            <td>150% Crypto Bonus</td>
+            <td>Crypto-natives, privacy</td>
+            <td>BTC, ETH, USDT, CHP</td>
+          </tr>
+          <tr>
+            <td class="site-name">PokerStars</td>
+            <td class="score">8.0 <span class="stars">★★★★</span></td>
+            <td>100% up to $600</td>
+            <td>Tournaments, brand legacy</td>
+            <td>Limited — geo-dependent</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Review #1 ClubGG -->
+  <section id="clubgg">
+    <div class="review-card gold-tier">
+      <div class="flex items-center flex-wrap gap-3 mb-2">
+        <span class="review-rank gold-tier">#1 Best Overall</span>
+        <span class="star-rating">★★★★★</span>
+        <span class="text-sm text-3">9.4/10</span>
+      </div>
+      <h2 class="mt-2">ClubGG — Best Overall for Filipinos</h2>
+
+      <p>
+        ClubGG is the answer to a specific question: <em>what's the easiest way for a Filipino player to qualify
+        for a major live event from their phone?</em> It's the club-based mobile poker app from the GGPoker
+        family, and through 2025 and 2026 it has aggressively become the de facto satellite engine for PSPC Manila,
+        APT, Hann Million, and the WPT Asia stops. If you want to get into PSPC Manila for a fraction of the buy-in,
+        ClubGG is where you do it.
+      </p>
+
+      <div class="review-meta">
+        <div class="meta-item"><span class="label-sm">Bonus</span><span class="value orange">100% up to $1,000</span></div>
+        <div class="meta-item"><span class="label-sm">PH Banking</span><span class="value">BTC · E-wallets</span></div>
+        <div class="meta-item"><span class="label-sm">Mobile</span><span class="value">Excellent (mobile-first)</span></div>
+        <div class="meta-item"><span class="label-sm">VPN Required</span><span class="value">No</span></div>
+      </div>
+
+      <h4>What it is</h4>
+      <p>
+        ClubGG is a club-based real-money poker app where players join private clubs that run cash games and
+        tournaments. The club model means stakes can flex from micro to high, and individual clubs can run
+        Asian-friendly schedules that accommodate the local time zone (which most international rooms ignore).
+        The app is mobile-first, and the mobile experience is genuinely best-in-class — unlike the mobile
+        afterthoughts you get from PokerStars or some legacy rooms.
+      </p>
+
+      <h4>What's actually good for Filipinos in 2026</h4>
+      <p>
+        The killer feature is the live tournament satellite ecosystem. ClubGG runs direct satellite tournaments
+        for PSPC Manila, APT Main Events, WPT Cambodia and Vietnam, Hann Million Clark, and recurring smaller
+        series. Buy-ins for these satellites typically start at $5–25 with packages running $1,500–10,000
+        depending on the destination. For a Filipino player who plans to play live anyway, ClubGG is a discount
+        on the buy-in, a flight, and a hotel package — all combined.
+      </p>
+
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Best-in-class mobile-first experience</li>
+            <li>Aggressive live satellite schedule for PH/Asia events</li>
+            <li>Multi-tier club system means you find your stake</li>
+            <li>BTC and e-wallet deposits work cleanly</li>
+            <li>No VPN required, geo-cleared for PH</li>
+            <li>Asian time-zone friendly schedules</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Club model takes 1–2 sessions to get used to</li>
+            <li>Cash game traffic varies by club (do your research)</li>
+            <li>Withdrawal speed can lag during big series weeks</li>
+            <li>Less casino-style flair than legacy rooms</li>
+          </ul>
+        </div>
+      </div>
+
+      <h4>Best for</h4>
+      <p>
+        Filipino players who plan to play live tournaments in PH or Asia within the next year, casual cash players
+        who want a clean mobile experience, anyone qualifying for PSPC Manila or APT.
+      </p>
+
+      <div class="review-cta gold-tier">
+        <div>
+          <div class="font-serif text-lg">Sign up at ClubGG</div>
+          <div class="text-xs text-3 mt-1">100% bonus up to $1,000 · Use ACESLIVEPH affiliate link</div>
+        </div>
+        <a href="#" class="btn-orange px-5 py-2.5 rounded text-sm whitespace-nowrap">Get Started →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Review #2 Natural8 -->
+  <section id="natural8">
+    <div class="review-card">
+      <div class="flex items-center flex-wrap gap-3 mb-2">
+        <span class="review-rank">#2 Best Cash Games</span>
+        <span class="star-rating">★★★★★</span>
+        <span class="text-sm text-3">9.5/10</span>
+      </div>
+      <h2 class="mt-2">Natural8 — Best Cash Games in Asia</h2>
+
+      <p>
+        Natural8 is the Asian-facing arm of GGPoker, and by traffic alone it's the largest online poker network
+        in Asia by a wide margin. If you're a cash game grinder looking for the deepest games at any stake from
+        $0.10/$0.25 up to $25/$50 NL, Natural8 is where the action is — full stop. The trade-off is that the
+        games are correspondingly tougher than ClubGG's club-pocketed regulars, but that's because everyone serious
+        plays here.
+      </p>
+
+      <div class="review-meta">
+        <div class="meta-item"><span class="label-sm">Bonus</span><span class="value orange">200% up to $1,000</span></div>
+        <div class="meta-item"><span class="label-sm">PH Banking</span><span class="value">BTC · E-wallets · Partial PHP</span></div>
+        <div class="meta-item"><span class="label-sm">Mobile</span><span class="value">Excellent</span></div>
+        <div class="meta-item"><span class="label-sm">VPN Required</span><span class="value">No</span></div>
+      </div>
+
+      <h4>What it is</h4>
+      <p>
+        Natural8 runs on the GGNetwork — the same network as GGPoker — but operates as a separate brand for
+        Asian markets. Software is the GG client, which is genuinely the best modern poker client in the world
+        right now: smooth multi-tabling, intuitive HUD-replacement features (Smart HUD), creative formats
+        like Rush & Cash, Spin & Gold (poker's hyper-turbo lottery), and the All-In Insurance feature.
+      </p>
+
+      <h4>The traffic story</h4>
+      <p>
+        Cash games run 24/7 with material action from $0.05/$0.10 up through $5/$10, with high-stakes tables
+        ($10/$25 and above) running primarily during evenings PH time. Multi-table tournaments are massive —
+        Battle Royale and APL Series guarantees regularly clear $1M+, with weekly majors running smaller. For
+        a serious player, this is the room you spend the most volume on.
+      </p>
+
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Largest player pool in Asia by far</li>
+            <li>Best-in-class poker client (GG software)</li>
+            <li>Strong promotional schedule and rakeback</li>
+            <li>Excellent mobile and desktop apps</li>
+            <li>PokerCraft replay tool included free</li>
+            <li>Generous welcome bonus structure</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Cash games tougher than club-based rooms</li>
+            <li>HUDs and trackers are blocked by design</li>
+            <li>Strong-handed regs at every stake</li>
+            <li>Fish detection means you can't hunt as freely</li>
+          </ul>
+        </div>
+      </div>
+
+      <h4>Best for</h4>
+      <p>
+        Serious cash game grinders, MTT players who want big fields and big guarantees, anyone willing to put
+        in volume against decent regs. Less ideal for the very casual player who'll get eaten alive at micros
+        because the micros aren't actually as soft as you'd think on this network.
+      </p>
+
+      <div class="review-cta">
+        <div>
+          <div class="font-serif text-lg">Sign up at Natural8</div>
+          <div class="text-xs text-3 mt-1">200% bonus up to $1,000 · Use ACESLIVEPH affiliate link</div>
+        </div>
+        <a href="#" class="btn-orange px-5 py-2.5 rounded text-sm whitespace-nowrap">Get Started →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Review #3 ACR -->
+  <section id="acr">
+    <div class="review-card">
+      <div class="flex items-center flex-wrap gap-3 mb-2">
+        <span class="review-rank">#3 Best for High Stakes</span>
+        <span class="star-rating">★★★★<span class="empty">★</span></span>
+        <span class="text-sm text-3">8.7/10</span>
+      </div>
+      <h2 class="mt-2">ACR Poker — Best for High Stakes & Crypto</h2>
+
+      <p>
+        ACR (Americas Cardroom, on the WPN network) is the room serious high-stakes Filipino players gravitate to
+        when they want depth at $10/$25 and up, professional rakeback structures, and a customer service team that
+        actually moves on big withdrawals. It's also one of the most crypto-native legacy rooms — BTC, ETH, USDT,
+        and a half-dozen other tokens deposit and withdraw cleanly. The Venom tournament series alone (with $10M+
+        guarantees) is enough reason to have an account.
+      </p>
+
+      <div class="review-meta">
+        <div class="meta-item"><span class="label-sm">Bonus</span><span class="value orange">100% up to $2,000</span></div>
+        <div class="meta-item"><span class="label-sm">PH Banking</span><span class="value">BTC · ETH · USDT</span></div>
+        <div class="meta-item"><span class="label-sm">Mobile</span><span class="value">Good</span></div>
+        <div class="meta-item"><span class="label-sm">VPN Required</span><span class="value">Sometimes</span></div>
+      </div>
+
+      <h4>What's actually good</h4>
+      <p>
+        Multi-currency crypto everything. The crypto banking on ACR is the cleanest of any of the major legacy
+        rooms — withdrawals to BTC settle in 30-60 minutes most of the time, and the room supports half a dozen
+        stablecoins for players who prefer to skip the BTC volatility. High-stakes cash games run consistently
+        up to $25/$50 and occasionally higher. The Venom MTT series is now an industry standard for $10M+
+        guarantees with international fields.
+      </p>
+
+      <h4>The trade-offs</h4>
+      <p>
+        ACR's traffic is meaningfully smaller than GGNetwork at micro and low-mid stakes. If you want to grind
+        $0.50/$1 with always-running games, Natural8 gives you more action. ACR shines from $2/$5 upward where
+        consistent professional-level games run. The mobile app is functional but feels last-generation versus
+        GG. And while ACR officially accepts PH players, some Filipino IPs occasionally trigger geo-checks
+        that resolve with a quick support email but can be momentarily annoying.
+      </p>
+
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Best crypto banking on a major legacy room</li>
+            <li>Strong high-stakes traffic ($2/$5+)</li>
+            <li>Venom $10M+ tournament series</li>
+            <li>Generous lifetime rakeback program</li>
+            <li>Customer support actually responsive</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Lighter traffic at micro stakes</li>
+            <li>Mobile app feels dated vs. GG</li>
+            <li>Occasional geo-check friction</li>
+            <li>Software has known bot allegations historically</li>
+          </ul>
+        </div>
+      </div>
+
+      <h4>Best for</h4>
+      <p>
+        High-stakes cash players ($2/$5 and up), MTT specialists chasing the Venom series, anyone who lives in
+        crypto and wants a poker room with crypto-native banking, players who want the biggest single-event
+        guarantees outside the GG umbrella.
+      </p>
+
+      <div class="review-cta">
+        <div>
+          <div class="font-serif text-lg">Sign up at ACR Poker</div>
+          <div class="text-xs text-3 mt-1">100% bonus up to $2,000 · Use ACESLIVEPH affiliate link</div>
+        </div>
+        <a href="#" class="btn-orange px-5 py-2.5 rounded text-sm whitespace-nowrap">Get Started →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Review #4 WPT Global -->
+  <section id="wpt-global">
+    <div class="review-card">
+      <div class="flex items-center flex-wrap gap-3 mb-2">
+        <span class="review-rank">#4 Best for Tour Qualifiers</span>
+        <span class="star-rating">★★★★<span class="empty">★</span></span>
+        <span class="text-sm text-3">8.5/10</span>
+      </div>
+      <h2 class="mt-2">WPT Global — Best for Live Tour Qualifiers</h2>
+
+      <p>
+        WPT Global is the youngest of the rooms in this review and it's still hungry — which means generous
+        bonuses, aggressive promotions, and the most direct path to qualifying for actual WPT live events.
+        For a Filipino player who wants to qualify for WPT Cambodia, WPT Vietnam, or WPT Prime Manila for a
+        fraction of the buy-in, this is the room.
+      </p>
+
+      <div class="review-meta">
+        <div class="meta-item"><span class="label-sm">Bonus</span><span class="value orange">100% up to $1,200</span></div>
+        <div class="meta-item"><span class="label-sm">PH Banking</span><span class="value">Cards · BTC · E-wallets</span></div>
+        <div class="meta-item"><span class="label-sm">Mobile</span><span class="value">Good</span></div>
+        <div class="meta-item"><span class="label-sm">VPN Required</span><span class="value">No</span></div>
+      </div>
+
+      <h4>The hook</h4>
+      <p>
+        WPT Global runs daily and weekly satellites to every WPT live stop on the calendar. For Asian players
+        the most relevant of these are the WPT Cambodia, WPT Vietnam, WPT Prime Manila, and WPT Korea satellites —
+        all of which run at multiple buy-in levels and frequently feed packages including hotel and travel.
+      </p>
+
+      <h4>What you actually get</h4>
+      <p>
+        Cash game traffic is decent but not deep — fine for $0.50/$1 and $1/$2, less reliable above. MTT
+        guarantees are growing month-on-month. The mobile experience is solid, and the desktop client is
+        clean. Banking accepts cards (a real win for casual players who don't want to mess with crypto),
+        BTC, and a handful of e-wallets. Bonuses and promotions roll out aggressively because the room is
+        in growth mode.
+      </p>
+
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Direct WPT live event qualifiers</li>
+            <li>Card deposits work for non-crypto players</li>
+            <li>Aggressive promotional schedule</li>
+            <li>Clean modern client and mobile app</li>
+            <li>WPT brand legitimacy and audit history</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Cash game traffic thinner than GG/ClubGG</li>
+            <li>Fewer recurring tournament series</li>
+            <li>Newer room means less long-track-record data</li>
+            <li>VIP/rakeback program less mature than ACR</li>
+          </ul>
+        </div>
+      </div>
+
+      <h4>Best for</h4>
+      <p>
+        Players targeting WPT live events specifically, casual players who want card deposits, anyone who
+        wants to be early on a growing room before its promotions get less generous.
+      </p>
+
+      <div class="review-cta">
+        <div>
+          <div class="font-serif text-lg">Sign up at WPT Global</div>
+          <div class="text-xs text-3 mt-1">100% bonus up to $1,200 · Use ACESLIVEPH affiliate link</div>
+        </div>
+        <a href="#" class="btn-orange px-5 py-2.5 rounded text-sm whitespace-nowrap">Get Started →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Review #5 CoinPoker -->
+  <section id="coinpoker">
+    <div class="review-card">
+      <div class="flex items-center flex-wrap gap-3 mb-2">
+        <span class="review-rank">#5 Best for Crypto-Native</span>
+        <span class="star-rating">★★★★<span class="empty">★</span></span>
+        <span class="text-sm text-3">8.3/10</span>
+      </div>
+      <h2 class="mt-2">CoinPoker — Best for Crypto-Native Players</h2>
+
+      <p>
+        CoinPoker is the only room on this list that started as a crypto-first room and means it. The platform
+        is built around its own CHP token, deposits and withdrawals are crypto-only, and the room has cultivated
+        a reputation for fast settlement, anonymous-friendly play, and a steadily growing high-stakes scene driven
+        by the Tony G connection and the partnership with PokerNews.
+      </p>
+
+      <div class="review-meta">
+        <div class="meta-item"><span class="label-sm">Bonus</span><span class="value orange">150% Crypto Bonus</span></div>
+        <div class="meta-item"><span class="label-sm">PH Banking</span><span class="value">BTC · ETH · USDT · CHP</span></div>
+        <div class="meta-item"><span class="label-sm">Mobile</span><span class="value">Good</span></div>
+        <div class="meta-item"><span class="label-sm">VPN Required</span><span class="value">No</span></div>
+      </div>
+
+      <h4>Why it matters for Filipinos</h4>
+      <p>
+        For PH players who already live in crypto — those who hold BTC, run a Phantom or MetaMask wallet,
+        and prefer to skip the banking system entirely — CoinPoker is a natural home. There's no fiat conversion
+        friction, no card processor declining a $500 deposit because the bank flagged a "gambling merchant,"
+        and no GCash withdrawal limit creating a 7-day waiting period for a meaningful cashout.
+      </p>
+
+      <h4>The trade-offs</h4>
+      <p>
+        Traffic is smaller than GG or ACR. Cash games run reliably up to $1/$2, occasionally higher when there's
+        action. The CHP token bonus structure means part of your value is denominated in their native token,
+        which can move with crypto markets. Software is solid but not best-in-class. The room is growing but
+        not yet at the scale where you can get a game running at any hour.
+      </p>
+
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Crypto-first banking — clean for PH players</li>
+            <li>Anonymous-friendly play</li>
+            <li>No fiat conversion or banking friction</li>
+            <li>Growing high-stakes scene</li>
+            <li>Tony G high-stakes streams build community</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Smaller player pool than majors</li>
+            <li>CHP token volatility affects bonus value</li>
+            <li>Mid-stakes traffic inconsistent</li>
+            <li>Less promotional volume than newer rooms</li>
+          </ul>
+        </div>
+      </div>
+
+      <h4>Best for</h4>
+      <p>
+        Filipino players who already operate in crypto, players who value privacy, anyone who's hit banking
+        friction on legacy rooms and wants a clean alternative.
+      </p>
+
+      <div class="review-cta">
+        <div>
+          <div class="font-serif text-lg">Sign up at CoinPoker</div>
+          <div class="text-xs text-3 mt-1">150% crypto bonus · Use ACESLIVEPH affiliate link</div>
+        </div>
+        <a href="#" class="btn-orange px-5 py-2.5 rounded text-sm whitespace-nowrap">Get Started →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Review #6 PokerStars -->
+  <section id="pokerstars">
+    <div class="review-card">
+      <div class="flex items-center flex-wrap gap-3 mb-2">
+        <span class="review-rank">#6 The Legacy Option</span>
+        <span class="star-rating">★★★★<span class="empty">★</span></span>
+        <span class="text-sm text-3">8.0/10</span>
+      </div>
+      <h2 class="mt-2">PokerStars — The Legacy Option</h2>
+
+      <p>
+        PokerStars is the room every poker player has heard of, and for two decades it was the unambiguous
+        global #1. In 2026 that's no longer true — GGPoker has taken the global traffic crown, and PokerStars
+        access for Filipino players is meaningfully restricted compared to where it sits in international rankings.
+        We include it here for completeness, and because for the WCOOP and EPT tournament traditionalists, no
+        other room delivers the exact tournament heritage.
+      </p>
+
+      <div class="review-meta">
+        <div class="meta-item"><span class="label-sm">Bonus</span><span class="value orange">100% up to $600</span></div>
+        <div class="meta-item"><span class="label-sm">PH Banking</span><span class="value">Limited — geo-dependent</span></div>
+        <div class="meta-item"><span class="label-sm">Mobile</span><span class="value">Good</span></div>
+        <div class="meta-item"><span class="label-sm">VPN Required</span><span class="value">Often</span></div>
+      </div>
+
+      <h4>The reality for PH players</h4>
+      <p>
+        PokerStars operates under different licenses in different markets, and the dot-com international room
+        increasingly geo-locks regions. Filipino players sometimes have access, sometimes don't, and frequently
+        find that a workable account requires more friction than the alternatives in this list. If you already
+        have a PokerStars account from years ago, it's still valuable for WCOOP, SCOOP, and EPT online satellites.
+        If you're starting from scratch in 2026, the other five rooms in this list deliver more value with less
+        hassle.
+      </p>
+
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Iconic tournament series (WCOOP, SCOOP, EPT)</li>
+            <li>Battle-tested software</li>
+            <li>Largest tournament guarantees globally</li>
+            <li>Strong customer support history</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Geo-restrictions often block PH access</li>
+            <li>Banking limited — fewer PH-friendly methods</li>
+            <li>Bonus structure smaller than competitors</li>
+            <li>Cash game traffic dropping vs. GG</li>
+          </ul>
+        </div>
+      </div>
+
+      <h4>Best for</h4>
+      <p>
+        Existing account holders, EPT/WCOOP traditionalists, players willing to deal with VPN/geo friction
+        for the brand legacy. Not the right starting point for a new PH player in 2026.
+      </p>
+
+      <div class="review-cta">
+        <div>
+          <div class="font-serif text-lg">Visit PokerStars</div>
+          <div class="text-xs text-3 mt-1">Account access varies by location</div>
+        </div>
+        <a href="#" class="btn-ghost px-5 py-2.5 rounded text-sm whitespace-nowrap">Check Access →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to choose -->
+  <section id="how-to-choose">
+    <h2>How to choose the right site for you</h2>
+
+    <h3>If you primarily play cash games</h3>
+    <p>
+      <strong>Natural8 first, then ACR.</strong> Natural8 has the deepest player pool at every stake from
+      $0.05/$0.10 through mid-stakes — the cash game volume is unmatched. ACR is the alternative if you
+      grind $2/$5 or higher and want professional rakeback. Skip the others for cash unless your stakes
+      are unusual.
+    </p>
+
+    <h3>If you primarily play tournaments</h3>
+    <p>
+      <strong>Natural8 for the biggest fields, ClubGG for live qualifiers, WPT Global for tour-specific.</strong>
+      Natural8's MTT series have the largest guarantees in Asia. ClubGG is unbeatable for satellites into PSPC
+      Manila, APT, and Asian live stops. WPT Global is where you go specifically for WPT live qualifiers.
+    </p>
+
+    <h3>If banking is your blocker</h3>
+    <p>
+      <strong>CoinPoker if you're crypto-native, WPT Global if you want cards.</strong> CoinPoker is the cleanest
+      option for crypto-only players. WPT Global is one of the few options where conventional card deposits
+      work reliably for PH players.
+    </p>
+
+    <h3>If you're going to play live in PH this year</h3>
+    <p>
+      <strong>ClubGG, no exceptions.</strong> The satellite ecosystem into PSPC Manila, APT Manila, Hann Million,
+      and the WPT Asian stops is unmatched. You'll save hundreds to thousands of dollars over time vs. paying
+      direct buy-ins.
+    </p>
+
+    <h3>If you want a single primary room</h3>
+    <p>
+      <strong>Natural8.</strong> The biggest player pool, the best software, the strongest promotional schedule,
+      and the room that lets you do the most without needing a backup. If you're going to have one online poker
+      account in 2026 and you live in the Philippines, this is the one.
+    </p>
+  </section>
+
+  <!-- Methodology -->
+  <section id="methodology">
+    <h2>How we reviewed</h2>
+    <p>
+      Every site in this review was tested by the ACESLIVEPH editorial team across the following criteria:
+    </p>
+    <ul>
+      <li><strong>Game traffic:</strong> peak-hours and off-peak cash game tables, MTT field sizes, average wait times</li>
+      <li><strong>Software:</strong> desktop and mobile clients, multi-tabling, replay tools, HUD policies</li>
+      <li><strong>Banking:</strong> deposit and withdrawal speed for Filipino-friendly methods (BTC, e-wallets, cards where applicable)</li>
+      <li><strong>Bonuses:</strong> first-deposit bonus structure, ongoing rakeback, leaderboards, promotional schedule</li>
+      <li><strong>Customer support:</strong> response time and competence on real issues, not just sales questions</li>
+      <li><strong>Geo-access:</strong> reliability of PH access without VPN, and behavior when geo-checks trigger</li>
+      <li><strong>Live tour qualifiers:</strong> satellite frequency and value for Asian live events specifically</li>
+      <li><strong>Reputation and security:</strong> known issues, bot policies, history with player funds</li>
+    </ul>
+    <p>
+      We update this review quarterly. Sites are re-tested, traffic patterns are re-checked, and rankings
+      can shift based on changes to bonuses, banking, or new room policies. Last updated: April 2026.
+    </p>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <h2>Frequently asked questions</h2>
+
+    <details class="faq" open>
+      <summary>Is online poker legal in the Philippines?</summary>
+      <p>
+        For Philippine residents, the legal situation is nuanced. PAGCOR licenses certain domestic online gaming
+        operators (PIGOs), but most international rooms in this review are not PAGCOR-licensed and operate under
+        offshore licenses. Players use these rooms commonly without enforcement against individual users, but
+        the activity is not formally regulated as legal in PH. We recommend players consult their own legal
+        counsel and understand their tax obligations on winnings.
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>What's the best deposit method for Filipino players?</summary>
+      <p>
+        Bitcoin (BTC) is the most universally accepted, fastest, and lowest-friction option across the rooms
+        in this review. E-wallets like Skrill and Neteller work on most rooms. Card deposits are workable on
+        WPT Global and a few others but unreliable elsewhere. GCash direct integration with international rooms
+        is rare; most players who use GCash route through a BTC exchange like PDAX or Coins.ph.
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>Do I need a VPN to play?</summary>
+      <p>
+        For ClubGG, Natural8, WPT Global, and CoinPoker — no, in most cases. These rooms accept PH players
+        directly. ACR sometimes triggers geo-checks that resolve with support but may benefit from a VPN if
+        you experience friction. PokerStars often requires a VPN due to geo-restrictions. Note that using a
+        VPN may violate the terms of service on some rooms and can lead to account closure if detected, so
+        verify each room's policy before using one.
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>Are these sites safe for my money?</summary>
+      <p>
+        The five rooms ranked #1–#5 are all established operators with multi-year track records of player
+        fund safety. None has had a major incident with player balances in the past 5+ years. As with any
+        online platform, we recommend not keeping more on the site than you need for active play, and using
+        BTC withdrawals for fast retrieval of significant balances.
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>Can I play with PHP (Philippine Pesos)?</summary>
+      <p>
+        Most international rooms denominate in USD and convert at deposit and withdrawal. Direct PHP support
+        is rare on the rooms in this review. The practical workflow for PH players is: PHP → BTC (via PDAX
+        or Coins.ph) → poker site, with the reverse on withdrawal. Conversion fees are typically 1–2% per leg.
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>Can I deposit with GCash?</summary>
+      <p>
+        Direct GCash → poker site integration is uncommon. The standard workaround is GCash → PDAX or Coins.ph
+        → BTC → poker site, which takes about 10–15 minutes total and incurs minimal fees. Some payment
+        intermediaries claim GCash-to-poker rails but most are unreliable; the BTC route remains the cleanest.
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>How much should I deposit to start?</summary>
+      <p>
+        The traditional bankroll guideline is 20–40 buy-ins for the stake you intend to play. For someone
+        starting at $0.05/$0.10 NL ($10 buy-in), that's a $200–400 starting bankroll. For $0.50/$1 NL ($100 buy-in),
+        $2,000–$4,000. Tournaments require larger rolls due to higher variance — typically 100+ buy-ins for
+        the level you play. Don't deposit more than you can comfortably lose.
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>What about the welcome bonuses — are they actually worth it?</summary>
+      <p>
+        Most welcome bonuses unlock incrementally as you generate rake. A "100% up to $1,000" bonus typically
+        means you earn $1 of bonus released for every $5–10 in rake you generate, capped at $1,000 over a
+        time window (often 60–90 days). If you play seriously, you'll unlock most or all of it. If you play
+        casually, you'll release a small fraction. Don't deposit larger than you'd play just to chase a
+        bonus you can't realistically clear.
+      </p>
+    </details>
+  </section>
+
+  <!-- Final verdict -->
+  <section id="verdict">
+    <h2>The final verdict</h2>
+    <p>
+      For the Filipino player choosing an online poker room in 2026, here's the simplest version of the
+      recommendation: <strong>Natural8 if you primarily play cash games, ClubGG if you primarily play live
+      tournaments and want satellite qualifiers, ACR if you grind high stakes or need crypto-native rakeback,
+      and CoinPoker if you operate entirely in crypto.</strong> WPT Global is the strong newer alternative
+      worth tracking. PokerStars is for legacy account holders, not new starts.
+    </p>
+    <p>
+      Most serious PH grinders end up running accounts on at least two of these — typically Natural8 plus
+      ClubGG — to capture the cash game depth on one and the live qualifier ecosystem on the other. There's
+      no rule against using multiple rooms; in fact, doing so is the right play for almost everyone.
+    </p>
+    <p>
+      We update this review quarterly. Bonuses change, traffic shifts, and rooms occasionally make policy
+      moves that change the recommendation. <strong>Subscribe to the ACESLIVEPH newsletter below</strong>
+      and you'll be the first to know when this review updates — plus the rest of the week's chismis from
+      the floor.
+    </p>
+  </section>
+
+  <!-- Responsible play -->
+  <div class="affiliate-box mt-12 mb-0" style="background: rgba(247,147,26,0.04); border-left-width: 3px;">
+    <p class="text-sm m-0">
+      <strong>Play responsibly.</strong> Online poker should be entertainment — never a financial plan.
+      Set deposit limits. Never play with money you can't lose. If gambling is causing harm to you or
+      someone you care about, contact PAGCOR's Responsible Gaming office or a counselor in your area.
+      Must be 21+ to gamble in the Philippines.
+    </p>
+  </div>
+
+</article>
+
+<!-- =============== NEWSLETTER CTA =============== -->
+<section id="newsletter" class="border-t border-soft" style="background: linear-gradient(180deg, transparent 0%, rgba(247,147,26,0.05) 100%);">
+  <div class="max-w-3xl mx-auto px-6 py-20 md:py-24 text-center">
+    <div class="text-3xl orange mb-4">♠</div>
+    <div class="label mb-4">The Newsletter</div>
+    <h2 class="font-serif text-3xl md:text-5xl font-semibold leading-tight mb-5">
+      Be first to know when this review updates.
+    </h2>
+    <p class="text-2 text-lg mb-10">
+      Plus the week's best chismis, the takes, the tournament news, what's running and where to eat after.
+      From the floor in Manila, AC, and Cebu.
+    </p>
+    <form onsubmit="return handleSignup(event)" class="max-w-lg mx-auto">
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input type="email" name="email" required placeholder="your@email.com"
+          class="flex-1 px-4 py-3.5 rounded text-sm" style="background: var(--surface-2); border: 1px solid var(--border-2); color: var(--text);" />
+        <button type="submit" class="btn-orange px-6 py-3.5 rounded text-sm whitespace-nowrap">Subscribe Free</button>
+      </div>
+    </form>
+    <p class="text-xs text-3 mt-4">Tuesday + Friday · No spam · Unsubscribe in one click</p>
+  </div>
+</section>
+
+<!-- =============== FOOTER =============== -->
+<footer class="border-t border-soft">
+  <div class="max-w-6xl mx-auto px-6 py-12">
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-8">
+      <div class="flex items-center gap-3">
+        <div class="font-serif text-2xl orange leading-none">A</div>
+        <div>
+          <div class="font-serif text-sm tracking-[0.18em] leading-none">ACESLIVE<span class="orange">PH</span></div>
+          <div class="text-[10px] uppercase tracking-[0.20em] text-3 mt-1">Angeles City, Philippines</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-5 text-xs text-2 flex-wrap">
+        <a href="/" class="hover:text-white">News</a>
+      <a href="/rooms" class="hover:text-white">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white">Online</a>
+      <a href="/tournaments" class="hover:text-white">Tourneys</a>
+      <a href="/poy" class="hover:text-white">POY</a>
+      <a href="/tools" class="hover:text-white">Tools</a>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-3 mb-6">
+      <div>© 2026 ACESLIVEPH · All rights reserved</div>
+      <div class="flex items-center gap-5 flex-wrap">
+        <a href="/about" class="hover:text-white transition">About</a>
+        <a href="/affiliate" class="hover:text-white transition">Affiliate Disclosure</a>
+        <a href="/privacy" class="hover:text-white transition">Privacy</a>
+        <a href="/responsible-play" class="hover:text-white transition">Responsible Play</a>
+      </div>
+    </div>
+    <p class="text-[11px] text-3 leading-relaxed max-w-3xl">
+      ACESLIVEPH is a media and information platform. We do not operate gaming services or accept wagers.
+      Affiliate relationships with poker rooms and operators are disclosed and labeled. Information is for
+      entertainment and reference only. Play responsibly. Must be 21+ to gamble in the Philippines.
+    </p>
+  </div>
+</footer>
+
+<script>
+  function handleSignup(e) {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.querySelector('input[name=email]').value.trim();
+    if (!email) return false;
+    const button = form.querySelector('button');
+    const original = button.innerHTML;
+    button.innerHTML = 'Subscribed ✓';
+    button.disabled = true;
+    setTimeout(() => { form.reset(); button.innerHTML = original; button.disabled = false; }, 2400);
+    return false;
+  }
+</script>
+
+</body>
+</html>
