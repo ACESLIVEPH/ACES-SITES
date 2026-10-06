@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bitcoin Dashboard — BTCisGTO | The Road to Lola's HOME</title>
+<meta name="description" content="Live Bitcoin dashboard and the public BTCisGTO mission treasury — every sat stacked toward Lola's HOME, auditable on-chain.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<style>
+:root {
+  --bg: #060605;
+  --panel: #0f0e0c;
+  --panel2: #171511;
+  --border: rgba(247,147,26,0.10);
+  --border2: rgba(247,147,26,0.22);
+  --text: #e9e4da;
+  --muted: #6f6a5e;
+  --orange: #F7931A;
+  --gold: #d4a843;
+  --danger: #e5605c;
+  --success: #58c98b;
+  --mono: 'JetBrains Mono', monospace;
+  --display: 'Bebas Neue', sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: var(--mono); min-height: 100vh; }
+body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background: radial-gradient(ellipse 80% 40% at 50% -10%, rgba(247,147,26,0.06), transparent); }
+a { color: var(--gold); text-decoration: none; transition: color 0.15s; }
+a:hover { color: var(--orange); }
+.wrap { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 1.25rem 1.25rem 4rem; }
+
+/* ---------- Site nav ---------- */
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-bottom: 1rem; margin-bottom: 1.75rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+.nav-brand { font-family: var(--display); font-size: 1.6rem; letter-spacing: 0.05em; color: var(--text); }
+.nav-brand em { font-style: normal; color: var(--orange); }
+.nav-links { display: flex; gap: 1.1rem; font-size: 0.66rem; flex-wrap: wrap; }
+.nav-links a.here { color: var(--orange); border-bottom: 1px solid var(--orange); padding-bottom: 2px; }
+
+.page-head { margin-bottom: 1.5rem; display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+.page-title { font-family: var(--display); font-size: 3rem; line-height: 0.95; letter-spacing: 0.02em; }
+.page-title em { font-style: normal; color: var(--orange); }
+.page-sub { font-size: 0.7rem; color: var(--muted); margin-top: 0.4rem; line-height: 1.7; }
+.head-meta { display: flex; gap: 1.5rem; align-items: baseline; padding-bottom: 0.35rem; }
+.hm-item { text-align: right; }
+.hm-lbl { display: block; font-size: 0.56rem; color: var(--muted); margin-bottom: 0.25rem; }
+.hm-val { font-size: 0.8rem; color: var(--text); white-space: nowrap; }
+.hm-val.blocknum { color: var(--orange); }
+
+/* ---------- Status banner ---------- */
+.status-banner { display: none; background: rgba(229,96,92,0.07); border: 1px solid rgba(229,96,92,0.3); border-radius: 8px; padding: 0.8rem 1.1rem; margin-bottom: 1rem; font-size: 0.7rem; color: var(--danger); line-height: 1.7; }
+.status-banner.active { display: block; }
+
+/* ---------- Treasury ---------- */
+.treasury { background: linear-gradient(180deg, rgba(247,147,26,0.07), rgba(247,147,26,0.015)); border: 1px solid var(--border2); border-radius: 12px; padding: 1.4rem; margin-bottom: 1rem; display: flex; gap: 1.4rem; align-items: center; flex-wrap: wrap; }
+.t-main { flex: 1; min-width: 260px; }
+.t-eyebrow { font-size: 0.62rem; color: var(--gold); letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+.t-balance { font-family: var(--display); font-size: 3.2rem; line-height: 0.95; color: var(--orange); }
+.t-balance small { font-size: 1.4rem; color: var(--gold); }
+.t-usd { font-size: 0.75rem; color: var(--muted); margin-top: 0.3rem; }
+.t-addr-row { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.9rem; flex-wrap: wrap; }
+.t-addr { font-size: 0.68rem; color: var(--text); background: var(--panel2); border: 1px solid var(--border); border-radius: 6px; padding: 0.5rem 0.7rem; word-break: break-all; max-width: 100%; }
+.t-copy { background: transparent; border: 1px solid var(--border2); border-radius: 6px; color: var(--gold); font-family: var(--mono); font-size: 0.62rem; padding: 0.5rem 0.8rem; cursor: pointer; white-space: nowrap; }
+.t-copy:hover { color: var(--orange); border-color: var(--orange); }
+.t-mission { font-size: 0.66rem; color: var(--muted); margin-top: 0.7rem; line-height: 1.7; }
+.t-mission a { color: var(--gold); }
+.t-qr { flex-shrink: 0; text-align: center; }
+.t-qr img { width: 132px; height: 132px; border-radius: 8px; background: #fff; padding: 6px; display: block; }
+.t-qr-lbl { font-size: 0.58rem; color: var(--muted); margin-top: 0.4rem; }
+.t-recv { font-size: 0.62rem; color: var(--muted); margin-top: 0.25rem; }
+
+/* ---------- Hero card ---------- */
+.hero-card { background: var(--panel); border: 1px solid var(--border2); border-radius: 12px; padding: 1.4rem; margin-bottom: 1rem; }
+.hero-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.live-line { display: flex; align-items: center; gap: 0.5rem; font-size: 0.62rem; color: var(--muted); margin-bottom: 0.45rem; }
+.pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--success); animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.25; } }
+.price-line { display: flex; align-items: baseline; gap: 0.9rem; flex-wrap: wrap; }
+.hero-price { font-family: var(--display); font-size: 4.4rem; line-height: 0.9; letter-spacing: 0.01em; }
+.delta-badge { font-size: 0.78rem; padding: 0.3rem 0.65rem; border-radius: 6px; }
+.delta-badge.up { color: var(--success); border: 1px solid rgba(88,201,139,0.35); }
+.delta-badge.down { color: var(--danger); border: 1px solid rgba(229,96,92,0.35); }
+.controls { display: flex; flex-direction: column; gap: 0.5rem; align-items: flex-end; }
+.tf-bar, .scale-bar { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+.tf-btn, .scale-btn { background: transparent; border: 1px solid var(--border); border-radius: 5px; color: var(--muted); font-family: var(--mono); font-size: 0.62rem; padding: 0.35rem 0.6rem; cursor: pointer; }
+.tf-btn:hover, .scale-btn:hover { color: var(--text); border-color: var(--border2); }
+.tf-btn.active, .scale-btn.active { color: var(--orange); border-color: var(--orange); }
+.chart-area { position: relative; height: 340px; margin-bottom: 0.4rem; }
+.chart-note { font-size: 0.6rem; color: var(--muted); text-align: right; min-height: 1em; margin-bottom: 0.8rem; }
+.stats-row { display: grid; grid-template-columns: repeat(6, 1fr); border-top: 1px solid var(--border); }
+.stat-col { padding: 0.9rem 0.8rem 0.2rem; border-right: 1px solid var(--border); }
+.stat-col:last-child { border-right: none; }
+.stat-lbl { font-size: 0.56rem; color: var(--muted); margin-bottom: 0.35rem; }
+.stat-val { font-size: 0.82rem; line-height: 1.4; }
+.stat-val small { color: var(--muted); font-size: 0.62rem; display: block; }
+
+/* ---------- Metric cards ---------- */
+.metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.8rem; margin-bottom: 0.8rem; }
+.metric-card { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; transition: border-color 0.2s; }
+.metric-card:hover { border-color: var(--border2); }
+.metric-card.accent { border-color: var(--border2); background: linear-gradient(180deg, rgba(247,147,26,0.05), transparent); }
+.m-lbl { font-size: 0.58rem; color: var(--muted); margin-bottom: 0.45rem; }
+.m-val { font-family: var(--display); font-size: 1.7rem; line-height: 1; }
+.m-val.orange { color: var(--orange); }
+.m-sub { font-size: 0.6rem; color: var(--muted); margin-top: 0.35rem; line-height: 1.5; }
+.bar { height: 5px; background: var(--panel2); border-radius: 3px; margin-top: 0.55rem; overflow: hidden; }
+.bar-fill { height: 100%; background: linear-gradient(90deg, var(--gold), var(--orange)); border-radius: 3px; width: 0%; transition: width 0.6s; }
+
+.foot { margin-top: 1.4rem; font-size: 0.6rem; color: var(--muted); line-height: 1.9; border-top: 1px solid var(--border); padding-top: 1rem; }
+
+@media (max-width: 900px) {
+  .stats-row { grid-template-columns: repeat(3, 1fr); }
+  .stat-col { border-bottom: 1px solid var(--border); }
+  .metrics-grid { grid-template-columns: 1fr 1fr; }
+  .hero-price { font-size: 3rem; }
+  .controls { align-items: flex-start; }
+  .page-title { font-size: 2.2rem; }
+}
+</style>
+<link rel="stylesheet" href="/assets/tool-nav-v1.css"><link rel="stylesheet" href="/site.css"><link rel="stylesheet" href="/shared/tool-theme.css"><link rel="canonical" href="https://btcisgto.cloud/dashboard/"><script src="/shared/shell.js" defer></script></head>
+<body class="legacy-tool"><a class="skip" href="#main">Skip to content</a><div id="site-header"></div><main id="main"><nav class="mission-bridge" aria-label="BTCisGTO tools"><a href="/">← BTCisGTO home</a><a href="/tools/">All tools</a><a href="/tradingtool/">Trading Sim</a><a href="/edge/">Edge</a><a href="/dashboard/">Dashboard</a><a href="/building">Build log</a></nav>
+<div class="wrap">
+
+<nav class="nav">
+  <a href="/" class="nav-brand">BTC<em>is</em>GTO</a>
+  <div class="nav-links">
+    <a href="/dashboard/" class="here">Dashboard</a>
+    <a href="/edge/">Edge</a>
+    <a href="/playbook">Playbook</a>
+    <a href="/belief-system">Belief System</a>
+    <a href="/goal">Lola's HOME</a>
+  </div>
+</nav>
+
+<div class="page-head">
+  <div>
+    <h1 class="page-title" style="margin:0;font-weight:400">Bitcoin <em>Dashboard</em></h1>
+    <div class="page-sub">The infinite game, measured live — and the public mission treasury for the road to Lola's HOME.</div>
+  </div>
+  <div class="head-meta">
+    <div class="hm-item"><span class="hm-lbl">Date</span><span class="hm-val" id="top-date">—</span></div>
+    <div class="hm-item"><span class="hm-lbl">Time</span><span class="hm-val" id="top-time">—</span></div>
+    <div class="hm-item"><span class="hm-lbl">Current block</span><span class="hm-val blocknum" id="top-block">—</span></div>
+  </div>
+</div>
+
+<div class="status-banner" id="status-banner"></div>
+
+<div class="treasury">
+  <div class="t-main">
+    <div class="t-eyebrow">Mission treasury · proof of work, auditable on-chain</div>
+    <div class="t-balance" id="t-balance">—<small> BTC</small></div>
+    <div class="t-usd" id="t-usd">verifying on-chain…</div>
+    <div class="t-recv" id="t-recv"></div>
+    <div class="t-addr-row">
+      <div class="t-addr" id="t-addr">bc1qn4yzkudwj5yt8hkk7xtqskkqx2yxz54zp8zppd</div>
+      <button class="t-copy" id="t-copy" onclick="copyAddr()">Copy address</button>
+    </div>
+    <div class="t-mission">This is the published mission address, not a complete audit of company assets, income, expenses, or liabilities. The long-term mission is <a href="/goal">Lola's HOME</a> — a holistic, organic, medicinal eco-resort in the Philippines. Verify the address balance independently.</div>
+  </div>
+  <div class="t-qr" id="t-qr">
+    <img id="t-qr-img" alt="Donate BTC QR code" onerror="document.getElementById('t-qr').style.display='none'">
+    <div class="t-qr-lbl">Scan to donate</div>
+  </div>
+</div>
+
+<div class="hero-card">
+  <div class="hero-head">
+    <div>
+      <div class="live-line"><span class="pulse" id="pulse"></span><span>Bitcoin — live price (USD)</span></div>
+      <div class="price-line">
+        <span class="hero-price" id="hero-price">—</span>
+        <span class="delta-badge up" id="delta-badge" style="display:none"><span id="delta-text"></span></span>
+      </div>
+    </div>
+    <div class="controls">
+      <div class="tf-bar" id="tf-bar">
+        <button class="tf-btn" data-tf="1H">1H</button>
+        <button class="tf-btn active" data-tf="1D">1D</button>
+        <button class="tf-btn" data-tf="7D">7D</button>
+        <button class="tf-btn" data-tf="1M">1M</button>
+        <button class="tf-btn" data-tf="1Y">1Y</button>
+        <button class="tf-btn" data-tf="ALL">ALL</button>
+      </div>
+      <div class="scale-bar">
+        <button class="scale-btn active" id="btn-linear">Linear</button>
+        <button class="scale-btn" id="btn-log">Log</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="chart-area"><canvas id="chart"></canvas></div>
+  <div class="chart-note" id="chart-note"></div>
+
+  <div class="stats-row">
+    <div class="stat-col"><div class="stat-lbl">24h range</div><div class="stat-val" id="stat-range">—</div></div>
+    <div class="stat-col"><div class="stat-lbl">Market cap</div><div class="stat-val" id="stat-mcap">—</div></div>
+    <div class="stat-col"><div class="stat-lbl">24h volume</div><div class="stat-val" id="stat-vol">—</div></div>
+    <div class="stat-col"><div class="stat-lbl">All-time high</div><div class="stat-val" id="stat-ath">—</div></div>
+    <div class="stat-col"><div class="stat-lbl">Sats per USD</div><div class="stat-val" id="stat-sats" style="color:var(--orange)">—</div></div>
+    <div class="stat-col"><div class="stat-lbl">Updated</div><div class="stat-val" id="stat-updated">—</div></div>
+  </div>
+</div>
+
+<div class="metrics-grid">
+  <div class="metric-card"><div class="m-lbl">Price (USD)</div><div class="m-val" id="v-usd">—</div><div class="m-sub" id="v-block">block —</div></div>
+  <div class="metric-card"><div class="m-lbl">Price (Philippine peso)</div><div class="m-val" id="v-php">—</div><div class="m-sub">for the ACES LIVE PH fam</div></div>
+  <div class="metric-card accent"><div class="m-lbl">$1 USD buys</div><div class="m-val orange" id="v-sats">—</div><div class="m-sub">stack accordingly</div></div>
+  <div class="metric-card"><div class="m-lbl">Fear &amp; Greed index</div><div class="m-val" id="v-fng">—</div><div class="m-sub" id="v-fng-sub">GTO move: fade the emotion</div></div>
+</div>
+
+<div class="metrics-grid">
+  <div class="metric-card"><div class="m-lbl">Next halving</div><div class="m-val" id="v-halving">—</div><div class="m-sub" id="v-halving-sub">block 1,050,000</div><div class="bar"><div class="bar-fill" id="epoch-bar"></div></div></div>
+  <div class="metric-card"><div class="m-lbl">Network fees (sat/vB)</div><div class="m-val" id="v-fee">—</div><div class="m-sub" id="v-fee-sub">fast · 30min · 1hr</div></div>
+  <div class="metric-card"><div class="m-lbl">Drawdown from ATH</div><div class="m-val" id="v-dd">—</div><div class="m-sub" id="v-dd-sub"></div></div>
+  <div class="metric-card"><div class="m-lbl">Moscow time</div><div class="m-val orange" id="v-moscow">—</div><div class="m-sub">sats per dollar, read as a clock</div></div>
+</div>
+
+<div class="foot">
+  Price &amp; market data: CoinGecko · Long-range history: Binance &amp; CryptoCompare · Chain &amp; treasury data: mempool.space · Sentiment: alternative.me<br>
+  Refreshes every 60 seconds. Live data or a visible error — never a stale cache. <a href="/">← Back to BTCisGTO</a>
+</div>
+
+</div>
+
+<script>
+/* ============ CONFIG ============ */
+var BTC_ADDRESS = 'bc1qn4yzkudwj5yt8hkk7xtqskkqx2yxz54zp8zppd';
+var CG = 'https://api.coingecko.com/api/v3';
+var MEMPOOL = 'https://mempool.space/api';
+var BINANCE = 'https://api.binance.com/api/v3';
+var CRYPTOCOMPARE = 'https://min-api.cryptocompare.com/data/v2';
+var HALVING_BLOCK = 1050000, EPOCH_START = 840000;
+var REFRESH_MS = 60000;
+
+var state = { price: null, ath: null, chart: null, scale: 'linear', tf: '1D', errors: {} };
+
+/* ============ ERROR SURFACE ============ */
+function setError(src, msg) { state.errors[src] = msg; renderErrors(); }
+function clearErr(src) { delete state.errors[src]; renderErrors(); }
+function renderErrors() {
+  var el = document.getElementById('status-banner');
+  var keys = Object.keys(state.errors);
+  if (!keys.length) { el.classList.remove('active'); el.textContent = ''; document.getElementById('pulse').style.background = 'var(--success)'; return; }
+  el.classList.add('active');
+  el.innerHTML = keys.map(function(k){ return '<strong>' + k + ':</strong> ' + state.errors[k]; }).join('<br>');
+  document.getElementById('pulse').style.background = 'var(--danger)';
+}
+
+/* ============ FORMATTERS ============ */
+function usd(n, dp) { return '$' + Number(n).toLocaleString('en-US', { minimumFractionDigits: dp == null ? 2 : dp, maximumFractionDigits: dp == null ? 2 : dp }); }
+function compact(n) {
+  if (n >= 1e12) return '$' + (n/1e12).toFixed(2) + 'T';
+  if (n >= 1e9) return '$' + (n/1e9).toFixed(2) + 'B';
+  if (n >= 1e6) return '$' + (n/1e6).toFixed(2) + 'M';
+  return usd(n, 0);
+}
+
+/* ============ TREASURY ============ */
+function initTreasuryUI() {
+  var configured = BTC_ADDRESS && BTC_ADDRESS.indexOf('ADDRESS_HERE') === -1;
+  document.getElementById('t-addr').textContent = configured ? BTC_ADDRESS : 'Treasury address not configured yet';
+  if (configured) {
+    document.getElementById('t-qr-img').src = 'https://api.qrserver.com/v1/create-qr-code/?size=132x132&margin=0&data=bitcoin:' + encodeURIComponent(BTC_ADDRESS);
+  } else {
+    document.getElementById('t-qr').style.display = 'none';
+    document.getElementById('t-copy').style.display = 'none';
+    document.getElementById('t-usd').textContent = 'set BTC_ADDRESS in this file to activate on-chain tracking';
+  }
+  return configured;
+}
+async function fetchTreasury() {
+  if (!state.treasuryOn) return;
+  try {
+    var res = await fetch(MEMPOOL + '/address/' + BTC_ADDRESS);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    var d = await res.json();
+    var cs = d.chain_stats, ms = d.mempool_stats;
+    var confirmed = (cs.funded_txo_sum - cs.spent_txo_sum);
+    var pending = (ms.funded_txo_sum - ms.spent_txo_sum);
+    var totalRecv = cs.funded_txo_sum + ms.funded_txo_sum;
+    var balBtc = (confirmed + pending) / 1e8;
+    clearErr('Treasury');
+    document.getElementById('t-balance').innerHTML = balBtc.toLocaleString('en-US', { minimumFractionDigits: 8, maximumFractionDigits: 8 }) + '<small> BTC</small>';
+    var usdLine = state.price ? '≈ ' + usd(balBtc * state.price, 0) + ' at current price' : '';
+    document.getElementById('t-usd').textContent = usdLine + (pending ? ' · ' + (pending/1e8).toFixed(8) + ' BTC pending' : '');
+    document.getElementById('t-recv').textContent = 'Total received all-time: ' + (totalRecv/1e8).toFixed(8) + ' BTC across ' + (cs.tx_count + ms.tx_count) + ' transactions';
+  } catch(e) { setError('Treasury', 'on-chain balance fetch failed — ' + e.message); }
+}
+function copyAddr() {
+  var btn = document.getElementById('t-copy');
+  function ok(){ btn.textContent = 'Copied ✓'; setTimeout(function(){ btn.textContent = 'Copy address'; }, 1800); }
+  if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(BTC_ADDRESS).then(ok); }
+  else {
+    var ta = document.createElement('textarea'); ta.value = BTC_ADDRESS; document.body.appendChild(ta);
+    ta.select(); document.execCommand('copy'); document.body.removeChild(ta); ok();
+  }
+}
+
+/* ============ CLOCK/BLOCK ============ */
+function tickClock() {
+  var now = new Date();
+  document.getElementById('top-date').textContent = now.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
+  document.getElementById('top-time').textContent = now.toLocaleTimeString('en-US');
+}
+setInterval(tickClock, 1000); tickClock();
+async function fetchChain() {
+  try {
+    var res = await fetch(MEMPOOL + '/blocks/tip/height');
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    var tip = parseInt(await res.text(), 10);
+    if (!tip || isNaN(tip)) throw new Error('bad block height');
+    clearErr('mempool.space');
+    document.getElementById('top-block').textContent = '#' + tip.toLocaleString();
+    document.getElementById('v-block').textContent = 'block #' + tip.toLocaleString();
+    var blocksLeft = Math.max(0, HALVING_BLOCK - tip);
+    var days = Math.round(blocksLeft * 10 / 60 / 24);
+    document.getElementById('v-halving').textContent = days.toLocaleString() + ' days';
+    document.getElementById('v-halving-sub').textContent = blocksLeft.toLocaleString() + ' blocks to #' + HALVING_BLOCK.toLocaleString();
+    var pct = Math.min(100, Math.max(0, (tip - EPOCH_START) / (HALVING_BLOCK - EPOCH_START) * 100));
+    document.getElementById('epoch-bar').style.width = pct.toFixed(1) + '%';
+  } catch(e) { setError('mempool.space', 'chain data failed — ' + e.message); }
+  try {
+    var fres = await fetch(MEMPOOL + '/v1/fees/recommended');
+    if (fres.ok) {
+      var f = await fres.json();
+      document.getElementById('v-fee').textContent = f.fastestFee;
+      document.getElementById('v-fee-sub').textContent = 'fast ' + f.fastestFee + ' · 30min ' + f.halfHourFee + ' · 1hr ' + f.hourFee;
+    }
+  } catch(e) { /* fee tile is secondary */ }
+}
+
+/* ============ MARKET DATA ============ */
+async function fetchMarket() {
+  try {
+    var res = await fetch(CG + '/coins/markets?vs_currency=usd&ids=bitcoin&price_change_percentage=24h');
+    if (!res.ok) throw new Error('HTTP ' + res.status + (res.status === 429 ? ' (rate limited — retries next cycle)' : ''));
+    var d = (await res.json())[0];
+    if (!d) throw new Error('empty response');
+    clearErr('CoinGecko market');
+    state.price = d.current_price; state.ath = d.ath;
+    document.getElementById('hero-price').textContent = usd(d.current_price);
+    document.getElementById('v-usd').textContent = usd(d.current_price, 0);
+    var chg = d.price_change_percentage_24h || 0, chgUsd = d.price_change_24h || 0;
+    var badge = document.getElementById('delta-badge');
+    badge.style.display = 'inline-block';
+    badge.className = 'delta-badge ' + (chg >= 0 ? 'up' : 'down');
+    document.getElementById('delta-text').textContent = (chg >= 0 ? '▲ +' : '▼ ') + chg.toFixed(2) + '%  ·  ' + (chgUsd >= 0 ? '+' : '−') + usd(Math.abs(chgUsd), 0) + ' / 24h';
+    document.getElementById('stat-range').textContent = compact(d.low_24h) + ' – ' + compact(d.high_24h);
+    document.getElementById('stat-mcap').textContent = compact(d.market_cap);
+    document.getElementById('stat-vol').textContent = compact(d.total_volume);
+    document.getElementById('stat-ath').innerHTML = usd(d.ath, 0) + '<small>' + new Date(d.ath_date).toLocaleDateString('en-US', { month:'short', year:'numeric' }) + '</small>';
+    var dd = d.ath_change_percentage;
+    document.getElementById('v-dd').textContent = dd.toFixed(1) + '%';
+    document.getElementById('v-dd-sub').textContent = dd > -10 ? 'near the highs — stay humble' : 'discount vs ATH — stay stacking';
+    var sats = Math.round(1e8 / d.current_price);
+    document.getElementById('stat-sats').textContent = sats.toLocaleString();
+    document.getElementById('v-sats').textContent = sats.toLocaleString() + ' sats';
+    var h = Math.floor(sats / 100), m = sats % 100;
+    document.getElementById('v-moscow').textContent = (h < 10 ? '0' : '') + h + ':' + (m < 10 ? '0' : '') + m;
+    document.getElementById('stat-updated').textContent = new Date().toLocaleTimeString('en-US');
+  } catch(e) { setError('CoinGecko market', 'fetch failed — ' + e.message + '. Values are NOT updating.'); }
+}
+async function fetchPhp() {
+  try {
+    var res = await fetch(CG + '/simple/price?ids=bitcoin&vs_currencies=php');
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    var d = await res.json();
+    var php = d.bitcoin && d.bitcoin.php;
+    if (!php) throw new Error('no PHP rate');
+    clearErr('CoinGecko PHP');
+    document.getElementById('v-php').textContent = '₱' + Math.round(php).toLocaleString();
+  } catch(e) { setError('CoinGecko PHP', 'peso price unavailable — ' + e.message); }
+}
+async function fetchFng() {
+  try {
+    var res = await fetch('https://api.alternative.me/fng/');
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    var d = await res.json();
+    var it = d.data && d.data[0];
+    if (!it) throw new Error('empty');
+    clearErr('Fear & Greed');
+    var v = parseInt(it.value, 10);
+    var el = document.getElementById('v-fng');
+    el.textContent = v + ' · ' + it.value_classification;
+    el.style.color = v <= 25 ? 'var(--danger)' : v >= 75 ? 'var(--success)' : 'var(--text)';
+    document.getElementById('v-fng-sub').textContent = v <= 40 ? 'crowd is fearful — the GTO player checks the price and smiles' : v >= 60 ? 'crowd is greedy — discipline beats euphoria' : 'crowd is neutral — keep stacking on schedule';
+  } catch(e) { setError('Fear & Greed', 'sentiment fetch failed — ' + e.message); }
+}
+
+/* ============ CHART: multi-source with fallbacks ============ */
+/* Each timeframe lists sources in priority order; first success wins. */
+var TF_SOURCES = {
+  '1H':  [srcCG(1, 3600000), srcBinance('1m', 60)],
+  '1D':  [srcCG(1), srcBinance('1h', 24)],
+  '7D':  [srcCG(7), srcBinance('4h', 42)],
+  '1M':  [srcCG(30), srcBinance('1d', 30)],
+  '1Y':  [srcBinance('1d', 365), srcCC(365)],
+  'ALL': [srcCC('all'), srcBinance('1w', 1000)]
+};
+function srcCG(days, sliceMs) {
+  return { name: 'CoinGecko', fn: async function(){
+    var res = await fetch(CG + '/coins/bitcoin/market_chart?vs_currency=usd&days=' + days);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    var prices = (await res.json()).prices || [];
+    if (sliceMs) { var cut = Date.now() - sliceMs; prices = prices.filter(function(p){ return p[0] >= cut; }); }
+    if (!prices.length) throw new Error('empty series');
+    return prices;
+  }};
+}
+function srcBinance(interval, limit) {
+  return { name: 'Binance', fn: async function(){
+    var res = await fetch(BINANCE + '/klines?symbol=BTCUSDT&interval=' + interval + '&limit=' + limit);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    var k = await res.json();
+    if (!Array.isArray(k) || !k.length) throw new Error('empty series');
+    return k.map(function(c){ return [c[0], parseFloat(c[4])]; });
+  }};
+}
+function srcCC(days) {
+  return { name: 'CryptoCompare', fn: async function(){
+    var url = CRYPTOCOMPARE + '/histoday?fsym=BTC&tsym=USD&' + (days === 'all' ? 'allData=true' : 'limit=' + days);
+    var res = await fetch(url);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    var d = await res.json();
+    var rows = d.Data && d.Data.Data;
+    if (!rows || !rows.length) throw new Error('empty series');
+    return rows.filter(function(r){ return r.close > 0; }).map(function(r){ return [r.time * 1000, r.close]; });
+  }};
+}
+async function fetchChart() {
+  var note = document.getElementById('chart-note');
+  note.textContent = 'Loading ' + state.tf + '…';
+  var sources = TF_SOURCES[state.tf], lastErr = null;
+  for (var i = 0; i < sources.length; i++) {
+    try {
+      var prices = await sources[i].fn();
+      clearErr('Chart');
+      drawChart(prices);
+      note.textContent = state.tf + ' · ' + prices.length + ' points · source: ' + sources[i].name + (i > 0 ? ' (fallback)' : '');
+      return;
+    } catch(e) { lastErr = sources[i].name + ': ' + e.message; }
+  }
+  setError('Chart', state.tf + ' failed on all sources — last error ' + lastErr);
+  note.textContent = 'Chart unavailable for ' + state.tf + '.';
+}
+function drawChart(prices) {
+  var ctx = document.getElementById('chart').getContext('2d');
+  var data = prices.map(function(p){ return { x: p[0], y: p[1] }; });
+  var first = data[0].y, last = data[data.length-1].y;
+  var lineColor = last >= first ? '#F7931A' : '#e5605c';
+  var grad = ctx.createLinearGradient(0, 0, 0, 340);
+  grad.addColorStop(0, last >= first ? 'rgba(247,147,26,0.18)' : 'rgba(229,96,92,0.15)');
+  grad.addColorStop(1, 'rgba(0,0,0,0)');
+  if (state.chart) state.chart.destroy();
+  state.chart = new Chart(ctx, {
+    type: 'line',
+    data: { datasets: [{ data: data, borderColor: lineColor, backgroundColor: grad, fill: true, borderWidth: 1.5, pointRadius: 0, tension: 0.2 }]},
+    options: {
+      responsive: true, maintainAspectRatio: false, animation: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: { legend: { display: false },
+        tooltip: { backgroundColor: '#171511', borderColor: 'rgba(247,147,26,0.3)', borderWidth: 1,
+          titleColor: '#6f6a5e', bodyColor: '#e9e4da', titleFont: { family: 'JetBrains Mono', size: 10 },
+          bodyFont: { family: 'JetBrains Mono', size: 12 }, displayColors: false,
+          callbacks: {
+            title: function(items){ return new Date(items[0].parsed.x).toLocaleString('en-US'); },
+            label: function(item){ return usd(item.parsed.y); }
+          } } },
+      scales: {
+        x: { type: 'linear', grid: { color: 'rgba(247,147,26,0.04)' },
+          ticks: { color: '#6f6a5e', font: { family: 'JetBrains Mono', size: 9 }, maxTicksLimit: 7,
+            callback: function(v){
+              var d = new Date(v), span = data[data.length-1].x - data[0].x;
+              if (span < 2*86400000) return d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+              if (span > 3*365*86400000) return d.getFullYear();
+              return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: span > 300*86400000 ? '2-digit' : undefined });
+            } } },
+        y: { type: state.scale === 'log' ? 'logarithmic' : 'linear', position: 'right', grid: { color: 'rgba(247,147,26,0.04)' },
+          ticks: { color: '#6f6a5e', font: { family: 'JetBrains Mono', size: 9 }, maxTicksLimit: 6, callback: function(v){ return compact(v); } } }
+      }
+    }
+  });
+}
+
+/* ============ CONTROLS ============ */
+document.getElementById('tf-bar').addEventListener('click', function(e){
+  var btn = e.target.closest('.tf-btn');
+  if (!btn) return;
+  document.querySelectorAll('.tf-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  state.tf = btn.dataset.tf;
+  fetchChart();
+});
+document.getElementById('btn-linear').addEventListener('click', function(){
+  state.scale = 'linear'; this.classList.add('active');
+  document.getElementById('btn-log').classList.remove('active'); fetchChart();
+});
+document.getElementById('btn-log').addEventListener('click', function(){
+  state.scale = 'log'; this.classList.add('active');
+  document.getElementById('btn-linear').classList.remove('active'); fetchChart();
+});
+
+/* ============ BOOT ============ */
+state.treasuryOn = initTreasuryUI();
+async function refreshAll() { await fetchMarket(); fetchPhp(); fetchChain(); fetchFng(); fetchTreasury(); }
+refreshAll();
+fetchChart();
+setInterval(refreshAll, REFRESH_MS);
+</script>
+</main><div id="site-footer"></div></body>
+</html>
