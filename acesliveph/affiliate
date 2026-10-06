@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Affiliate Disclosure — ACESLIVEPH</title>
+<meta name="description" content="ACESLIVEPH's affiliate disclosure: which poker rooms and casinos we have affiliate relationships with, how they're disclosed, and our editorial independence policy." />
+<link rel="canonical" href="https://acesliveph.com/affiliate" />
+<meta name="theme-color" content="#0a0a0a" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root {
+    --bg: #0a0a0a; --surface: #161616; --surface-2: #1c1c1c;
+    --border: #262626; --border-2: #333333;
+    --text: #ffffff; --text-2: #b0b0b0; --text-3: #6b6b6b;
+    --orange: #F7931A; --orange-2: #d97f15;
+    --gold: #c9a227; --green: #4ade80;
+  }
+  * { -webkit-font-smoothing: antialiased; }
+  html, body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; line-height: 1.65; }
+  .font-serif { font-family: 'Cinzel', serif; letter-spacing: 0.02em; }
+  .orange { color: var(--orange); }
+  .gold { color: var(--gold); }
+  .text-2 { color: var(--text-2); }
+  .text-3 { color: var(--text-3); }
+  .surface { background: var(--surface); }
+  .border-soft { border-color: var(--border); }
+  .promo-strip { background: linear-gradient(90deg, #0a0a0a 0%, #4a2a05 50%, #0a0a0a 100%); }
+  .btn-orange { background: var(--orange); color: #0a0a0a; font-weight: 700; transition: all 0.18s; border: 1px solid var(--orange); }
+  .btn-orange:hover { background: var(--orange-2); border-color: var(--orange-2); }
+  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border-2); transition: all 0.18s; }
+  .btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
+  .label { font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--orange); }
+  article h2 { font-family: 'Cinzel', serif; font-size: 1.6rem; font-weight: 600; margin: 2.5rem 0 1rem; color: var(--text); }
+  article h3 { font-family: 'Cinzel', serif; font-size: 1.2rem; font-weight: 600; margin: 1.75rem 0 0.5rem; color: var(--text); }
+  article p { margin-bottom: 1rem; color: var(--text-2); }
+  article p strong { color: var(--text); font-weight: 600; }
+  article ul { margin: 0 0 1.25rem 1.5rem; }
+  article ul li { margin-bottom: 0.5rem; color: var(--text-2); }
+  article ul li::marker { color: var(--orange); }
+  article a { color: var(--orange); border-bottom: 1px solid rgba(247,147,26,0.4); }
+  article a:hover { color: var(--orange-2); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border-2), transparent); }
+</style>
+</head>
+<body>
+
+<div class="promo-strip text-center text-xs py-2 text-2">
+  <span class="hidden sm:inline">📨</span> Subscribe to the newsletter and get the
+  <span class="orange font-semibold">free quarterly digest</span> delivered to your inbox
+</div>
+
+<header class="border-b border-soft sticky top-0 z-50" style="background: rgba(10,10,10,0.92); backdrop-filter: blur(12px);">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3">
+      <div class="font-serif text-2xl orange leading-none">A</div>
+      <div>
+        <div class="font-serif text-sm tracking-[0.18em] leading-none">ACESLIVE<span class="orange">PH</span></div>
+        <div class="text-[10px] uppercase tracking-[0.20em] text-3 mt-1">The #1 Poker Hub of the Philippines</div>
+      </div>
+    </a>
+    <div class="hidden md:flex items-center gap-7 text-xs uppercase tracking-[0.16em] text-2">
+      <a href="/" class="hover:text-white">News</a>
+      <a href="/rooms" class="hover:text-white">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white">Online</a>
+      <a href="/tournaments" class="hover:text-white">Tourneys</a>
+      <a href="/poy" class="hover:text-white">POY</a>
+      <a href="/tools" class="hover:text-white">Tools</a>
+    </div>
+    <a href="/" class="btn-ghost text-xs px-4 py-2 rounded">Home</a>
+  </div>
+</header>
+
+<article class="max-w-3xl mx-auto px-6 py-16">
+  <div class="text-xs text-3 mb-4">
+    <a href="/" class="hover:text-white">Home</a> › <span class="text-2">Affiliate Disclosure</span>
+  </div>
+  <div class="label mb-3">Legal · Last Updated April 29, 2026</div>
+  <h1 class="font-serif text-4xl md:text-5xl font-semibold leading-[1.1] mb-6">Affiliate Disclosure</h1>
+
+  <p class="text-lg text-2 mb-10">
+    ACESLIVEPH is a media and information platform funded primarily through affiliate relationships with online poker rooms,
+    casinos, and gambling-adjacent services. This page explains those relationships in detail so you can make informed decisions.
+  </p>
+
+  <h2>What "affiliate link" means</h2>
+  <p>
+    Some links on ACESLIVEPH — particularly on our review pages, comparison pages, and within editorial articles — are affiliate links.
+    When you click an affiliate link and subsequently sign up and deposit at the linked operator, ACESLIVEPH receives a commission
+    payment from that operator. <strong>This costs you nothing extra.</strong> The operator pays us for the referral; you pay
+    the same prices and play the same games as you would by going directly to the operator.
+  </p>
+
+  <h2>Operators we have or are pursuing affiliate relationships with</h2>
+  <ul>
+    <li>ClubGG Poker</li>
+    <li>Natural8 (GGPoker Asia)</li>
+    <li>ACR Poker (Americas Cardroom / WPN)</li>
+    <li>WPT Global</li>
+    <li>CoinPoker</li>
+    <li>PokerStars</li>
+    <li>Booking.com (hotels — when integrated)</li>
+    <li>Agoda (hotels — when integrated)</li>
+    <li>Selected training products (GTO Wizard, Run It Once, Upswing Poker, etc.)</li>
+  </ul>
+  <p>
+    The list above reflects active and intended relationships as of the last-updated date. Some are formally signed; others are in
+    application stage. We will update this page as relationships are added or removed.
+  </p>
+
+  <h2>How affiliate relationships affect our coverage — they don't</h2>
+  <p>
+    ACESLIVEPH editorial reviews and rankings are produced independently of our affiliate relationships. Sites are ranked in the
+    order we'd recommend them to a friend, not in the order that pays us most. We do not accept money to write a positive review of
+    something we wouldn't have recommended unpaid.
+  </p>
+  <p>
+    This is enforced through the following operating rules:
+  </p>
+  <ul>
+    <li>Editorial decisions about what to cover and how to rank operators are made before any affiliate negotiation.</li>
+    <li>An operator's affiliate payout structure (CPA rate, revenue share, flat fees) does not influence ranking position.</li>
+    <li>If an operator threatens to pull an affiliate deal because of editorial coverage, we publish the piece, end the affiliate relationship, and write a separate piece about the threat with documentation.</li>
+    <li>Our ranking methodology is published in each review for transparency.</li>
+  </ul>
+
+  <h2>Sponsored content and how it differs</h2>
+  <p>
+    Separately from affiliate links, we sometimes publish sponsored content where an operator pays for placement of editorial-style content
+    (e.g., a "Player Spotlight" featuring one of their sponsored players, or a featured listing on a review hub page).
+  </p>
+  <p>
+    All sponsored content is clearly labeled <strong class="orange">"Sponsored"</strong> at the top of the post, in the URL meta-description,
+    and (where applicable) verbally on YouTube videos. We retain editorial control over how sponsored content is framed; sponsors review only the
+    factual accuracy of statements about themselves.
+  </p>
+
+  <h2>FTC and platform disclosure compliance</h2>
+  <p>
+    ACESLIVEPH targets a global audience including readers in the United States, the European Union, and the United Kingdom. We aim to
+    comply with the disclosure standards of:
+  </p>
+  <ul>
+    <li>US Federal Trade Commission "Endorsement Guides"</li>
+    <li>UK Advertising Standards Authority CAP Code</li>
+    <li>EU consumer protection directives on commercial communications</li>
+    <li>Philippine SEC and DTI guidelines on advertising</li>
+  </ul>
+  <p>
+    In practice, this means: every page with affiliate links includes a clearly labeled disclosure box (like the one at the top of every review).
+    Sponsored social media posts on Instagram, TikTok, YouTube, and X are tagged <code>#ad</code> or <code>#sponsored</code> per platform requirements.
+  </p>
+
+  <h2>Questions or corrections</h2>
+  <p>
+    If you spot a missing disclosure, an outdated affiliate relationship, or have any concerns about how a piece of content was monetized,
+    contact us at <a href="mailto:editorial@acesliveph.com">editorial@acesliveph.com</a>. We take affiliate transparency seriously and respond
+    to every disclosure-related inquiry.
+  </p>
+
+  <p class="text-xs text-3 mt-12 pt-6 border-t border-soft">
+    This affiliate disclosure was last updated on April 29, 2026. We update it whenever a new relationship is added or removed,
+    or when industry disclosure standards change.
+  </p>
+</article>
+
+<footer class="border-t border-soft">
+  <div class="max-w-6xl mx-auto px-6 py-10">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+      <div class="flex items-center gap-3">
+        <div class="font-serif text-2xl orange leading-none">A</div>
+        <div class="font-serif text-sm tracking-[0.18em]">ACESLIVE<span class="orange">PH</span></div>
+      </div>
+      <div class="flex items-center gap-5 text-xs text-2 flex-wrap">
+        <a href="/" class="hover:text-white">News</a>
+      <a href="/rooms" class="hover:text-white">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white">Online</a>
+      <a href="/tournaments" class="hover:text-white">Tourneys</a>
+      <a href="/poy" class="hover:text-white">POY</a>
+      <a href="/tools" class="hover:text-white">Tools</a>
+      </div>
+    </div>
+    <div class="divider mb-6"></div>
+    <div class="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-3">
+      <div>© 2026 ACESLIVEPH · Angeles City, Philippines</div>
+      <div class="flex items-center gap-5 flex-wrap">
+        <a href="/about" class="hover:text-white">About</a>
+        <a href="/contact" class="hover:text-white">Contact</a>
+        <a href="/affiliate" class="hover:text-white">Affiliate</a>
+        <a href="/editorial" class="hover:text-white">Editorial</a>
+        <a href="/privacy" class="hover:text-white">Privacy</a>
+        <a href="/terms" class="hover:text-white">Terms</a>
+        <a href="/responsible-play" class="hover:text-white">Responsible Play</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

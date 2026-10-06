@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — ACESLIVEPH</title>
+<meta name="description" content="Get in touch with ACESLIVEPH. Editorial tips, partnerships, corrections, and player profile claims." />
+<link rel="canonical" href="https://acesliveph.com/contact" />
+<meta name="theme-color" content="#0a0a0a" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root { --bg: #0a0a0a; --surface: #161616; --surface-2: #1c1c1c; --border: #262626; --border-2: #333333; --text: #ffffff; --text-2: #b0b0b0; --text-3: #6b6b6b; --orange: #F7931A; --orange-2: #d97f15; --gold: #c9a227; }
+  * { -webkit-font-smoothing: antialiased; }
+  html, body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; line-height: 1.65; }
+  .font-serif { font-family: 'Cinzel', serif; letter-spacing: 0.02em; }
+  .orange { color: var(--orange); } .gold { color: var(--gold); }
+  .text-2 { color: var(--text-2); } .text-3 { color: var(--text-3); }
+  .border-soft { border-color: var(--border); }
+  .promo-strip { background: linear-gradient(90deg, #0a0a0a 0%, #4a2a05 50%, #0a0a0a 100%); }
+  .btn-orange { background: var(--orange); color: #0a0a0a; font-weight: 700; transition: all 0.18s; border: 1px solid var(--orange); }
+  .btn-orange:hover { background: var(--orange-2); border-color: var(--orange-2); }
+  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border-2); transition: all 0.18s; }
+  .btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
+  .label { font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--orange); }
+  .card { background: var(--surface); border: 1px solid var(--border); transition: border 0.2s; padding: 1.5rem; border-radius: 8px; }
+  .card:hover { border-color: var(--orange); }
+  .card a { color: var(--orange); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border-2), transparent); }
+</style>
+</head>
+<body>
+<div class="promo-strip text-center text-xs py-2 text-2"><span class="hidden sm:inline">📨</span> Subscribe to the newsletter and get the <span class="orange font-semibold">free quarterly digest</span> delivered to your inbox</div>
+<header class="border-b border-soft sticky top-0 z-50" style="background: rgba(10,10,10,0.92); backdrop-filter: blur(12px);">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3"><div class="font-serif text-2xl orange leading-none">A</div><div><div class="font-serif text-sm tracking-[0.18em] leading-none">ACESLIVE<span class="orange">PH</span></div><div class="text-[10px] uppercase tracking-[0.20em] text-3 mt-1">The #1 Poker Hub of the Philippines</div></div></a>
+    <div class="hidden md:flex items-center gap-7 text-xs uppercase tracking-[0.16em] text-2">
+      <a href="/" class="hover:text-white">News</a>
+      <a href="/rooms" class="hover:text-white">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white">Online</a>
+      <a href="/tournaments" class="hover:text-white">Tourneys</a>
+      <a href="/poy" class="hover:text-white">POY</a>
+      <a href="/tools" class="hover:text-white">Tools</a>
+    </div>
+    <a href="/" class="btn-ghost text-xs px-4 py-2 rounded">Home</a>
+  </div>
+</header>
+
+<section class="max-w-3xl mx-auto px-6 py-16">
+  <div class="text-xs text-3 mb-4"><a href="/" class="hover:text-white">Home</a> › <span class="text-2">Contact</span></div>
+  <div class="label mb-3">Get in Touch</div>
+  <h1 class="font-serif text-4xl md:text-5xl font-semibold leading-[1.1] mb-6">Contact ACESLIVEPH</h1>
+  <p class="text-lg text-2 mb-10">
+    We respond to every email. Most replies within 48 hours, faster during major series weeks.
+    Pick the right address below and your message gets to the right person.
+  </p>
+
+  <div class="space-y-4">
+    <div class="card">
+      <div class="label mb-2">Editorial</div>
+      <h3 class="font-serif text-xl mb-2">News tips, corrections, player profiles</h3>
+      <p class="text-2 text-sm mb-3">
+        Got a tip on a Filipino player's deep run we missed? Spotted a factual error in an article?
+        Want to claim or correct your Filipino POY profile? This is the address.
+      </p>
+      <a href="mailto:editorial@acesliveph.com" class="text-sm">editorial@acesliveph.com →</a>
+    </div>
+
+    <div class="card">
+      <div class="label mb-2">Partnerships</div>
+      <h3 class="font-serif text-xl mb-2">Sponsorships, affiliate deals, tour coverage</h3>
+      <p class="text-2 text-sm mb-3">
+        Poker rooms, casinos, tour operators, training products — all partnership inquiries go here.
+        We respond within one business week with availability and rates.
+      </p>
+      <a href="mailto:partners@acesliveph.com" class="text-sm">partners@acesliveph.com →</a>
+    </div>
+
+    <div class="card">
+      <div class="label mb-2">General</div>
+      <h3 class="font-serif text-xl mb-2">Anything else</h3>
+      <p class="text-2 text-sm mb-3">
+        Reader questions, feedback, feature requests, "why isn't there a section on X" —
+        all general inquiries go here.
+      </p>
+      <a href="mailto:hello@acesliveph.com" class="text-sm">hello@acesliveph.com →</a>
+    </div>
+
+    <div class="card">
+      <div class="label mb-2">Follow Us</div>
+      <h3 class="font-serif text-xl mb-2">For real-time updates and chismis</h3>
+      <p class="text-2 text-sm mb-3">
+        The fastest way to reach us is in the DMs on the platform you live on.
+        We're active across all eight channels.
+      </p>
+      <div class="flex flex-wrap gap-2 text-xs">
+        <a href="#" class="px-3 py-2 rounded surface border border-soft hover:border-orange hover:text-orange transition">YouTube</a>
+        <a href="#" class="px-3 py-2 rounded surface border border-soft hover:border-orange hover:text-orange transition">Discord</a>
+        <a href="#" class="px-3 py-2 rounded surface border border-soft hover:border-orange hover:text-orange transition">Twitch</a>
+        <a href="#" class="px-3 py-2 rounded surface border border-soft hover:border-orange hover:text-orange transition">TikTok</a>
+        <a href="#" class="px-3 py-2 rounded surface border border-soft hover:border-orange hover:text-orange transition">Instagram</a>
+        <a href="#" class="px-3 py-2 rounded surface border border-soft hover:border-orange hover:text-orange transition">Facebook</a>
+        <a href="#" class="px-3 py-2 rounded surface border border-soft hover:border-orange hover:text-orange transition">Telegram</a>
+        <a href="#" class="px-3 py-2 rounded surface border border-soft hover:border-orange hover:text-orange transition">X / Twitter</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="label mb-2">Mailing Address</div>
+      <p class="text-2 text-sm m-0">
+        ACESLIVEPH<br />
+        Angeles City, Pampanga<br />
+        Philippines
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-soft">
+  <div class="max-w-6xl mx-auto px-6 py-10">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+      <div class="flex items-center gap-3"><div class="font-serif text-2xl orange leading-none">A</div><div class="font-serif text-sm tracking-[0.18em]">ACESLIVE<span class="orange">PH</span></div></div>
+      <div class="flex items-center gap-5 text-xs text-2 flex-wrap"><a href="/" class="hover:text-white">News</a>
+      <a href="/rooms" class="hover:text-white">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white">Online</a>
+      <a href="/tournaments" class="hover:text-white">Tourneys</a>
+      <a href="/poy" class="hover:text-white">POY</a>
+      <a href="/tools" class="hover:text-white">Tools</a></div>
+    </div>
+    <div class="divider mb-6"></div>
+    <div class="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-3">
+      <div>© 2026 ACESLIVEPH · Angeles City, Philippines</div>
+      <div class="flex items-center gap-5 flex-wrap"><a href="/about" class="hover:text-white">About</a><a href="/contact" class="hover:text-white">Contact</a><a href="/affiliate" class="hover:text-white">Affiliate</a><a href="/editorial" class="hover:text-white">Editorial</a><a href="/privacy" class="hover:text-white">Privacy</a><a href="/terms" class="hover:text-white">Terms</a><a href="/responsible-play" class="hover:text-white">Responsible Play</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

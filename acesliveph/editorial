@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Editorial Standards — ACESLIVEPH</title>
+<meta name="description" content="ACESLIVEPH editorial standards: how we source, fact-check, handle corrections, and maintain independence from advertisers and affiliate partners." />
+<link rel="canonical" href="https://acesliveph.com/editorial" />
+<meta name="theme-color" content="#0a0a0a" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root { --bg: #0a0a0a; --surface: #161616; --surface-2: #1c1c1c; --border: #262626; --border-2: #333333; --text: #ffffff; --text-2: #b0b0b0; --text-3: #6b6b6b; --orange: #F7931A; --orange-2: #d97f15; --gold: #c9a227; }
+  * { -webkit-font-smoothing: antialiased; }
+  html, body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; line-height: 1.65; }
+  .font-serif { font-family: 'Cinzel', serif; letter-spacing: 0.02em; }
+  .orange { color: var(--orange); } .gold { color: var(--gold); }
+  .text-2 { color: var(--text-2); } .text-3 { color: var(--text-3); }
+  .border-soft { border-color: var(--border); }
+  .promo-strip { background: linear-gradient(90deg, #0a0a0a 0%, #4a2a05 50%, #0a0a0a 100%); }
+  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border-2); transition: all 0.18s; }
+  .btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
+  .label { font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--orange); }
+  article h2 { font-family: 'Cinzel', serif; font-size: 1.6rem; font-weight: 600; margin: 2.5rem 0 1rem; color: var(--text); }
+  article p { margin-bottom: 1rem; color: var(--text-2); }
+  article p strong { color: var(--text); font-weight: 600; }
+  article ul { margin: 0 0 1.25rem 1.5rem; }
+  article ul li { margin-bottom: 0.5rem; color: var(--text-2); }
+  article ul li::marker { color: var(--orange); }
+  article a { color: var(--orange); border-bottom: 1px solid rgba(247,147,26,0.4); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border-2), transparent); }
+</style>
+</head>
+<body>
+<div class="promo-strip text-center text-xs py-2 text-2"><span class="hidden sm:inline">📨</span> Subscribe to the newsletter and get the <span class="orange font-semibold">free quarterly digest</span> delivered to your inbox</div>
+<header class="border-b border-soft sticky top-0 z-50" style="background: rgba(10,10,10,0.92); backdrop-filter: blur(12px);">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3"><div class="font-serif text-2xl orange leading-none">A</div><div><div class="font-serif text-sm tracking-[0.18em] leading-none">ACESLIVE<span class="orange">PH</span></div><div class="text-[10px] uppercase tracking-[0.20em] text-3 mt-1">The #1 Poker Hub of the Philippines</div></div></a>
+    <div class="hidden md:flex items-center gap-7 text-xs uppercase tracking-[0.16em] text-2"><a href="/" class="hover:text-white">News</a>
+      <a href="/rooms" class="hover:text-white">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white">Online</a>
+      <a href="/tournaments" class="hover:text-white">Tourneys</a>
+      <a href="/poy" class="hover:text-white">POY</a>
+      <a href="/tools" class="hover:text-white">Tools</a></div>
+    <a href="/" class="btn-ghost text-xs px-4 py-2 rounded">Home</a>
+  </div>
+</header>
+
+<article class="max-w-3xl mx-auto px-6 py-16">
+  <div class="text-xs text-3 mb-4"><a href="/" class="hover:text-white">Home</a> › <span class="text-2">Editorial Standards</span></div>
+  <div class="label mb-3">How We Operate</div>
+  <h1 class="font-serif text-4xl md:text-5xl font-semibold leading-[1.1] mb-6">Editorial Standards</h1>
+  <p class="text-lg text-2 mb-10">
+    These are the rules we follow. They apply to every piece of content on ACESLIVEPH — articles,
+    reviews, rankings, newsletter issues, social posts, video content. They exist because trust takes
+    years to build and one careless post to break.
+  </p>
+
+  <h2>Our voice</h2>
+  <p>
+    ACESLIVEPH is the friend who actually plays. Not the journalist who covers the game from a press box.
+    Not the operator who's selling you something. The grinder who walks into the room, sits down, and tells you
+    the truth about what just happened. We are player-first, plain-spoken, willing to have opinions and defend them,
+    willing to call out bad rakes and shady operators, willing to praise the good ones.
+  </p>
+
+  <h2>The Three-Source Rule</h2>
+  <p>
+    Before publishing anything negative about an identified individual or operator, we require at minimum:
+  </p>
+  <ul>
+    <li><strong>Two independent sources</strong> confirming the fact (not two people who heard it from the same place), or</li>
+    <li><strong>One source plus documentary evidence</strong> (screenshots, photos, public records, official statements).</li>
+  </ul>
+  <p>
+    If we have only one verbal source, the story stays unpublished or gets framed in non-attributable terms
+    ("multiple regs in Manila have raised concerns about the rake structure at [room]" rather than naming an individual operator without documentation).
+  </p>
+
+  <h2>Right of Reply</h2>
+  <p>
+    Before publishing anything substantively negative about an identified person or operator, we contact them
+    and offer a chance to respond. Email or DM. We give them 24 hours.
+  </p>
+  <ul>
+    <li>If they respond, we include their response in the piece.</li>
+    <li>If they don't respond, we publish with a note that they were given the chance.</li>
+    <li>If they threaten or try to bully us out of publishing, we publish anyway — with documentation of the threat.</li>
+  </ul>
+
+  <h2>Things we never publish</h2>
+  <ul>
+    <li>Allegations of cheating against an identified individual without documentary evidence.</li>
+    <li>Allegations of criminal conduct against any identified party without documentary evidence and legal review.</li>
+    <li>Specific accusations of poker-room collusion or game-rigging without documentary evidence.</li>
+    <li>Personal information about a player they haven't made public themselves (real name if they go by a handle, home address, family details, employer).</li>
+    <li>Photos of identifiable players mid-hand without their permission.</li>
+    <li>Speculation about a player's mental health, addiction, or financial trouble unless they've spoken about it publicly.</li>
+    <li>Content about a player's personal life unless they've made it public themselves.</li>
+    <li>Schedules or details for underground / unlicensed games.</li>
+  </ul>
+
+  <h2>Affiliate independence</h2>
+  <p>
+    ACESLIVEPH earns commissions from some of the operators we review. This does not affect our coverage:
+  </p>
+  <ul>
+    <li>Editorial decisions are made before any affiliate negotiation.</li>
+    <li>An operator's affiliate payout structure does not influence ranking position.</li>
+    <li>If an operator threatens to pull an affiliate deal because of editorial coverage, we publish the piece, end the affiliate relationship, and write a separate piece about the threat.</li>
+    <li>If we wouldn't write a positive review of something unpaid, we don't write one because of the affiliate either.</li>
+  </ul>
+  <p>
+    See our <a href="/affiliate">Affiliate Disclosure</a> for the full list of operators we have or are pursuing relationships with.
+  </p>
+
+  <h2>Sponsored content rules</h2>
+  <p>
+    When a brand pays for content placement (e.g., a Player Spotlight, a featured listing):
+  </p>
+  <ul>
+    <li>Always labeled <strong class="orange">"Sponsored"</strong> at the top of the post.</li>
+    <li>The sponsor reviews factual accuracy of statements about themselves; they do not have editorial control over framing.</li>
+    <li>We do not accept money to write a positive review of something we wouldn't have recommended unpaid.</li>
+    <li>If the sponsor pulls the deal because we won't change our framing, we publish anyway and refund the sponsorship.</li>
+  </ul>
+
+  <h2>Corrections and retractions</h2>
+  <p>We will get things wrong. The rule is: own it fast, own it visibly.</p>
+  <ul>
+    <li><strong>Factual error:</strong> corrected within 24 hours of confirmation. An "Updated [date]: corrected [fact]" note is added at the top of the article.</li>
+    <li><strong>Significant factual error or unfounded accusation:</strong> retracted publicly. The retraction is pinned to the top of the relevant article and published as a standalone post on social channels. We apologize directly to the affected party.</li>
+    <li><strong>Pattern of errors from a contributor:</strong> the contributor is dropped.</li>
+  </ul>
+  <p>A correction we own is a credibility builder. A correction we hide is a credibility killer.</p>
+
+  <h2>AI-assisted content</h2>
+  <p>
+    Some ACESLIVEPH content is AI-assisted — particularly news aggregation summaries, review templates, and educational
+    glossary content. Our rule:
+  </p>
+  <ul>
+    <li>AI is a starting draft, never the final published piece.</li>
+    <li>Every AI-assisted piece is reviewed and edited by a human before publishing.</li>
+    <li>We do not publish raw AI output as editorial content.</li>
+    <li>AI is never used to fabricate quotes, sources, or facts.</li>
+    <li>AI tools used: Claude (Anthropic), GPT (OpenAI), and similar large language models. We do not list specific model versions in articles unless relevant to the topic.</li>
+  </ul>
+
+  <h2>Reporting an issue</h2>
+  <p>
+    If you spot an error, an undisclosed conflict of interest, or a factual claim you can disprove,
+    contact <a href="mailto:editorial@acesliveph.com">editorial@acesliveph.com</a>. We respond to every editorial complaint
+    within 48 hours. Where the complaint is valid, we correct or retract publicly.
+  </p>
+
+  <p class="text-xs text-3 mt-12 pt-6 border-t border-soft">Last updated April 29, 2026.</p>
+</article>
+
+<footer class="border-t border-soft">
+  <div class="max-w-6xl mx-auto px-6 py-10">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+      <div class="flex items-center gap-3"><div class="font-serif text-2xl orange leading-none">A</div><div class="font-serif text-sm tracking-[0.18em]">ACESLIVE<span class="orange">PH</span></div></div>
+      <div class="flex items-center gap-5 text-xs text-2 flex-wrap"><a href="/" class="hover:text-white">News</a>
+      <a href="/rooms" class="hover:text-white">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white">Online</a>
+      <a href="/tournaments" class="hover:text-white">Tourneys</a>
+      <a href="/poy" class="hover:text-white">POY</a>
+      <a href="/tools" class="hover:text-white">Tools</a></div>
+    </div>
+    <div class="divider mb-6"></div>
+    <div class="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-3">
+      <div>© 2026 ACESLIVEPH · Angeles City, Philippines</div>
+      <div class="flex items-center gap-5 flex-wrap"><a href="/about" class="hover:text-white">About</a><a href="/contact" class="hover:text-white">Contact</a><a href="/affiliate" class="hover:text-white">Affiliate</a><a href="/editorial" class="hover:text-white">Editorial</a><a href="/privacy" class="hover:text-white">Privacy</a><a href="/terms" class="hover:text-white">Terms</a><a href="/responsible-play" class="hover:text-white">Responsible Play</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

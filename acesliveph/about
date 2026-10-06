@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ACESLIVEPH — The Poker Hub of the Philippines & Southeast Asia</title>
+<meta name="description" content="Live cash games, tournament series, news, chismis, and free tools for poker players across the Philippines and Southeast Asia. Manila, Angeles City, Cebu, and growing." />
+<meta property="og:title" content="ACESLIVEPH — The Poker Hub of the Philippines & Southeast Asia" />
+<meta property="og:description" content="Where the game lives. Where the players go. Live games, tournaments, news, and tools — all in one place." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://acesliveph.com" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --bg-2: #111111;
+    --surface: #161616;
+    --surface-2: #1c1c1c;
+    --border: #262626;
+    --border-2: #333333;
+    --text: #ffffff;
+    --text-2: #b0b0b0;
+    --text-3: #6b6b6b;
+    --orange: #F7931A;
+    --orange-2: #d97f15;
+    --orange-glow: rgba(247, 147, 26, 0.4);
+    --gold: #c9a227;
+    --gold-2: #b08e1f;
+    --gold-soft: rgba(201, 162, 39, 0.12);
+    --red: #b8232b;
+  }
+  * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-weight: 400;
+    line-height: 1.55;
+  }
+  .font-serif { font-family: 'Cinzel', serif; letter-spacing: 0.02em; }
+  .gold { color: var(--orange); }
+  .gold-bg { background: var(--orange); color: #1a1a1a; }
+  .text-2 { color: var(--text-2); }
+  .text-3 { color: var(--text-3); }
+  .surface { background: var(--surface); }
+  .surface-2 { background: var(--surface-2); }
+  .border-soft { border-color: var(--border); }
+  .border-mid { border-color: var(--border-2); }
+
+  /* Felt texture for hero */
+  .felt-bg {
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(247, 147, 26, 0.18) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 100%, rgba(201, 162, 39, 0.05) 0%, transparent 50%),
+      var(--bg);
+  }
+  .grain::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
+
+  /* Suit accents */
+  .suit-spade::before { content: '\2660'; color: var(--orange); margin-right: 0.4em; }
+  .suit-club::before  { content: '\2663'; color: var(--orange); margin-right: 0.4em; }
+  .suit-heart::before { content: '\2665'; color: var(--orange); margin-right: 0.4em; }
+  .suit-diamond::before { content: '\2666'; color: var(--orange); margin-right: 0.4em; }
+
+  /* Buttons */
+  .btn-orange {
+    background: var(--orange);
+    color: #1a1a1a;
+    font-weight: 600;
+    transition: all 0.18s ease;
+    border: 1px solid var(--orange);
+  }
+  .btn-orange:hover { background: var(--orange-2); border-color: var(--orange-2); transform: translateY(-1px); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border-2);
+    transition: all 0.18s ease;
+  }
+  .btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
+
+  /* Email input */
+  .email-input {
+    background: var(--surface-2);
+    border: 1px solid var(--border-2);
+    color: var(--text);
+    transition: border 0.18s;
+  }
+  .email-input:focus { outline: none; border-color: var(--orange); }
+  .email-input::placeholder { color: var(--text-3); }
+
+  /* Card hover */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    transition: border 0.2s, transform 0.2s, background 0.2s;
+  }
+  .card:hover { border-color: var(--border-2); background: var(--surface-2); }
+
+  /* Status dots */
+  .dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+  .dot-live { background: #4ade80; box-shadow: 0 0 8px rgba(74, 222, 128, 0.6); }
+  .dot-soon { background: var(--orange); }
+  .dot-future { background: var(--text-3); }
+
+  /* Marquee chismis */
+  .chismis-tag {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--text-2);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 3px;
+  }
+  .chismis-tag.live { color: #4ade80; border-color: rgba(74, 222, 128, 0.3); }
+  .chismis-tag.opinion { color: var(--orange); border-color: rgba(247, 147, 26, 0.3); }
+  .chismis-tag.news { color: #93c5fd; border-color: rgba(147, 197, 253, 0.3); }
+  .chismis-tag.nightlife { color: #fda4af; border-color: rgba(253, 164, 175, 0.3); }
+  .chismis-tag.tour { color: #c4b5fd; border-color: rgba(196, 181, 253, 0.3); }
+
+  /* Divider */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-2), transparent);
+  }
+
+  /* Subtle link */
+  .link { color: var(--text); border-bottom: 1px solid var(--border-2); transition: border 0.15s, color 0.15s; }
+  .link:hover { color: var(--orange); border-color: var(--orange); }
+
+  /* Section label */
+  .label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--orange);
+  }
+
+  /* Numeric data */
+  .tabular { font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body class="felt-bg relative">
+
+<!-- ============= NAV ============= -->
+<nav class="border-b border-soft sticky top-0 z-40 backdrop-blur" style="background: rgba(10,10,10,0.85);">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <span class="font-serif text-xl orange">A</span>
+      <span class="font-serif text-base tracking-widest">ACESLIVE<span class="orange">PH</span></span>
+    </a>
+    <div class="hidden md:flex items-center gap-7 text-xs uppercase tracking-[0.16em] text-2">
+      <a href="/" class="hover:text-white transition">News</a>
+      <a href="/rooms" class="hover:text-white transition">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white transition">Online</a>
+      <a href="/tournaments" class="hover:text-white transition">Tourneys</a>
+      <a href="/poy" class="hover:text-white transition">POY</a>
+      <a href="/tools" class="hover:text-white transition">Tools</a>
+    </div>
+    <a href="/#newsletter" class="btn-ghost text-xs px-4 py-2 rounded">Subscribe</a>
+  </div>
+</nav>
+
+<!-- ============= HERO ============= -->
+<section class="relative grain overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 pt-20 pb-24 md:pt-28 md:pb-32 relative">
+    <div class="text-center max-w-4xl mx-auto">
+      <div class="label mb-6">Beta launching Summer 2026 · Manila · Angeles City · Cebu</div>
+      <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl leading-tight font-semibold mb-6">
+        Where the game lives.<br />
+        <span class="orange">Where the players go.</span>
+      </h1>
+      <p class="text-lg md:text-xl text-2 max-w-2xl mx-auto mb-10">
+        The poker hub of the Philippines and Southeast Asia.
+        Live cash games, tournament series, scene news and chismis,
+        and free tools — all in one place. Built by players, for players.
+      </p>
+
+      <!-- Email capture -->
+      <form id="hero-signup" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto" action="#" method="post" onsubmit="return handleSignup(event)">
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="your@email.com"
+          class="email-input flex-1 px-4 py-3 rounded text-sm" />
+        <button type="submit" class="btn-orange px-6 py-3 rounded text-sm whitespace-nowrap">
+          Get the newsletter
+        </button>
+      </form>
+      <p class="text-xs text-3 mt-3">
+        Twice a week · Tuesday & Friday · No spam · Unsubscribe anytime
+      </p>
+
+      <!-- Trust row -->
+      <div class="mt-14 pt-10 border-t border-soft grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <div class="font-serif text-3xl gold tabular">12+</div>
+          <div class="text-xs text-3 mt-1 uppercase tracking-wider">Rooms tracked</div>
+        </div>
+        <div>
+          <div class="font-serif text-3xl gold tabular">3</div>
+          <div class="text-xs text-3 mt-1 uppercase tracking-wider">Cities live</div>
+        </div>
+        <div>
+          <div class="font-serif text-3xl gold tabular">All</div>
+          <div class="text-xs text-3 mt-1 uppercase tracking-wider">APT · WPT · Triton</div>
+        </div>
+        <div>
+          <div class="font-serif text-3xl gold tabular">9</div>
+          <div class="text-xs text-3 mt-1 uppercase tracking-wider">Free poker tools</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============= FOUR PRODUCT LAYERS ============= -->
+<section id="product" class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+  <div class="max-w-2xl mb-14">
+    <div class="label mb-4">The platform</div>
+    <h2 class="font-serif text-3xl md:text-5xl font-semibold mb-4">
+      Four ways to play.
+    </h2>
+    <p class="text-2 text-lg">
+      One app. Everything a traveling live poker player needs to plan the trip,
+      track the trip, log the trip, read about the trip, and prep for the next one.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-5">
+
+    <!-- Live & Rooms -->
+    <div class="card rounded-lg p-7">
+      <div class="flex items-start justify-between mb-4">
+        <div>
+          <div class="suit-spade label">Live & Rooms</div>
+          <h3 class="font-serif text-2xl mt-2">Is it running tonight?</h3>
+        </div>
+        <span class="chismis-tag live"><span class="dot dot-live"></span>Live data</span>
+      </div>
+      <p class="text-2 mb-5">
+        Real-time view of cash games at every major poker room in Southeast Asia.
+        Stakes, waitlists, rake structures, jackpots, dealer-tip norms,
+        food, ATMs, hotel adjacency. And what's worth doing
+        <span class="orange">after the session</span> — bars, restaurants, and late-night spots near the room.
+      </p>
+      <div class="flex flex-wrap gap-2">
+        <span class="chismis-tag">Okada</span>
+        <span class="chismis-tag">Solaire</span>
+        <span class="chismis-tag">Resorts World</span>
+        <span class="chismis-tag">Hann Clark</span>
+        <span class="chismis-tag">City of Dreams</span>
+        <span class="chismis-tag">Newport</span>
+        <span class="chismis-tag">NUStar Cebu</span>
+        <span class="chismis-tag">+ more</span>
+      </div>
+    </div>
+
+    <!-- Tournaments -->
+    <div class="card rounded-lg p-7">
+      <div class="flex items-start justify-between mb-4">
+        <div>
+          <div class="suit-club label">Tournament Hub</div>
+          <h3 class="font-serif text-2xl mt-2">Every series in Asia.</h3>
+        </div>
+        <span class="chismis-tag tour">Updated daily</span>
+      </div>
+      <p class="text-2 mb-5">
+        APT, WPT Asia, Triton, GG Live, PokerStars Live, PSPC Manila,
+        and every regional series — schedules, structures, satellites,
+        live floor reports, end-of-day chip counts, results, and player profiles.
+        One calendar. Every stop.
+      </p>
+      <div class="flex flex-wrap gap-2">
+        <span class="chismis-tag">APT</span>
+        <span class="chismis-tag">WPT Asia</span>
+        <span class="chismis-tag">Triton</span>
+        <span class="chismis-tag">PSPC Manila</span>
+        <span class="chismis-tag">GG Live</span>
+        <span class="chismis-tag">PokerStars Live</span>
+        <span class="chismis-tag">Hann Million</span>
+        <span class="chismis-tag">+ regional</span>
+      </div>
+    </div>
+
+    <!-- Newsletter & Chismis -->
+    <div class="card rounded-lg p-7">
+      <div class="flex items-start justify-between mb-4">
+        <div>
+          <div class="suit-heart label">Newsletter & Chismis</div>
+          <h3 class="font-serif text-2xl mt-2">The takes. The news. The chismis.</h3>
+        </div>
+        <span class="chismis-tag opinion">Tue · Fri</span>
+      </div>
+      <p class="text-2 mb-5">
+        Twice-weekly newsletter, plus an always-fresh feed of news, opinion, and floor gossip
+        from the Asian poker scene. Who shipped the latest Hann Million.
+        Why the new rake at City of Dreams is a joke. Where the regs are eating after Solaire midnight breaks.
+        Cardplayer is corporate. We're <span class="orange">of the scene.</span>
+      </p>
+      <div class="flex flex-wrap gap-2">
+        <span class="chismis-tag news">News</span>
+        <span class="chismis-tag opinion">Opinion</span>
+        <span class="chismis-tag">Trip reports</span>
+        <span class="chismis-tag">Player interviews</span>
+        <span class="chismis-tag nightlife">Nightlife</span>
+        <span class="chismis-tag">Strategy</span>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="card rounded-lg p-7">
+      <div class="flex items-start justify-between mb-4">
+        <div>
+          <div class="suit-diamond label">Free Tools</div>
+          <h3 class="font-serif text-2xl mt-2">Built for live players.</h3>
+        </div>
+        <span class="chismis-tag">Free forever</span>
+      </div>
+      <p class="text-2 mb-5">
+        Bankroll and session tracker. Equity and odds calculator. Preflop charts library.
+        Hand history journal. Hourly tracker. ICM calculator. Variance simulator.
+        Kelly sizing. All free. Pro tier unlocks the deep stuff.
+      </p>
+      <div class="grid grid-cols-3 gap-2 text-xs text-2">
+        <div class="flex items-center gap-2"><span class="orange">▸</span> Session tracker</div>
+        <div class="flex items-center gap-2"><span class="orange">▸</span> Bankroll</div>
+        <div class="flex items-center gap-2"><span class="orange">▸</span> Equity calc</div>
+        <div class="flex items-center gap-2"><span class="orange">▸</span> Preflop charts</div>
+        <div class="flex items-center gap-2"><span class="orange">▸</span> Hand journal</div>
+        <div class="flex items-center gap-2"><span class="orange">▸</span> Hourly</div>
+        <div class="flex items-center gap-2"><span class="orange">▸</span> ICM</div>
+        <div class="flex items-center gap-2"><span class="orange">▸</span> Variance</div>
+        <div class="flex items-center gap-2"><span class="orange">▸</span> Kelly</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============= COVERAGE ============= -->
+<section id="coverage" class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+  <div class="max-w-2xl mb-14">
+    <div class="label mb-4">Coverage</div>
+    <h2 class="font-serif text-3xl md:text-5xl font-semibold mb-4">
+      Where we're live.<br /><span class="orange">Where we're going.</span>
+    </h2>
+    <p class="text-2 text-lg">
+      Phase 1 is the Philippines — the densest live poker market in Southeast Asia outside Macau.
+      Phase 2 expands across the rest of the APT and WPT Asia footprint.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-5">
+
+    <!-- Phase 1 -->
+    <div class="card rounded-lg p-6">
+      <div class="flex items-center justify-between mb-5">
+        <div class="label">Phase 1 · Live Now</div>
+        <span class="chismis-tag live"><span class="dot dot-live"></span>Beta</span>
+      </div>
+      <ul class="space-y-3 text-sm">
+        <li class="flex items-center justify-between border-b border-soft pb-2">
+          <span><strong class="text-white">Manila</strong> <span class="text-3 text-xs">· 7 rooms</span></span>
+          <span class="text-3 text-xs">PH</span>
+        </li>
+        <li class="flex items-center justify-between border-b border-soft pb-2">
+          <span><strong class="text-white">Angeles City</strong> <span class="text-3 text-xs">· 3 rooms</span></span>
+          <span class="text-3 text-xs">PH</span>
+        </li>
+        <li class="flex items-center justify-between">
+          <span><strong class="text-white">Cebu</strong> <span class="text-3 text-xs">· 2 rooms</span></span>
+          <span class="text-3 text-xs">PH</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Phase 2 -->
+    <div class="card rounded-lg p-6">
+      <div class="flex items-center justify-between mb-5">
+        <div class="label">Phase 2 · Q4 2026</div>
+        <span class="chismis-tag" style="color: var(--orange); border-color: rgba(201,162,39,0.3);"><span class="dot dot-soon"></span>Soon</span>
+      </div>
+      <ul class="space-y-3 text-sm text-2">
+        <li class="flex items-center justify-between border-b border-soft pb-2">
+          <span>Saigon · Ho Chi Minh</span><span class="text-3 text-xs">VN</span>
+        </li>
+        <li class="flex items-center justify-between border-b border-soft pb-2">
+          <span>Phnom Penh</span><span class="text-3 text-xs">KH</span>
+        </li>
+        <li class="flex items-center justify-between border-b border-soft pb-2">
+          <span>Seoul · Jeju</span><span class="text-3 text-xs">KR</span>
+        </li>
+        <li class="flex items-center justify-between">
+          <span>Macau</span><span class="text-3 text-xs">MO</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Phase 3 -->
+    <div class="card rounded-lg p-6">
+      <div class="flex items-center justify-between mb-5">
+        <div class="label">Phase 3 · 2027</div>
+        <span class="chismis-tag"><span class="dot dot-future"></span>Future</span>
+      </div>
+      <ul class="space-y-3 text-sm text-2">
+        <li class="flex items-center justify-between border-b border-soft pb-2">
+          <span>Taipei</span><span class="text-3 text-xs">TW</span>
+        </li>
+        <li class="flex items-center justify-between border-b border-soft pb-2">
+          <span>Bangkok · Pattaya</span><span class="text-3 text-xs">TH</span>
+        </li>
+        <li class="flex items-center justify-between border-b border-soft pb-2">
+          <span>Colombo</span><span class="text-3 text-xs">LK</span>
+        </li>
+        <li class="flex items-center justify-between">
+          <span>Tokyo · Osaka</span><span class="text-3 text-xs">JP</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============= SAMPLE FEED ============= -->
+<section id="feed" class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+  <div class="grid md:grid-cols-12 gap-12">
+    <div class="md:col-span-4">
+      <div class="label mb-4">The Chismis Feed</div>
+      <h2 class="font-serif text-3xl md:text-5xl font-semibold mb-5 leading-tight">
+        Fresh.<br />
+        <span class="orange">From the floor.</span>
+      </h2>
+      <p class="text-2 mb-6">
+        Short scrolling river of news, opinion, and gossip from across Asian poker.
+        Updated through the day. Distilled into the newsletter twice a week.
+      </p>
+      <a href="#newsletter" class="link text-sm">Subscribe to the newsletter →</a>
+    </div>
+
+    <div class="md:col-span-8 space-y-4">
+
+      <!-- Item 1 -->
+      <article class="card rounded-lg p-6">
+        <div class="flex items-center gap-2 mb-3 text-xs">
+          <span class="chismis-tag live"><span class="dot dot-live"></span>Live</span>
+          <span class="text-3">·</span>
+          <span class="text-3">2 min ago</span>
+          <span class="text-3 ml-auto">Solaire · Manila</span>
+        </div>
+        <h3 class="font-serif text-lg mb-2">3 tables of ₱100/200 NLH running. List of 12.</h3>
+        <p class="text-2 text-sm">
+          Solaire's busiest weeknight in three weeks. Two seats open at the moment, expected to clear by 9pm.
+          Stringer reports the ₱500/1000 game spinning up if a 4th and 5th sit.
+        </p>
+      </article>
+
+      <!-- Item 2 -->
+      <article class="card rounded-lg p-6">
+        <div class="flex items-center gap-2 mb-3 text-xs">
+          <span class="chismis-tag opinion">Opinion · Jayleezie</span>
+          <span class="text-3">·</span>
+          <span class="text-3">3 hours ago</span>
+        </div>
+        <h3 class="font-serif text-lg mb-2">The new rake at City of Dreams is a joke. Here's the math.</h3>
+        <p class="text-2 text-sm">
+          5% capped at ₱500 per pot up from ₱300 means a 1/2 grinder is now paying roughly ₱1,400/hour
+          in rake at peak. That's a 2bb/100 swing. The room can do this because…
+        </p>
+      </article>
+
+      <!-- Item 3 -->
+      <article class="card rounded-lg p-6">
+        <div class="flex items-center gap-2 mb-3 text-xs">
+          <span class="chismis-tag tour">Tour</span>
+          <span class="text-3">·</span>
+          <span class="text-3">6 hours ago</span>
+          <span class="text-3 ml-auto">via PokerNews</span>
+        </div>
+        <h3 class="font-serif text-lg mb-2">APT Manila announces ₱100M guarantee for the August Main Event.</h3>
+        <p class="text-2 text-sm">
+          Up from ₱75M last quarter. Satellites running on ClubGG starting next week, ₱5K direct buy-ins
+          from June 1. Side events list confirmed for Hann + Newport double-stop.
+        </p>
+      </article>
+
+      <!-- Item 4 -->
+      <article class="card rounded-lg p-6">
+        <div class="flex items-center gap-2 mb-3 text-xs">
+          <span class="chismis-tag nightlife">After the Session</span>
+          <span class="text-3">·</span>
+          <span class="text-3">Yesterday</span>
+          <span class="text-3 ml-auto">Angeles City</span>
+        </div>
+        <h3 class="font-serif text-lg mb-2">Where the Hann regs are eating at 2am.</h3>
+        <p class="text-2 text-sm">
+          A short list of late-night Korean BBQ, ramen, and tapsilogan within a 5-minute drive of Hann.
+          Plus the rooftop where half the day-1 bust-outs ended up Thursday night.
+        </p>
+      </article>
+
+      <!-- Item 5 -->
+      <article class="card rounded-lg p-6">
+        <div class="flex items-center gap-2 mb-3 text-xs">
+          <span class="chismis-tag news">News</span>
+          <span class="text-3">·</span>
+          <span class="text-3">Yesterday</span>
+          <span class="text-3 ml-auto">via HendonMob</span>
+        </div>
+        <h3 class="font-serif text-lg mb-2">Filipino pro Mike Takayama notches second six-figure cash of the year.</h3>
+        <p class="text-2 text-sm">
+          $135K for 3rd at the WPT Prime Cambodia Main Event. Brings 2026 live earnings past $400K.
+          Local scene's strongest year on Hendon since 2019.
+        </p>
+      </article>
+
+      <div class="text-center pt-4">
+        <a href="#newsletter" class="link text-sm">Get the full feed in the newsletter →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============= POSITIONING ============= -->
+<section class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+  <div class="max-w-3xl mx-auto text-center mb-14">
+    <div class="label mb-4">Why ACESLIVEPH</div>
+    <h2 class="font-serif text-3xl md:text-5xl font-semibold mb-5">
+      No one else covers Asian poker like locals.
+    </h2>
+    <p class="text-2 text-lg">
+      Bravo and PokerAtlas are US-only. Cardplayer covers Asia as an afterthought.
+      PokerNews is operator-funded. The independent, multi-room, multi-tour, player-first platform —
+      <span class="orange">the one built here, by people who actually play here</span> — does not exist.
+      Until now.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-4 gap-5">
+    <div class="card rounded-lg p-6">
+      <div class="font-serif text-2xl gold mb-3">01</div>
+      <h3 class="font-semibold mb-2">Asia-native</h3>
+      <p class="text-2 text-sm">Bravo doesn't enter Asia. We treat Asia as the entire business.</p>
+    </div>
+    <div class="card rounded-lg p-6">
+      <div class="font-serif text-2xl gold mb-3">02</div>
+      <h3 class="font-semibold mb-2">Operator-neutral</h3>
+      <p class="text-2 text-sm">No tour partnership owns us. We call out bad rakes and praise the good rooms.</p>
+    </div>
+    <div class="card rounded-lg p-6">
+      <div class="font-serif text-2xl gold mb-3">03</div>
+      <h3 class="font-semibold mb-2">Tools + data + voice</h3>
+      <p class="text-2 text-sm">Session log auto-tagged with the room, the news, the tournament. Integration is the moat.</p>
+    </div>
+    <div class="card rounded-lg p-6">
+      <div class="font-serif text-2xl gold mb-3">04</div>
+      <h3 class="font-semibold mb-2">Of the scene</h3>
+      <p class="text-2 text-sm">Cardplayer is corporate. We're the ones at the table. The voice 2+2 will actually read.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============= FOR WHOM ============= -->
+<section class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+  <div class="max-w-2xl mb-14">
+    <div class="label mb-4">Built for</div>
+    <h2 class="font-serif text-3xl md:text-5xl font-semibold mb-4">
+      The traveling player.<br />
+      <span class="orange">The local grinder.</span>
+    </h2>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-5">
+    <div class="card rounded-lg p-6">
+      <div class="suit-spade label">Tournament Regs</div>
+      <p class="text-2 mt-3">
+        You chase APT, WPT, Triton stops across Asia. You need schedules, structures, satellites, hotel deals,
+        and a feed that tells you which side events are soft this week. We're the calendar and the scout.
+      </p>
+    </div>
+    <div class="card rounded-lg p-6">
+      <div class="suit-club label">Cash Game Grinders</div>
+      <p class="text-2 mt-3">
+        You play 4–6 sessions a week in a Manila or AC room. You need real-time game status, a session log,
+        a bankroll tracker, and rake transparency across rooms. We're the dashboard.
+      </p>
+    </div>
+    <div class="card rounded-lg p-6">
+      <div class="suit-heart label">Recreational Travelers</div>
+      <p class="text-2 mt-3">
+        Coming to Manila or Angeles City for a poker trip a few times a year. Want to know which room fits your stake,
+        which hotel walks to which casino, where to eat after. We're the trip planner.
+      </p>
+    </div>
+    <div class="card rounded-lg p-6">
+      <div class="suit-diamond label">Online → Live Aspirants</div>
+      <p class="text-2 mt-3">
+        You play GG or ClubGG online and you're thinking about your first Asian live trip.
+        We've written the playbook — start here, fly there, satellites here, hotel here.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============= NEWSLETTER CTA ============= -->
+<section id="newsletter" class="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">
+  <div class="label mb-4">The Newsletter</div>
+  <h2 class="font-serif text-3xl md:text-5xl font-semibold mb-5 leading-tight">
+    Two issues a week.<br />
+    <span class="orange">Worth opening every time.</span>
+  </h2>
+  <p class="text-2 text-lg mb-10">
+    The week's best chismis, the takes, the tournament recaps, what's running and where to eat after.
+    From the floor in Manila, AC, and Cebu — soon every poker city in Asia.
+  </p>
+
+  <form id="footer-signup" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto" action="#" method="post" onsubmit="return handleSignup(event)">
+    <input
+      type="email"
+      name="email"
+      required
+      placeholder="your@email.com"
+      class="email-input flex-1 px-4 py-3 rounded text-sm" />
+    <button type="submit" class="btn-orange px-6 py-3 rounded text-sm whitespace-nowrap">
+      Subscribe
+    </button>
+  </form>
+  <p class="text-xs text-3 mt-3">
+    Tuesday + Friday · No spam · Unsubscribe in one click
+  </p>
+</section>
+
+<!-- ============= FOOTER ============= -->
+<footer class="border-t border-soft mt-10">
+  <div class="max-w-7xl mx-auto px-6 py-12">
+    <div class="grid md:grid-cols-4 gap-10 mb-10">
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <span class="font-serif text-xl gold">A</span>
+          <span class="font-serif text-base tracking-widest">ACESLIVE<span class="orange">PH</span></span>
+        </div>
+        <p class="text-3 text-sm">
+          The poker hub of the Philippines and Southeast Asia. Headquartered in Angeles City.
+        </p>
+      </div>
+      <div>
+        <div class="label mb-4">Product</div>
+        <ul class="space-y-2 text-sm text-2">
+          <li><a href="#product" class="hover:text-white transition">Live & Rooms</a></li>
+          <li><a href="#product" class="hover:text-white transition">Tournament Hub</a></li>
+          <li><a href="#feed" class="hover:text-white transition">Chismis Feed</a></li>
+          <li><a href="#product" class="hover:text-white transition">Tools</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="label mb-4">Company</div>
+        <ul class="space-y-2 text-sm text-2">
+          <li><a href="#" class="hover:text-white transition">About</a></li>
+          <li><a href="mailto:hello@acesliveph.com" class="hover:text-white transition">Contact</a></li>
+          <li><a href="#" class="hover:text-white transition">Editorial standards</a></li>
+          <li><a href="#" class="hover:text-white transition">Affiliate disclosure</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="label mb-4">Follow</div>
+        <ul class="space-y-2 text-sm text-2">
+          <li><a href="#" class="hover:text-white transition">X / Twitter</a></li>
+          <li><a href="#" class="hover:text-white transition">YouTube</a></li>
+          <li><a href="#" class="hover:text-white transition">TikTok</a></li>
+          <li><a href="#" class="hover:text-white transition">Discord <span class="text-3 text-xs">(soon)</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="divider mb-6"></div>
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-3">
+      <div>© 2026 ACESLIVEPH · Angeles City, Philippines · All rights reserved</div>
+      <div class="flex items-center gap-6">
+        <a href="#" class="hover:text-white transition">Privacy</a>
+        <a href="#" class="hover:text-white transition">Terms</a>
+        <a href="#" class="hover:text-white transition">Responsible Play</a>
+      </div>
+    </div>
+    <div class="text-xs text-3 mt-6 max-w-3xl mx-auto text-center">
+      ACESLIVEPH is an information and media platform.
+      We do not operate gaming services or accept wagers.
+      Affiliate relationships with poker rooms and operators are disclosed and labeled.
+      Information is for entertainment and reference only.
+      Play responsibly.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Placeholder signup handler — replace with your email provider integration.
+  // Recommended: Beehiiv, Kit (formerly ConvertKit), Buttondown, or Mailchimp.
+  function handleSignup(e) {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.querySelector('input[name=email]').value.trim();
+    if (!email) return false;
+
+    // TODO: replace with real provider endpoint, e.g.:
+    //   fetch('https://api.beehiiv.com/v2/publications/PUB_ID/subscriptions', { ... })
+
+    const button = form.querySelector('button');
+    const originalText = button.innerHTML;
+    button.innerHTML = 'Saved ✓';
+    button.disabled = true;
+    setTimeout(() => {
+      form.reset();
+      button.innerHTML = originalText;
+      button.disabled = false;
+    }, 2200);
+    return false;
+  }
+</script>
+
+</body>
+</html>
