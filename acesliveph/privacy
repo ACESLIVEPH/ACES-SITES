@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — ACESLIVEPH</title>
+<meta name="description" content="ACESLIVEPH privacy policy. What we collect, how we use it, third-party services, and your data rights." />
+<link rel="canonical" href="https://acesliveph.com/privacy" />
+<meta name="theme-color" content="#0a0a0a" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root { --bg: #0a0a0a; --surface: #161616; --surface-2: #1c1c1c; --border: #262626; --border-2: #333333; --text: #ffffff; --text-2: #b0b0b0; --text-3: #6b6b6b; --orange: #F7931A; --orange-2: #d97f15; --gold: #c9a227; }
+  * { -webkit-font-smoothing: antialiased; }
+  html, body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; line-height: 1.65; }
+  .font-serif { font-family: 'Cinzel', serif; letter-spacing: 0.02em; }
+  .orange { color: var(--orange); } .gold { color: var(--gold); }
+  .text-2 { color: var(--text-2); } .text-3 { color: var(--text-3); }
+  .border-soft { border-color: var(--border); }
+  .promo-strip { background: linear-gradient(90deg, #0a0a0a 0%, #4a2a05 50%, #0a0a0a 100%); }
+  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border-2); transition: all 0.18s; }
+  .btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
+  .label { font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--orange); }
+  article h2 { font-family: 'Cinzel', serif; font-size: 1.6rem; font-weight: 600; margin: 2.5rem 0 1rem; color: var(--text); }
+  article p { margin-bottom: 1rem; color: var(--text-2); }
+  article p strong { color: var(--text); font-weight: 600; }
+  article ul { margin: 0 0 1.25rem 1.5rem; }
+  article ul li { margin-bottom: 0.5rem; color: var(--text-2); }
+  article ul li::marker { color: var(--orange); }
+  article a { color: var(--orange); border-bottom: 1px solid rgba(247,147,26,0.4); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border-2), transparent); }
+</style>
+</head>
+<body>
+<div class="promo-strip text-center text-xs py-2 text-2"><span class="hidden sm:inline">📨</span> Subscribe to the newsletter and get the <span class="orange font-semibold">free quarterly digest</span> delivered to your inbox</div>
+<header class="border-b border-soft sticky top-0 z-50" style="background: rgba(10,10,10,0.92); backdrop-filter: blur(12px);">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3"><div class="font-serif text-2xl orange leading-none">A</div><div><div class="font-serif text-sm tracking-[0.18em] leading-none">ACESLIVE<span class="orange">PH</span></div><div class="text-[10px] uppercase tracking-[0.20em] text-3 mt-1">The #1 Poker Hub of the Philippines</div></div></a>
+    <div class="hidden md:flex items-center gap-7 text-xs uppercase tracking-[0.16em] text-2"><a href="/" class="hover:text-white">News</a>
+      <a href="/rooms" class="hover:text-white">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white">Online</a>
+      <a href="/tournaments" class="hover:text-white">Tourneys</a>
+      <a href="/poy" class="hover:text-white">POY</a>
+      <a href="/tools" class="hover:text-white">Tools</a></div>
+    <a href="/" class="btn-ghost text-xs px-4 py-2 rounded">Home</a>
+  </div>
+</header>
+
+<article class="max-w-3xl mx-auto px-6 py-16">
+  <div class="text-xs text-3 mb-4"><a href="/" class="hover:text-white">Home</a> › <span class="text-2">Privacy Policy</span></div>
+  <div class="label mb-3">Legal · Last Updated April 29, 2026</div>
+  <h1 class="font-serif text-4xl md:text-5xl font-semibold leading-[1.1] mb-6">Privacy Policy</h1>
+  <p class="text-lg text-2 mb-10">
+    ACESLIVEPH respects your privacy. This policy explains what data we collect, how we use it,
+    who we share it with, and your rights as a reader. Plain English, no legalese.
+  </p>
+
+  <h2>What we collect</h2>
+  <p>We collect three categories of data:</p>
+  <ul>
+    <li><strong>Email addresses you give us</strong> — when you subscribe to the newsletter, we collect your email and (optionally) any name you provide. That's the only personally identifying information we ask for.</li>
+    <li><strong>Anonymized analytics</strong> — page views, referrer, country, browser type. Collected through Plausible Analytics, which is privacy-respecting and does not use cookies or fingerprint visitors. No personal data is collected here.</li>
+    <li><strong>Affiliate referral tracking</strong> — when you click an affiliate link to an operator's site, the operator's referral system tracks the click for commission attribution. ACESLIVEPH does not store this data; the operator does. Their privacy policies apply once you leave our site.</li>
+  </ul>
+
+  <h2>What we don't collect</h2>
+  <ul>
+    <li>We don't collect IP addresses for tracking purposes.</li>
+    <li>We don't use behavioral tracking cookies, retargeting pixels, or third-party advertising trackers.</li>
+    <li>We don't fingerprint browsers.</li>
+    <li>We don't sell, rent, or share your email address with anyone.</li>
+  </ul>
+
+  <h2>How we use your email address</h2>
+  <p>If you subscribe to the newsletter, we use your email to:</p>
+  <ul>
+    <li>Send you the twice-weekly newsletter on Tuesday and Friday.</li>
+    <li>Occasionally notify you of major site updates (a new feature, a major article).</li>
+    <li>Deliver the free quarterly digest PDF to your inbox.</li>
+  </ul>
+  <p>That's it. We do not send promotional emails for third-party operators, even our affiliate partners.</p>
+
+  <h2>Third-party services we use</h2>
+  <ul>
+    <li><strong>Beehiiv</strong> — hosts the email list and delivers newsletters. <a href="https://www.beehiiv.com/privacy">Beehiiv privacy policy</a>.</li>
+    <li><strong>Plausible Analytics</strong> — anonymized site analytics. <a href="https://plausible.io/privacy">Plausible privacy policy</a>.</li>
+    <li><strong>Cloudflare</strong> — DNS and DDoS protection. <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare privacy policy</a>.</li>
+    <li><strong>Google Fonts</strong> — typography. Fonts load from Google's CDN; standard browser caching applies.</li>
+  </ul>
+
+  <h2>Data retention</h2>
+  <p>
+    Newsletter email addresses are retained for as long as you remain subscribed. When you unsubscribe (one click in any newsletter footer),
+    your email is removed from active sends within 24 hours and deleted from our records within 30 days.
+  </p>
+  <p>
+    Anonymized analytics data is retained for up to 24 months, then aggregated and the underlying records discarded.
+  </p>
+
+  <h2>Your rights</h2>
+  <p>You can at any time:</p>
+  <ul>
+    <li>Unsubscribe from the newsletter (one click in the footer of any email).</li>
+    <li>Request a copy of any personal data we hold on you (just email <a href="mailto:privacy@acesliveph.com">privacy@acesliveph.com</a>).</li>
+    <li>Request deletion of your data (same address).</li>
+    <li>Request correction of your data (same address).</li>
+  </ul>
+  <p>
+    We will respond to all data requests within 14 days, faster where possible.
+    For Philippine residents, ACESLIVEPH complies with the Data Privacy Act of 2012 (RA 10173) and is registered with the National Privacy Commission.
+  </p>
+
+  <h2>Cookies</h2>
+  <p>
+    ACESLIVEPH uses minimal cookies. We do not use behavioral or advertising cookies.
+    The only cookies set on the site are functional (e.g., remembering whether you've dismissed a banner) and Plausible Analytics
+    is configured cookieless. No cookie consent banner is required because we do not set tracking cookies.
+  </p>
+
+  <h2>Children's privacy</h2>
+  <p>
+    ACESLIVEPH is intended for adults 21+ in the Philippines and 18+ in most other jurisdictions. We do not knowingly collect data from
+    minors. If you believe a minor has provided personal data to us, contact <a href="mailto:privacy@acesliveph.com">privacy@acesliveph.com</a>
+    and we will delete it promptly.
+  </p>
+
+  <h2>Changes to this policy</h2>
+  <p>
+    If we materially change this policy, we'll notify newsletter subscribers by email and post a prominent notice on the homepage at
+    least 30 days before the change takes effect.
+  </p>
+
+  <p class="text-xs text-3 mt-12 pt-6 border-t border-soft">
+    Last updated April 29, 2026. Contact <a href="mailto:privacy@acesliveph.com">privacy@acesliveph.com</a> with any questions.
+  </p>
+</article>
+
+<footer class="border-t border-soft">
+  <div class="max-w-6xl mx-auto px-6 py-10">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+      <div class="flex items-center gap-3"><div class="font-serif text-2xl orange leading-none">A</div><div class="font-serif text-sm tracking-[0.18em]">ACESLIVE<span class="orange">PH</span></div></div>
+      <div class="flex items-center gap-5 text-xs text-2 flex-wrap"><a href="/" class="hover:text-white">News</a>
+      <a href="/rooms" class="hover:text-white">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white">Online</a>
+      <a href="/tournaments" class="hover:text-white">Tourneys</a>
+      <a href="/poy" class="hover:text-white">POY</a>
+      <a href="/tools" class="hover:text-white">Tools</a></div>
+    </div>
+    <div class="divider mb-6"></div>
+    <div class="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-3">
+      <div>© 2026 ACESLIVEPH · Angeles City, Philippines</div>
+      <div class="flex items-center gap-5 flex-wrap"><a href="/about" class="hover:text-white">About</a><a href="/contact" class="hover:text-white">Contact</a><a href="/affiliate" class="hover:text-white">Affiliate</a><a href="/editorial" class="hover:text-white">Editorial</a><a href="/privacy" class="hover:text-white">Privacy</a><a href="/terms" class="hover:text-white">Terms</a><a href="/responsible-play" class="hover:text-white">Responsible Play</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

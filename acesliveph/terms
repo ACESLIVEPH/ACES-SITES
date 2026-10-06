@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Terms of Service — ACESLIVEPH</title>
+<meta name="description" content="Terms of service for ACESLIVEPH. Use of the website, intellectual property, disclaimers, and governing law." />
+<link rel="canonical" href="https://acesliveph.com/terms" />
+<meta name="theme-color" content="#0a0a0a" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root { --bg: #0a0a0a; --surface: #161616; --surface-2: #1c1c1c; --border: #262626; --border-2: #333333; --text: #ffffff; --text-2: #b0b0b0; --text-3: #6b6b6b; --orange: #F7931A; --orange-2: #d97f15; --gold: #c9a227; }
+  * { -webkit-font-smoothing: antialiased; }
+  html, body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; line-height: 1.65; }
+  .font-serif { font-family: 'Cinzel', serif; letter-spacing: 0.02em; }
+  .orange { color: var(--orange); } .gold { color: var(--gold); }
+  .text-2 { color: var(--text-2); } .text-3 { color: var(--text-3); }
+  .border-soft { border-color: var(--border); }
+  .promo-strip { background: linear-gradient(90deg, #0a0a0a 0%, #4a2a05 50%, #0a0a0a 100%); }
+  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border-2); transition: all 0.18s; }
+  .btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
+  .label { font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--orange); }
+  article h2 { font-family: 'Cinzel', serif; font-size: 1.6rem; font-weight: 600; margin: 2.5rem 0 1rem; color: var(--text); }
+  article p { margin-bottom: 1rem; color: var(--text-2); }
+  article p strong { color: var(--text); font-weight: 600; }
+  article ul { margin: 0 0 1.25rem 1.5rem; }
+  article ul li { margin-bottom: 0.5rem; color: var(--text-2); }
+  article ul li::marker { color: var(--orange); }
+  article a { color: var(--orange); border-bottom: 1px solid rgba(247,147,26,0.4); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border-2), transparent); }
+</style>
+</head>
+<body>
+<div class="promo-strip text-center text-xs py-2 text-2"><span class="hidden sm:inline">📨</span> Subscribe to the newsletter and get the <span class="orange font-semibold">free quarterly digest</span> delivered to your inbox</div>
+<header class="border-b border-soft sticky top-0 z-50" style="background: rgba(10,10,10,0.92); backdrop-filter: blur(12px);">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3"><div class="font-serif text-2xl orange leading-none">A</div><div><div class="font-serif text-sm tracking-[0.18em] leading-none">ACESLIVE<span class="orange">PH</span></div><div class="text-[10px] uppercase tracking-[0.20em] text-3 mt-1">The #1 Poker Hub of the Philippines</div></div></a>
+    <div class="hidden md:flex items-center gap-7 text-xs uppercase tracking-[0.16em] text-2"><a href="/" class="hover:text-white">News</a>
+      <a href="/rooms" class="hover:text-white">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white">Online</a>
+      <a href="/tournaments" class="hover:text-white">Tourneys</a>
+      <a href="/poy" class="hover:text-white">POY</a>
+      <a href="/tools" class="hover:text-white">Tools</a></div>
+    <a href="/" class="btn-ghost text-xs px-4 py-2 rounded">Home</a>
+  </div>
+</header>
+
+<article class="max-w-3xl mx-auto px-6 py-16">
+  <div class="text-xs text-3 mb-4"><a href="/" class="hover:text-white">Home</a> › <span class="text-2">Terms of Service</span></div>
+  <div class="label mb-3">Legal · Last Updated April 29, 2026</div>
+  <h1 class="font-serif text-4xl md:text-5xl font-semibold leading-[1.1] mb-6">Terms of Service</h1>
+  <p class="text-lg text-2 mb-10">By using ACESLIVEPH, you agree to these terms. If you don't agree, please don't use the site.</p>
+
+  <h2>About this site</h2>
+  <p>ACESLIVEPH (the "Site") is operated by ACESLIVEPH, an information and media business based in Angeles City, Philippines. The Site provides news, reviews, rankings, tournament information, and free tools related to poker. <strong>ACESLIVEPH is not a gaming operator. We do not accept wagers, host games, or process bets.</strong></p>
+
+  <h2>Eligibility</h2>
+  <p>By using the Site you represent that you are at least 18 years old (21 in the Philippines for content related to gambling), and that using the Site does not violate the laws of your jurisdiction. The Site may contain links to third-party gaming operators; access to those operators is governed by their own terms and your local laws.</p>
+
+  <h2>Intellectual property</h2>
+  <p>All content on the Site — articles, reviews, rankings, photos, logos, design — is owned by ACESLIVEPH unless attributed to a third party. You may:</p>
+  <ul>
+    <li>Read and share Site content for personal, non-commercial use.</li>
+    <li>Quote up to 200 words from any article with a link back to the original.</li>
+    <li>Embed our content on social media via standard platform sharing features.</li>
+  </ul>
+  <p>You may not:</p>
+  <ul>
+    <li>Republish full articles, rankings, or methodology on another site.</li>
+    <li>Scrape the Site for AI training, search index databases, or commercial syndication without written permission.</li>
+    <li>Pass off our content as your own.</li>
+    <li>Use ACESLIVEPH branding or design in derivative works without permission.</li>
+  </ul>
+  <p>For licensing inquiries, contact <a href="mailto:editorial@acesliveph.com">editorial@acesliveph.com</a>.</p>
+
+  <h2>User content</h2>
+  <p>If you submit content to ACESLIVEPH (a comment, a tip, a player profile correction), you grant us a non-exclusive license to use, edit, and publish that content. You retain ownership. Don't submit content that's defamatory, infringes copyright, contains personal data of others without consent, or violates Philippine law.</p>
+
+  <h2>No financial or legal advice</h2>
+  <p>Content on ACESLIVEPH is for entertainment and informational purposes only. <strong>Nothing on the Site constitutes financial, legal, tax, or gambling advice.</strong> Tournament results, odds calculators, bankroll recommendations, and similar tools are educational. Always consult qualified professionals before making financial decisions, and verify all gambling-related information directly with the operator before betting real money.</p>
+
+  <h2>Affiliate disclosure</h2>
+  <p>ACESLIVEPH earns commissions from some of the operators we link to. See our <a href="/affiliate">Affiliate Disclosure</a> for full details on relationships and how they're managed.</p>
+
+  <h2>External links</h2>
+  <p>The Site contains links to third-party websites. ACESLIVEPH is not responsible for the content, privacy practices, terms, or business practices of those third parties. When you leave the Site, their terms govern.</p>
+
+  <h2>No warranty</h2>
+  <p>The Site is provided "as is" without warranties of any kind, express or implied, including but not limited to merchantability, fitness for a particular purpose, or non-infringement. We do our best to keep information accurate and up to date — particularly tournament schedules, bonus offers, and rankings — but information changes frequently and we do not guarantee accuracy at any given moment.</p>
+
+  <h2>Limitation of liability</h2>
+  <p>To the maximum extent permitted by Philippine law, ACESLIVEPH and its operators are not liable for any indirect, incidental, consequential, or punitive damages arising from your use of the Site, including but not limited to lost profits, lost gambling winnings, or losses incurred at third-party gaming operators we link to.</p>
+
+  <h2>Indemnification</h2>
+  <p>You agree to indemnify ACESLIVEPH against any claims arising from your violation of these terms or applicable law in connection with your use of the Site.</p>
+
+  <h2>Governing law and jurisdiction</h2>
+  <p>These terms are governed by the laws of the Republic of the Philippines. Any disputes will be resolved in the courts of Pampanga, Philippines.</p>
+
+  <h2>Changes to these terms</h2>
+  <p>We may update these terms from time to time. Material changes will be communicated via newsletter and posted prominently on the homepage at least 30 days before taking effect.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about these terms? <a href="mailto:legal@acesliveph.com">legal@acesliveph.com</a></p>
+
+  <p class="text-xs text-3 mt-12 pt-6 border-t border-soft">Last updated April 29, 2026.</p>
+</article>
+
+<footer class="border-t border-soft">
+  <div class="max-w-6xl mx-auto px-6 py-10">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+      <div class="flex items-center gap-3"><div class="font-serif text-2xl orange leading-none">A</div><div class="font-serif text-sm tracking-[0.18em]">ACESLIVE<span class="orange">PH</span></div></div>
+      <div class="flex items-center gap-5 text-xs text-2 flex-wrap"><a href="/" class="hover:text-white">News</a>
+      <a href="/rooms" class="hover:text-white">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white">Online</a>
+      <a href="/tournaments" class="hover:text-white">Tourneys</a>
+      <a href="/poy" class="hover:text-white">POY</a>
+      <a href="/tools" class="hover:text-white">Tools</a></div>
+    </div>
+    <div class="divider mb-6"></div>
+    <div class="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-3">
+      <div>© 2026 ACESLIVEPH · Angeles City, Philippines</div>
+      <div class="flex items-center gap-5 flex-wrap"><a href="/about" class="hover:text-white">About</a><a href="/contact" class="hover:text-white">Contact</a><a href="/affiliate" class="hover:text-white">Affiliate</a><a href="/editorial" class="hover:text-white">Editorial</a><a href="/privacy" class="hover:text-white">Privacy</a><a href="/terms" class="hover:text-white">Terms</a><a href="/responsible-play" class="hover:text-white">Responsible Play</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

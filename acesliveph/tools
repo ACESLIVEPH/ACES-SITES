@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Free Poker Tools — ACESLIVEPH</title>
+<meta name="description" content="Free poker tools for live and online players: Pot odds, outs to equity, tournament ROI, bankroll calculator, variance simulator, Kelly criterion, effective stack." />
+<link rel="canonical" href="https://acesliveph.com/tools" />
+<meta name="theme-color" content="#0a0a0a" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root {
+    --bg: #0a0a0a; --surface: #161616; --surface-2: #1c1c1c;
+    --border: #262626; --border-2: #333333;
+    --text: #ffffff; --text-2: #b0b0b0; --text-3: #6b6b6b;
+    --orange: #F7931A; --orange-2: #d97f15;
+    --gold: #c9a227; --green: #4ade80; --red: #ef4444;
+  }
+  * { -webkit-font-smoothing: antialiased; }
+  html, body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; line-height: 1.55; }
+  .font-serif { font-family: 'Cinzel', serif; letter-spacing: 0.02em; }
+  .font-mono { font-family: 'JetBrains Mono', monospace; }
+  .orange { color: var(--orange); }
+  .gold { color: var(--gold); }
+  .text-2 { color: var(--text-2); }
+  .text-3 { color: var(--text-3); }
+  .surface { background: var(--surface); }
+  .border-soft { border-color: var(--border); }
+  .promo-strip { background: linear-gradient(90deg, #0a0a0a 0%, #4a2a05 50%, #0a0a0a 100%); }
+  .nav-link { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-2); }
+  .nav-link:hover { color: var(--orange); }
+  .nav-link.active { color: var(--orange); }
+  .btn-orange { background: var(--orange); color: #0a0a0a; font-weight: 700; transition: all 0.18s; border: 1px solid var(--orange); cursor: pointer; }
+  .btn-orange:hover { background: var(--orange-2); border-color: var(--orange-2); }
+  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border-2); transition: all 0.18s; cursor: pointer; }
+  .btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
+  .label { font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--orange); }
+  .card { background: var(--surface); border: 1px solid var(--border); transition: border 0.2s, transform 0.2s; }
+  .card:hover { border-color: var(--orange); }
+  .tool-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1.75rem; }
+  .tool-card.featured { border-left: 4px solid var(--orange); }
+
+  /* Form inputs */
+  .field { margin-bottom: 1rem; }
+  .field label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.4rem; }
+  .field input, .field select { width: 100%; background: var(--surface-2); border: 1px solid var(--border-2); color: var(--text); padding: 0.65rem 0.85rem; border-radius: 4px; font-size: 0.95rem; font-family: 'JetBrains Mono', monospace; }
+  .field input:focus, .field select:focus { outline: none; border-color: var(--orange); }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 480px) { .field-row { grid-template-columns: 1fr; } }
+  .field-help { font-size: 0.75rem; color: var(--text-3); margin-top: 0.25rem; }
+
+  /* Result */
+  .result { background: var(--surface-2); border: 1px solid rgba(247,147,26,0.3); border-left: 3px solid var(--orange); border-radius: 4px; padding: 1.25rem; margin-top: 1rem; }
+  .result-label { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-3); }
+  .result-value { font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 600; color: var(--orange); margin-top: 0.25rem; }
+  .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 480px) { .result-grid { grid-template-columns: 1fr; } }
+  .result-extra { font-size: 0.8rem; color: var(--text-2); margin-top: 0.25rem; font-family: 'JetBrains Mono', monospace; }
+
+  /* Tabs */
+  .tab-bar { display: flex; gap: 2px; background: var(--surface); padding: 4px; border-radius: 6px; border: 1px solid var(--border); margin-bottom: 1.5rem; flex-wrap: wrap; }
+  .tab-btn { flex: 1; min-width: 110px; padding: 0.6rem 0.75rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; background: transparent; color: var(--text-2); border: none; border-radius: 4px; cursor: pointer; transition: all 0.15s; }
+  .tab-btn.active { background: var(--orange); color: #0a0a0a; }
+  .tab-btn:not(.active):hover { color: var(--text); }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  /* Distribution bars (variance simulator) */
+  .dist-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; font-family: 'JetBrains Mono', monospace; }
+  .dist-row:last-child { border-bottom: none; }
+  .dist-bar { flex: 1; height: 6px; background: var(--surface-2); border-radius: 3px; overflow: hidden; }
+  .dist-bar > div { height: 100%; background: var(--orange); }
+  .dist-bar.green > div { background: var(--green); }
+  .dist-bar.red > div { background: var(--red); }
+  .dist-percentile { width: 60px; color: var(--text-3); }
+  .dist-value { width: 110px; text-align: right; color: var(--text); font-weight: 600; }
+
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border-2), transparent); }
+</style>
+</head>
+<body>
+
+<!-- Promo strip -->
+<div class="promo-strip text-center text-xs py-2 text-2">
+  <span class="hidden sm:inline">📨</span> Subscribe to the newsletter and get the
+  <span class="orange font-semibold">free quarterly digest</span> delivered to your inbox
+</div>
+
+<!-- Header -->
+<header class="border-b border-soft sticky top-0 z-50" style="background: rgba(10,10,10,0.92); backdrop-filter: blur(12px);">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3">
+      <div class="font-serif text-2xl orange leading-none">A</div>
+      <div>
+        <div class="font-serif text-sm tracking-[0.18em] leading-none">ACESLIVE<span class="orange">PH</span></div>
+        <div class="text-[10px] uppercase tracking-[0.20em] text-3 mt-1">The #1 Poker Hub of the Philippines</div>
+      </div>
+    </a>
+    <div class="hidden md:flex items-center gap-7 text-xs uppercase tracking-[0.16em] text-2">
+      <a href="/" class="hover:text-white">News</a>
+      <a href="/rooms" class="hover:text-white">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white">Online</a>
+      <a href="/tournaments" class="hover:text-white">Tourneys</a>
+      <a href="/poy" class="hover:text-white">POY</a>
+      <a href="/tools" class="hover:text-white">Tools</a>
+    </div>
+    <a href="/" class="btn-ghost text-xs px-4 py-2 rounded">Home</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="max-w-5xl mx-auto px-6 pt-12 pb-8 text-center">
+  <div class="label mb-4">Free Forever · No Login · No Paywall</div>
+  <h1 class="font-serif text-4xl md:text-5xl font-semibold leading-[1.1] mb-4">
+    Poker tools, <span class="orange">free.</span>
+  </h1>
+  <p class="text-base text-2 max-w-xl mx-auto">
+    The full toolkit every live poker player needs. No accounts, no nonsense.
+    Pick a tool below or scroll through them all.
+  </p>
+</section>
+
+<!-- Tool tabs -->
+<section class="max-w-3xl mx-auto px-6 pb-20">
+  <div class="tab-bar">
+    <button class="tab-btn active" data-tab="pot-odds">Pot Odds</button>
+    <button class="tab-btn" data-tab="outs">Outs → Equity</button>
+    <button class="tab-btn" data-tab="roi">Tournament ROI</button>
+    <button class="tab-btn" data-tab="bankroll">Required Bankroll</button>
+    <button class="tab-btn" data-tab="variance">Variance Sim</button>
+    <button class="tab-btn" data-tab="kelly">Kelly Criterion</button>
+    <button class="tab-btn" data-tab="stack">Effective Stack</button>
+  </div>
+
+  <!-- Pot Odds Calculator -->
+  <div class="tab-content active" id="tab-pot-odds">
+    <div class="tool-card featured">
+      <div class="label mb-2">Pot Odds Calculator</div>
+      <h2 class="font-serif text-2xl mb-3">What price are you getting?</h2>
+      <p class="text-2 text-sm mb-5">
+        Calculate the pot odds you're getting on a call, and the minimum equity you need for it to be profitable.
+        Compare your hand equity to this number — if your equity is higher, the call is +EV.
+      </p>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Pot size</label>
+          <input type="number" id="po-pot" value="100" min="0" step="any" />
+          <div class="field-help">Total pot before villain's bet</div>
+        </div>
+        <div class="field">
+          <label>Bet to call</label>
+          <input type="number" id="po-bet" value="50" min="0" step="any" />
+          <div class="field-help">Villain's bet you're facing</div>
+        </div>
+      </div>
+
+      <button class="btn-orange w-full py-3 rounded mt-2" onclick="calcPotOdds()">Calculate</button>
+
+      <div class="result-grid mt-5">
+        <div class="result">
+          <div class="result-label">Pot odds</div>
+          <div class="result-value" id="po-ratio">3 : 1</div>
+          <div class="result-extra" id="po-pct">25.0%</div>
+        </div>
+        <div class="result">
+          <div class="result-label">Required equity</div>
+          <div class="result-value" id="po-required">25.0%</div>
+          <div class="result-extra" id="po-explain">Need 25% to break even</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Outs to Equity -->
+  <div class="tab-content" id="tab-outs">
+    <div class="tool-card featured">
+      <div class="label mb-2">Outs to Equity</div>
+      <h2 class="font-serif text-2xl mb-3">How often do you hit your draw?</h2>
+      <p class="text-2 text-sm mb-5">
+        Convert your outs into approximate equity using the rule of 4 (turn + river) or rule of 2 (single street).
+        Quick mental math at the table.
+      </p>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Number of outs</label>
+          <input type="number" id="outs-count" value="9" min="0" max="47" step="1" />
+          <div class="field-help">Cards that improve to a winner (max 47)</div>
+        </div>
+        <div class="field">
+          <label>Streets remaining</label>
+          <select id="outs-street">
+            <option value="2">Both (turn + river)</option>
+            <option value="1" selected>One street only</option>
+          </select>
+          <div class="field-help">Most common: facing turn bet</div>
+        </div>
+      </div>
+
+      <button class="btn-orange w-full py-3 rounded mt-2" onclick="calcOuts()">Calculate</button>
+
+      <div class="result-grid mt-5">
+        <div class="result">
+          <div class="result-label">Approximate equity</div>
+          <div class="result-value" id="outs-equity">19.6%</div>
+          <div class="result-extra" id="outs-rule">Rule of 2: outs × 2</div>
+        </div>
+        <div class="result">
+          <div class="result-label">Exact equity</div>
+          <div class="result-value" id="outs-exact">19.6%</div>
+          <div class="result-extra" id="outs-formula">9 of 46 cards</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tournament ROI -->
+  <div class="tab-content" id="tab-roi">
+    <div class="tool-card featured">
+      <div class="label mb-2">Tournament ROI Calculator</div>
+      <h2 class="font-serif text-2xl mb-3">Are you actually winning?</h2>
+      <p class="text-2 text-sm mb-5">
+        Calculate your tournament ROI from total buy-ins and total cashes. Honest number.
+        Most live MTT players think they're winning more than they actually are.
+      </p>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Tournaments played</label>
+          <input type="number" id="roi-played" value="50" min="1" step="1" />
+        </div>
+        <div class="field">
+          <label>Average buy-in (₱)</label>
+          <input type="number" id="roi-buyin" value="5000" min="0" step="any" />
+        </div>
+      </div>
+      <div class="field">
+        <label>Total cashes (₱)</label>
+        <input type="number" id="roi-cashes" value="320000" min="0" step="any" />
+        <div class="field-help">Sum of all your money won, gross</div>
+      </div>
+
+      <button class="btn-orange w-full py-3 rounded mt-2" onclick="calcROI()">Calculate</button>
+
+      <div class="result-grid mt-5">
+        <div class="result">
+          <div class="result-label">ROI</div>
+          <div class="result-value" id="roi-pct">28.0%</div>
+          <div class="result-extra" id="roi-status">Profitable</div>
+        </div>
+        <div class="result">
+          <div class="result-label">Net profit</div>
+          <div class="result-value" id="roi-profit">₱70,000</div>
+          <div class="result-extra" id="roi-perTourney">₱1,400 per tournament</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Required Bankroll -->
+  <div class="tab-content" id="tab-bankroll">
+    <div class="tool-card featured">
+      <div class="label mb-2">Required Bankroll</div>
+      <h2 class="font-serif text-2xl mb-3">Can you afford the swings?</h2>
+      <p class="text-2 text-sm mb-5">
+        Compute the bankroll needed to play your stake at a target risk of ruin, given your win rate and standard deviation.
+        Industry-standard for cash games: ~30 buy-ins for low-stakes, 50+ for higher.
+      </p>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Win rate (bb/100)</label>
+          <input type="number" id="br-winrate" value="5" step="0.1" />
+        </div>
+        <div class="field">
+          <label>Std deviation (bb/100)</label>
+          <input type="number" id="br-stddev" value="100" step="any" />
+          <div class="field-help">Live cash typical: 70–110</div>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Target risk of ruin</label>
+          <select id="br-ror">
+            <option value="0.01">1% (conservative)</option>
+            <option value="0.05" selected>5% (standard)</option>
+            <option value="0.10">10% (aggressive)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Big blind size (₱)</label>
+          <input type="number" id="br-bb" value="200" min="0" step="any" />
+          <div class="field-help">e.g., ₱100/200 game = 200</div>
+        </div>
+      </div>
+
+      <button class="btn-orange w-full py-3 rounded mt-2" onclick="calcBankroll()">Calculate</button>
+
+      <div class="result-grid mt-5">
+        <div class="result">
+          <div class="result-label">Required bankroll</div>
+          <div class="result-value" id="br-amount">₱600,000</div>
+          <div class="result-extra" id="br-buyins">30 buy-ins (at 100bb)</div>
+        </div>
+        <div class="result">
+          <div class="result-label">In big blinds</div>
+          <div class="result-value" id="br-bbs">3,000 bb</div>
+          <div class="result-extra" id="br-formula">Formula: σ²·ln(1/ROR) / (2·WR)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Variance Simulator -->
+  <div class="tab-content" id="tab-variance">
+    <div class="tool-card featured">
+      <div class="label mb-2">Variance Simulator</div>
+      <h2 class="font-serif text-2xl mb-3">What does the swing look like?</h2>
+      <p class="text-2 text-sm mb-5">
+        Monte Carlo simulation of 10,000 sample runs at your win rate and standard deviation.
+        Shows what 90% of outcomes look like at the end of your sample size.
+      </p>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Hands</label>
+          <input type="number" id="var-hands" value="100000" min="100" step="any" />
+        </div>
+        <div class="field">
+          <label>Win rate (bb/100)</label>
+          <input type="number" id="var-winrate" value="5" step="0.1" />
+        </div>
+      </div>
+      <div class="field">
+        <label>Std deviation (bb/100)</label>
+        <input type="number" id="var-stddev" value="100" step="any" />
+      </div>
+
+      <button class="btn-orange w-full py-3 rounded mt-2" onclick="runVariance()">Run 10,000 simulations</button>
+
+      <div id="var-results" class="mt-5" style="display:none;">
+        <div class="result-grid">
+          <div class="result">
+            <div class="result-label">Expected outcome</div>
+            <div class="result-value" id="var-expected">+5,000 bb</div>
+            <div class="result-extra">Win rate × hands ÷ 100</div>
+          </div>
+          <div class="result">
+            <div class="result-label">Risk of losing money</div>
+            <div class="result-value" id="var-risk">12.7%</div>
+            <div class="result-extra">% of runs ending negative</div>
+          </div>
+        </div>
+        <div class="card rounded p-5 mt-4">
+          <div class="label mb-3">Outcome distribution</div>
+          <div id="var-distribution"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kelly Criterion -->
+  <div class="tab-content" id="tab-kelly">
+    <div class="tool-card featured">
+      <div class="label mb-2">Kelly Criterion</div>
+      <h2 class="font-serif text-2xl mb-3">Optimal bet sizing.</h2>
+      <p class="text-2 text-sm mb-5">
+        Calculate the mathematically optimal bet size as a fraction of your bankroll given your edge.
+        For poker stakes selection, "Half-Kelly" (50% of full Kelly) is a common conservative variant.
+      </p>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Win probability (%)</label>
+          <input type="number" id="kelly-prob" value="55" min="0" max="100" step="0.1" />
+          <div class="field-help">Your equity / hit rate</div>
+        </div>
+        <div class="field">
+          <label>Odds offered (decimal)</label>
+          <input type="number" id="kelly-odds" value="2" min="1" step="0.01" />
+          <div class="field-help">2 = even money, 3 = 2:1, etc.</div>
+        </div>
+      </div>
+
+      <button class="btn-orange w-full py-3 rounded mt-2" onclick="calcKelly()">Calculate</button>
+
+      <div class="result-grid mt-5">
+        <div class="result">
+          <div class="result-label">Full Kelly</div>
+          <div class="result-value" id="kelly-full">10.0%</div>
+          <div class="result-extra">% of bankroll to bet</div>
+        </div>
+        <div class="result">
+          <div class="result-label">Half Kelly (recommended)</div>
+          <div class="result-value" id="kelly-half">5.0%</div>
+          <div class="result-extra">50% of full Kelly</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Effective Stack -->
+  <div class="tab-content" id="tab-stack">
+    <div class="tool-card featured">
+      <div class="label mb-2">Effective Stack</div>
+      <h2 class="font-serif text-2xl mb-3">How deep is the actual play?</h2>
+      <p class="text-2 text-sm mb-5">
+        The effective stack between two players is the smaller of the two — that's the amount actually in play.
+        Convert to big blinds for instant context.
+      </p>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Your stack</label>
+          <input type="number" id="es-hero" value="20000" min="0" step="any" />
+        </div>
+        <div class="field">
+          <label>Villain's stack</label>
+          <input type="number" id="es-villain" value="35000" min="0" step="any" />
+        </div>
+      </div>
+      <div class="field">
+        <label>Big blind size</label>
+        <input type="number" id="es-bb" value="200" min="0" step="any" />
+      </div>
+
+      <button class="btn-orange w-full py-3 rounded mt-2" onclick="calcStack()">Calculate</button>
+
+      <div class="result-grid mt-5">
+        <div class="result">
+          <div class="result-label">Effective stack</div>
+          <div class="result-value" id="es-eff">20,000</div>
+          <div class="result-extra" id="es-context">You are the shorter stack</div>
+        </div>
+        <div class="result">
+          <div class="result-label">In big blinds</div>
+          <div class="result-value" id="es-bbs">100 bb</div>
+          <div class="result-extra" id="es-depth">Standard cash depth</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- More tools coming -->
+<section class="max-w-5xl mx-auto px-6 py-16">
+  <div class="text-center mb-10">
+    <div class="label mb-3">Coming Soon</div>
+    <h2 class="font-serif text-3xl font-semibold">More tools shipping every month.</h2>
+  </div>
+
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <div class="card rounded-lg p-5"><div class="orange text-2xl mb-2">♠</div><div class="font-serif">Equity Calculator</div><p class="text-3 text-xs mt-1">Hand vs. range and multi-way equity. Q3 2026.</p></div>
+    <div class="card rounded-lg p-5"><div class="orange text-2xl mb-2">♣</div><div class="font-serif">Preflop Charts</div><p class="text-3 text-xs mt-1">Full library: 6-max, 9-max, ICM-adjusted. Q3 2026.</p></div>
+    <div class="card rounded-lg p-5"><div class="orange text-2xl mb-2">♦</div><div class="font-serif">ICM Calculator</div><p class="text-3 text-xs mt-1">Final-table ICM with future game adjustment. Q3 2026.</p></div>
+    <div class="card rounded-lg p-5"><div class="orange text-2xl mb-2">♥</div><div class="font-serif">Hand History Journal</div><p class="text-3 text-xs mt-1">Log, replay, and review hands from your sessions. Q4 2026.</p></div>
+    <div class="card rounded-lg p-5"><div class="orange text-2xl mb-2">♠</div><div class="font-serif">Live Cash Tracker</div><p class="text-3 text-xs mt-1">Bravo-style "what's running" feed. Mobile app, Q3 2026.</p></div>
+    <div class="card rounded-lg p-5"><div class="orange text-2xl mb-2">♣</div><div class="font-serif">Session Tracker</div><p class="text-3 text-xs mt-1">Bankroll over time, win rate by stake. Q3 2026.</p></div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-soft">
+  <div class="max-w-6xl mx-auto px-6 py-10">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+      <div class="flex items-center gap-3">
+        <div class="font-serif text-2xl orange leading-none">A</div>
+        <div class="font-serif text-sm tracking-[0.18em]">ACESLIVE<span class="orange">PH</span></div>
+      </div>
+      <div class="flex items-center gap-5 text-xs text-2 flex-wrap">
+        <a href="/" class="hover:text-white">News</a>
+      <a href="/rooms" class="hover:text-white">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white">Online</a>
+      <a href="/tournaments" class="hover:text-white">Tourneys</a>
+      <a href="/poy" class="hover:text-white">POY</a>
+      <a href="/tools" class="hover:text-white">Tools</a>
+      </div>
+    </div>
+    <div class="divider mb-6"></div>
+    <div class="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-3">
+      <div>© 2026 ACESLIVEPH · Angeles City, Philippines</div>
+      <div class="flex items-center gap-5 flex-wrap">
+        <a href="/about" class="hover:text-white">About</a>
+        <a href="/privacy" class="hover:text-white">Privacy</a>
+        <a href="/responsible-play" class="hover:text-white">Responsible Play</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Tab switching
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  // ===== POT ODDS =====
+  function calcPotOdds() {
+    const pot = parseFloat(document.getElementById('po-pot').value);
+    const bet = parseFloat(document.getElementById('po-bet').value);
+    if (!pot || !bet || bet <= 0) return;
+    const totalPot = pot + bet;
+    const required = bet / (totalPot + bet);
+    const ratio = (totalPot / bet);
+    document.getElementById('po-ratio').textContent = ratio.toFixed(2) + ' : 1';
+    document.getElementById('po-pct').textContent = (required * 100).toFixed(1) + '%';
+    document.getElementById('po-required').textContent = (required * 100).toFixed(1) + '%';
+    document.getElementById('po-explain').textContent = 'Need ' + (required * 100).toFixed(1) + '% to break even';
+  }
+
+  // ===== OUTS TO EQUITY =====
+  function calcOuts() {
+    const outs = parseInt(document.getElementById('outs-count').value);
+    const streets = parseInt(document.getElementById('outs-street').value);
+    if (isNaN(outs) || outs < 0 || outs > 47) return;
+    // Rule of 2/4 approximation
+    const approx = outs * (streets === 2 ? 4 : 2);
+    // Exact: 1 - C(47-outs, streets) / C(47, streets) for 2 streets, or outs/46 for one
+    let exact;
+    let formula;
+    if (streets === 1) {
+      exact = (outs / 46) * 100;
+      formula = outs + ' of 46 unseen cards';
+    } else {
+      // P(hit by river) = 1 - P(miss turn)*P(miss river)
+      // Approximation: 1 - ((47-outs)/47) * ((46-outs)/46)
+      const missBoth = ((47 - outs) / 47) * ((46 - outs) / 46);
+      exact = (1 - missBoth) * 100;
+      formula = outs + ' outs · two streets';
+    }
+    document.getElementById('outs-equity').textContent = approx.toFixed(1) + '%';
+    document.getElementById('outs-rule').textContent = streets === 2 ? 'Rule of 4: outs × 4' : 'Rule of 2: outs × 2';
+    document.getElementById('outs-exact').textContent = exact.toFixed(1) + '%';
+    document.getElementById('outs-formula').textContent = formula;
+  }
+
+  // ===== ROI =====
+  function calcROI() {
+    const played = parseInt(document.getElementById('roi-played').value);
+    const buyin = parseFloat(document.getElementById('roi-buyin').value);
+    const cashes = parseFloat(document.getElementById('roi-cashes').value);
+    if (!played || !buyin || isNaN(cashes)) return;
+    const totalSpent = played * buyin;
+    const profit = cashes - totalSpent;
+    const roi = (profit / totalSpent) * 100;
+    document.getElementById('roi-pct').textContent = roi.toFixed(1) + '%';
+    document.getElementById('roi-status').textContent = profit > 0 ? 'Profitable' : profit < 0 ? 'Losing player' : 'Breakeven';
+    document.getElementById('roi-profit').textContent = '₱' + profit.toLocaleString('en-PH', {maximumFractionDigits: 0});
+    document.getElementById('roi-perTourney').textContent = '₱' + (profit / played).toLocaleString('en-PH', {maximumFractionDigits: 0}) + ' per tournament';
+  }
+
+  // ===== BANKROLL =====
+  function calcBankroll() {
+    const wr = parseFloat(document.getElementById('br-winrate').value);
+    const sd = parseFloat(document.getElementById('br-stddev').value);
+    const ror = parseFloat(document.getElementById('br-ror').value);
+    const bb = parseFloat(document.getElementById('br-bb').value);
+    if (!wr || wr <= 0 || !sd || !ror || !bb) return;
+    // Required bankroll in bb: (sd^2 / (2*wr)) * ln(1/ror)
+    const wrPerHand = wr / 100;
+    const sdPerHand = sd / Math.sqrt(100);
+    const requiredBB = (sd * sd / (2 * wr)) * Math.log(1 / ror);
+    const requiredAmount = requiredBB * bb;
+    const buyins = requiredBB / 100;
+    document.getElementById('br-amount').textContent = '₱' + requiredAmount.toLocaleString('en-PH', {maximumFractionDigits: 0});
+    document.getElementById('br-buyins').textContent = buyins.toFixed(1) + ' buy-ins (at 100bb)';
+    document.getElementById('br-bbs').textContent = requiredBB.toLocaleString('en-PH', {maximumFractionDigits: 0}) + ' bb';
+    document.getElementById('br-formula').textContent = 'σ²·ln(1/' + (ror * 100) + '%) / (2·WR)';
+  }
+
+  // ===== VARIANCE SIMULATOR =====
+  function gaussian() {
+    let u = 0, v = 0;
+    while (u === 0) u = Math.random();
+    while (v === 0) v = Math.random();
+    return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+  }
+  function runVariance() {
+    const hands = parseInt(document.getElementById('var-hands').value);
+    const wr = parseFloat(document.getElementById('var-winrate').value);
+    const sd = parseFloat(document.getElementById('var-stddev').value);
+    if (!hands || hands < 100 || isNaN(wr) || !sd) return;
+
+    const sims = 10000;
+    const blocks = Math.floor(hands / 100);
+    const meanPerBlock = wr;
+    const sdPerBlock = sd / Math.sqrt(1);
+
+    const results = [];
+    let losingCount = 0;
+    for (let i = 0; i < sims; i++) {
+      let total = 0;
+      for (let b = 0; b < blocks; b++) {
+        total += meanPerBlock + sdPerBlock * gaussian();
+      }
+      results.push(total);
+      if (total < 0) losingCount++;
+    }
+    results.sort((a, b) => a - b);
+
+    const expected = wr * blocks;
+    const risk = (losingCount / sims) * 100;
+
+    document.getElementById('var-expected').textContent = (expected >= 0 ? '+' : '') + Math.round(expected).toLocaleString() + ' bb';
+    document.getElementById('var-risk').textContent = risk.toFixed(1) + '%';
+
+    // Distribution: percentiles
+    const percentiles = [
+      {p: 'Top 5%', v: results[Math.floor(sims * 0.95)], cls: 'green'},
+      {p: 'Top 25%', v: results[Math.floor(sims * 0.75)], cls: 'green'},
+      {p: 'Median', v: results[Math.floor(sims * 0.50)], cls: ''},
+      {p: 'Bottom 25%', v: results[Math.floor(sims * 0.25)], cls: 'red'},
+      {p: 'Bottom 5%', v: results[Math.floor(sims * 0.05)], cls: 'red'}
+    ];
+    const max = Math.max(Math.abs(results[0]), Math.abs(results[sims - 1]));
+    const distHTML = percentiles.map(p => {
+      const widthPct = Math.min(100, (Math.abs(p.v) / max) * 100);
+      const sign = p.v >= 0 ? '+' : '';
+      return `<div class="dist-row">
+        <span class="dist-percentile">${p.p}</span>
+        <span class="dist-bar ${p.cls}"><div style="width: ${widthPct}%"></div></span>
+        <span class="dist-value">${sign}${Math.round(p.v).toLocaleString()} bb</span>
+      </div>`;
+    }).join('');
+    document.getElementById('var-distribution').innerHTML = distHTML;
+    document.getElementById('var-results').style.display = 'block';
+  }
+
+  // ===== KELLY =====
+  function calcKelly() {
+    const p = parseFloat(document.getElementById('kelly-prob').value) / 100;
+    const odds = parseFloat(document.getElementById('kelly-odds').value);
+    if (isNaN(p) || p <= 0 || p >= 1 || !odds || odds <= 1) {
+      document.getElementById('kelly-full').textContent = '—';
+      document.getElementById('kelly-half').textContent = '—';
+      return;
+    }
+    const b = odds - 1;
+    const q = 1 - p;
+    const kelly = (b * p - q) / b;
+    if (kelly <= 0) {
+      document.getElementById('kelly-full').textContent = '0% — no edge';
+      document.getElementById('kelly-half').textContent = '0% — pass';
+      return;
+    }
+    document.getElementById('kelly-full').textContent = (kelly * 100).toFixed(1) + '%';
+    document.getElementById('kelly-half').textContent = (kelly * 50).toFixed(1) + '%';
+  }
+
+  // ===== EFFECTIVE STACK =====
+  function calcStack() {
+    const hero = parseFloat(document.getElementById('es-hero').value);
+    const villain = parseFloat(document.getElementById('es-villain').value);
+    const bb = parseFloat(document.getElementById('es-bb').value);
+    if (isNaN(hero) || isNaN(villain) || !bb) return;
+    const eff = Math.min(hero, villain);
+    const bbs = eff / bb;
+    document.getElementById('es-eff').textContent = eff.toLocaleString();
+    document.getElementById('es-context').textContent = hero <= villain ? 'You are the shorter stack' : 'Villain is the shorter stack';
+    document.getElementById('es-bbs').textContent = bbs.toFixed(0) + ' bb';
+    let depth = 'Standard cash depth';
+    if (bbs < 25) depth = 'Short stack — push/fold range';
+    else if (bbs < 50) depth = 'Medium stack — careful play';
+    else if (bbs < 100) depth = 'Standard MTT depth';
+    else if (bbs < 200) depth = 'Standard cash depth';
+    else depth = 'Deep stack — maximize implied odds';
+    document.getElementById('es-depth').textContent = depth;
+  }
+
+  // Run initial calcs
+  calcPotOdds(); calcOuts(); calcROI(); calcBankroll(); calcKelly(); calcStack();
+</script>
+
+</body>
+</html>

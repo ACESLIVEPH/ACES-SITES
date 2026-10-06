@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Live Poker Rooms in the Philippines — ACESLIVEPH</title>
+<meta name="description" content="Complete directory of live poker rooms across the Philippines. Okada, Solaire, City of Dreams, Newport, Hann Clark, NUStar Cebu and more. Bad beat jackpots, table counts, hours." />
+<link rel="canonical" href="https://acesliveph.com/rooms" />
+<meta name="theme-color" content="#F7931A" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root { --bg: #0a0a0a; --surface: #161616; --surface-2: #1c1c1c; --border: #262626; --border-2: #333333; --text: #ffffff; --text-2: #b8b8b8; --text-3: #6b6b6b; --orange: #F7931A; --orange-bright: #FFA830; --orange-2: #d97f15; --gold: #c9a227; --green: #4ade80; --red: #ef4444; }
+  * { -webkit-font-smoothing: antialiased; }
+  html, body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; line-height: 1.55; }
+  .font-serif { font-family: 'Playfair Display', serif; letter-spacing: -0.005em; }
+  .font-cinzel { font-family: 'Cinzel', serif; letter-spacing: 0.02em; }
+  .orange { color: var(--orange); } .gold { color: var(--gold); }
+  .text-2 { color: var(--text-2); } .text-3 { color: var(--text-3); }
+  .surface { background: var(--surface); } .surface-2 { background: var(--surface-2); }
+  .border-soft { border-color: var(--border); }
+  .promo-strip { background: linear-gradient(90deg, #0a0a0a 0%, #6b3a05 50%, #0a0a0a 100%); }
+  .nav-link { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-2); padding: 8px 0; transition: color 0.15s; }
+  .nav-link:hover { color: var(--orange); }
+  .nav-link.active { color: var(--orange); border-bottom: 2px solid var(--orange); }
+  .btn-orange { background: var(--orange); color: #0a0a0a; font-weight: 700; transition: all 0.18s; border: 1px solid var(--orange); box-shadow: 0 0 20px rgba(247,147,26,0.25); }
+  .btn-orange:hover { background: var(--orange-bright); border-color: var(--orange-bright); }
+  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border-2); transition: all 0.18s; }
+  .btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
+  .label { font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--orange); }
+
+  /* Filter pills */
+  .filter-pill { padding: 8px 18px; font-size: 13px; font-weight: 600; color: var(--text-2); background: var(--surface); border: 1px solid var(--border); border-radius: 100px; cursor: pointer; transition: all 0.15s; white-space: nowrap; }
+  .filter-pill:hover { border-color: var(--border-2); color: var(--text); }
+  .filter-pill.active { color: var(--orange); border-color: var(--orange); background: rgba(247,147,26,0.08); }
+
+  /* Room card */
+  .room-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; transition: border 0.2s, transform 0.2s; }
+  .room-card:hover { border-color: var(--orange); transform: translateY(-2px); }
+  .room-icon { width: 56px; height: 56px; border-radius: 12px; background: rgba(247,147,26,0.10); border: 1px solid rgba(247,147,26,0.4); display: flex; align-items: center; justify-content: center; color: var(--orange); font-size: 28px; flex-shrink: 0; box-shadow: 0 0 16px rgba(247,147,26,0.12); }
+  .open-pill { display: inline-flex; align-items: center; padding: 4px 10px; background: rgba(74,222,128,0.10); border: 1px solid rgba(74,222,128,0.4); border-radius: 100px; font-size: 11px; font-weight: 700; color: var(--green); letter-spacing: 0.04em; }
+  .open-pill::before { content: '●'; margin-right: 6px; font-size: 8px; }
+  .game-tag { display: inline-block; padding: 4px 10px; font-size: 11px; font-weight: 600; background: rgba(247,147,26,0.08); border: 1px solid rgba(247,147,26,0.3); border-radius: 6px; color: var(--orange); }
+  .bbj-pill { display: inline-flex; align-items: center; padding: 6px 12px; background: rgba(247,147,26,0.08); border: 1px solid rgba(247,147,26,0.4); border-radius: 8px; font-size: 11px; font-weight: 700; color: var(--orange); letter-spacing: 0.04em; gap: 6px; }
+  .bbj-pill .amount { color: var(--text); font-family: 'Cinzel', serif; font-size: 13px; }
+  .meta-icon { color: var(--text-3); font-size: 14px; margin-right: 6px; }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border-2), transparent); }
+</style>
+</head>
+<body>
+
+<div class="promo-strip text-center text-xs py-2.5 text-2"><span class="hidden sm:inline">📨</span> Get the <span class="orange font-semibold">free quarterly digest</span> delivered to your inbox <span class="text-3 mx-2">·</span> <a href="/#newsletter" class="orange font-semibold hover:underline">Subscribe →</a></div>
+
+<header class="border-b border-soft sticky top-0 z-50" style="background: rgba(10,10,10,0.92); backdrop-filter: blur(14px);">
+  <div class="max-w-[1400px] mx-auto px-5">
+    <div class="flex items-center justify-between gap-6 py-4">
+      <a href="/" class="flex items-center gap-3 flex-shrink-0">
+        <div class="font-cinzel text-3xl orange leading-none" style="text-shadow: 0 0 20px rgba(247,147,26,0.4);">A</div>
+        <div>
+          <div class="font-cinzel text-base tracking-[0.18em] leading-none">ACESLIVE<span class="orange">PH</span></div>
+          <div class="text-[10px] uppercase tracking-[0.20em] text-3 mt-1">#1 Poker Hub of the Philippines</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="/" class="nav-link">News</a>
+        <a href="/rooms" class="nav-link active">Rooms</a>
+        <a href="/poker-sites" class="nav-link">Online</a>
+        <a href="/tournaments" class="nav-link">Tourneys</a>
+        <a href="/poy" class="nav-link">POY</a>
+        <a href="/tools" class="nav-link">Tools</a>
+      </nav>
+      <a href="/#newsletter" class="btn-orange text-xs px-4 py-2 rounded-md whitespace-nowrap">Subscribe</a>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="max-w-[1400px] mx-auto px-5 pt-10 pb-4">
+  <div class="flex items-end justify-between flex-wrap gap-4">
+    <div>
+      <div class="label mb-3">Live Poker Rooms</div>
+      <h1 class="font-serif text-4xl md:text-5xl font-bold leading-[1.05]">Poker Rooms<br />Across the <span class="orange">Philippines</span></h1>
+    </div>
+    <div class="flex items-center gap-2 px-4 py-2 rounded-lg" style="background: rgba(247,147,26,0.10); border: 1px solid rgba(247,147,26,0.4);">
+      <span class="orange text-lg">📍</span>
+      <span class="orange font-cinzel font-bold text-lg tabular">22</span>
+      <span class="text-2 text-sm">rooms tracked</span>
+    </div>
+  </div>
+</section>
+
+<!-- Filters -->
+<section class="max-w-[1400px] mx-auto px-5 py-6">
+  <div class="flex gap-2 overflow-x-auto pb-2" style="scrollbar-width: none;">
+    <button class="filter-pill active">All</button>
+    <button class="filter-pill">Metro Manila</button>
+    <button class="filter-pill">Pampanga</button>
+    <button class="filter-pill">Cebu</button>
+    <button class="filter-pill">Davao</button>
+    <button class="filter-pill">Iloilo</button>
+    <button class="filter-pill">Bohol</button>
+  </div>
+</section>
+
+<!-- Room cards -->
+<section class="max-w-[1400px] mx-auto px-5 pb-16">
+  <div class="grid lg:grid-cols-2 gap-5">
+
+    <!-- Okada Manila -->
+    <div class="room-card">
+      <div class="flex items-start gap-4 mb-4">
+        <div class="room-icon">♠</div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-start justify-between gap-3 mb-1">
+            <h3 class="font-serif text-xl font-bold">Okada Manila Poker Room</h3>
+            <span class="open-pill">24H Open</span>
+          </div>
+          <p class="text-sm text-3">Parañaque · Metro Manila</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 mb-3 text-sm text-2 flex-wrap">
+        <span><span class="meta-icon">⊞</span>42 tables</span>
+        <span><span class="meta-icon">⏱</span>24 Hours</span>
+      </div>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="game-tag">NLH</span>
+        <span class="game-tag">PLO</span>
+        <span class="game-tag">Short Deck</span>
+      </div>
+      <div class="bbj-pill"><span>🔥</span><span>BAD BEAT</span><span class="amount">₱12,500,000</span></div>
+    </div>
+
+    <!-- Solaire -->
+    <div class="room-card">
+      <div class="flex items-start gap-4 mb-4">
+        <div class="room-icon">♠</div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-start justify-between gap-3 mb-1">
+            <h3 class="font-serif text-xl font-bold">Solaire Poker Room</h3>
+            <span class="open-pill">24H Open</span>
+          </div>
+          <p class="text-sm text-3">Parañaque · Metro Manila</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 mb-3 text-sm text-2 flex-wrap">
+        <span><span class="meta-icon">⊞</span>35 tables</span>
+        <span><span class="meta-icon">⏱</span>24 Hours</span>
+      </div>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="game-tag">NLH</span>
+        <span class="game-tag">PLO</span>
+        <span class="game-tag">Short Deck</span>
+      </div>
+      <div class="bbj-pill"><span>🔥</span><span>BAD BEAT</span><span class="amount">₱8,200,000</span></div>
+    </div>
+
+    <!-- City of Dreams -->
+    <div class="room-card">
+      <div class="flex items-start gap-4 mb-4">
+        <div class="room-icon">♠</div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-start justify-between gap-3 mb-1">
+            <h3 class="font-serif text-xl font-bold">City of Dreams Poker Room</h3>
+            <span class="open-pill">24H Open</span>
+          </div>
+          <p class="text-sm text-3">Parañaque · Metro Manila</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 mb-3 text-sm text-2 flex-wrap">
+        <span><span class="meta-icon">⊞</span>28 tables</span>
+        <span><span class="meta-icon">⏱</span>24 Hours</span>
+      </div>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="game-tag">NLH</span>
+        <span class="game-tag">PLO</span>
+      </div>
+      <div class="bbj-pill"><span>🔥</span><span>BAD BEAT</span><span class="amount">₱5,750,000</span></div>
+    </div>
+
+    <!-- Newport World -->
+    <div class="room-card">
+      <div class="flex items-start gap-4 mb-4">
+        <div class="room-icon">♠</div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-start justify-between gap-3 mb-1">
+            <h3 class="font-serif text-xl font-bold">Newport World Resorts Poker</h3>
+            <span class="open-pill">24H Open</span>
+          </div>
+          <p class="text-sm text-3">Pasay · Metro Manila</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 mb-3 text-sm text-2 flex-wrap">
+        <span><span class="meta-icon">⊞</span>24 tables</span>
+        <span><span class="meta-icon">⏱</span>24 Hours</span>
+      </div>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="game-tag">NLH</span>
+        <span class="game-tag">PLO</span>
+        <span class="game-tag">Short Deck</span>
+      </div>
+      <div class="bbj-pill"><span>🔥</span><span>BAD BEAT</span><span class="amount">₱4,000,000</span></div>
+    </div>
+
+    <!-- Resorts World Manila -->
+    <div class="room-card">
+      <div class="flex items-start gap-4 mb-4">
+        <div class="room-icon">♠</div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-start justify-between gap-3 mb-1">
+            <h3 class="font-serif text-xl font-bold">Resorts World Manila Poker</h3>
+            <span class="open-pill">24H Open</span>
+          </div>
+          <p class="text-sm text-3">Pasay · Metro Manila</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 mb-3 text-sm text-2 flex-wrap">
+        <span><span class="meta-icon">⊞</span>22 tables</span>
+        <span><span class="meta-icon">⏱</span>24 Hours</span>
+      </div>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="game-tag">NLH</span>
+        <span class="game-tag">PLO</span>
+        <span class="game-tag">Limit HE</span>
+      </div>
+      <div class="bbj-pill"><span>🔥</span><span>BAD BEAT</span><span class="amount">₱3,200,000</span></div>
+    </div>
+
+    <!-- Hann Casino Resort Clark -->
+    <div class="room-card">
+      <div class="flex items-start gap-4 mb-4">
+        <div class="room-icon">♠</div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-start justify-between gap-3 mb-1">
+            <h3 class="font-serif text-xl font-bold">Hann Casino Resort Poker</h3>
+            <span class="open-pill">24H Open</span>
+          </div>
+          <p class="text-sm text-3">Clark · Pampanga</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 mb-3 text-sm text-2 flex-wrap">
+        <span><span class="meta-icon">⊞</span>20 tables</span>
+        <span><span class="meta-icon">⏱</span>24 Hours</span>
+      </div>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="game-tag">NLH</span>
+        <span class="game-tag">PLO</span>
+        <span class="game-tag">Short Deck</span>
+      </div>
+      <div class="bbj-pill"><span>🔥</span><span>BAD BEAT</span><span class="amount">₱2,800,000</span></div>
+    </div>
+
+    <!-- Sunset Casino AC -->
+    <div class="room-card">
+      <div class="flex items-start gap-4 mb-4">
+        <div class="room-icon">♠</div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-start justify-between gap-3 mb-1">
+            <h3 class="font-serif text-xl font-bold">Sunset Casino Poker Room</h3>
+            <span class="open-pill">24H Open</span>
+          </div>
+          <p class="text-sm text-3">Angeles City · Pampanga</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 mb-3 text-sm text-2 flex-wrap">
+        <span><span class="meta-icon">⊞</span>12 tables</span>
+        <span><span class="meta-icon">⏱</span>24 Hours</span>
+      </div>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="game-tag">NLH</span>
+        <span class="game-tag">PLO</span>
+      </div>
+      <div class="bbj-pill"><span>🔥</span><span>BAD BEAT</span><span class="amount">₱1,400,000</span></div>
+    </div>
+
+    <!-- NUStar Cebu -->
+    <div class="room-card">
+      <div class="flex items-start gap-4 mb-4">
+        <div class="room-icon">♠</div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-start justify-between gap-3 mb-1">
+            <h3 class="font-serif text-xl font-bold">NUStar Cebu Poker Room</h3>
+            <span class="open-pill">24H Open</span>
+          </div>
+          <p class="text-sm text-3">Cebu City · Cebu</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 mb-3 text-sm text-2 flex-wrap">
+        <span><span class="meta-icon">⊞</span>16 tables</span>
+        <span><span class="meta-icon">⏱</span>24 Hours</span>
+      </div>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="game-tag">NLH</span>
+        <span class="game-tag">PLO</span>
+      </div>
+      <div class="bbj-pill"><span>🔥</span><span>BAD BEAT</span><span class="amount">₱2,100,000</span></div>
+    </div>
+
+    <!-- Waterfront Cebu -->
+    <div class="room-card">
+      <div class="flex items-start gap-4 mb-4">
+        <div class="room-icon">♠</div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-start justify-between gap-3 mb-1">
+            <h3 class="font-serif text-xl font-bold">Waterfront Cebu Poker Room</h3>
+            <span class="open-pill">24H Open</span>
+          </div>
+          <p class="text-sm text-3">Lahug · Cebu</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 mb-3 text-sm text-2 flex-wrap">
+        <span><span class="meta-icon">⊞</span>10 tables</span>
+        <span><span class="meta-icon">⏱</span>24 Hours</span>
+      </div>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="game-tag">NLH</span>
+        <span class="game-tag">PLO</span>
+      </div>
+      <div class="bbj-pill"><span>🔥</span><span>BAD BEAT</span><span class="amount">₱950,000</span></div>
+    </div>
+
+    <!-- Casino Filipino Tagaytay -->
+    <div class="room-card">
+      <div class="flex items-start gap-4 mb-4">
+        <div class="room-icon">♠</div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-start justify-between gap-3 mb-1">
+            <h3 class="font-serif text-xl font-bold">Casino Filipino Tagaytay</h3>
+            <span class="open-pill">24H Open</span>
+          </div>
+          <p class="text-sm text-3">Tagaytay · Cavite</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 mb-3 text-sm text-2 flex-wrap">
+        <span><span class="meta-icon">⊞</span>8 tables</span>
+        <span><span class="meta-icon">⏱</span>24 Hours</span>
+      </div>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="game-tag">NLH</span>
+      </div>
+      <div class="bbj-pill"><span>🔥</span><span>BAD BEAT</span><span class="amount">₱650,000</span></div>
+    </div>
+
+  </div>
+
+  <p class="text-xs text-3 mt-8 text-center max-w-2xl mx-auto">
+    Beta data: room counts, hours, and bad beat jackpot totals are aggregated from public operator sources.
+    Verify directly with the venue before traveling. Live data feed targeted Q3 2026.
+  </p>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-soft mt-10">
+  <div class="max-w-[1400px] mx-auto px-5 py-12">
+    <div class="grid md:grid-cols-4 gap-10 mb-10">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="font-cinzel text-2xl orange leading-none">A</div>
+          <div><div class="font-cinzel text-sm tracking-[0.18em] leading-none">ACESLIVE<span class="orange">PH</span></div><div class="text-[10px] uppercase tracking-[0.20em] text-3 mt-1">The #1 Poker Hub of the Philippines</div></div>
+        </div>
+        <p class="text-3 text-xs leading-relaxed mb-3">Live poker rooms, online sites, tournament tracker, Filipino POY rankings, and free tools.</p>
+        <p class="text-3 text-xs">Headquartered in Angeles City, Philippines</p>
+      </div>
+      <div>
+        <div class="label mb-3">Sections</div>
+        <ul class="space-y-2 text-xs text-2"><li><a href="/" class="hover:text-white">News</a></li><li><a href="/rooms" class="hover:text-white">Live Rooms</a></li><li><a href="/poker-sites" class="hover:text-white">Online Poker</a></li><li><a href="/tournaments" class="hover:text-white">Tournaments</a></li><li><a href="/poy" class="hover:text-white">Filipino POY</a></li><li><a href="/tools" class="hover:text-white">Poker Tools</a></li></ul>
+      </div>
+      <div>
+        <div class="label mb-3">Legal</div>
+        <ul class="space-y-2 text-xs text-2"><li><a href="/about" class="hover:text-white">About</a></li><li><a href="/contact" class="hover:text-white">Contact</a></li><li><a href="/affiliate" class="hover:text-white">Affiliate Disclosure</a></li><li><a href="/editorial" class="hover:text-white">Editorial</a></li><li><a href="/privacy" class="hover:text-white">Privacy</a></li><li><a href="/terms" class="hover:text-white">Terms</a></li><li><a href="/responsible-play" class="hover:text-white">Responsible Play</a></li></ul>
+      </div>
+    </div>
+    <div class="divider mb-6"></div>
+    <div class="text-xs text-3">© 2026 ACESLIVEPH · Angeles City, Philippines · All rights reserved</div>
+  </div>
+</footer>
+
+</body>
+</html>

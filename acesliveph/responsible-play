@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Responsible Play — ACESLIVEPH</title>
+<meta name="description" content="Responsible gambling resources for poker players in the Philippines. Warning signs, self-exclusion, and where to get help." />
+<link rel="canonical" href="https://acesliveph.com/responsible-play" />
+<meta name="theme-color" content="#0a0a0a" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root { --bg: #0a0a0a; --surface: #161616; --surface-2: #1c1c1c; --border: #262626; --border-2: #333333; --text: #ffffff; --text-2: #b0b0b0; --text-3: #6b6b6b; --orange: #F7931A; --orange-2: #d97f15; --gold: #c9a227; --red: #ef4444; }
+  * { -webkit-font-smoothing: antialiased; }
+  html, body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; line-height: 1.65; }
+  .font-serif { font-family: 'Cinzel', serif; letter-spacing: 0.02em; }
+  .orange { color: var(--orange); } .gold { color: var(--gold); }
+  .text-2 { color: var(--text-2); } .text-3 { color: var(--text-3); }
+  .border-soft { border-color: var(--border); }
+  .promo-strip { background: linear-gradient(90deg, #0a0a0a 0%, #4a2a05 50%, #0a0a0a 100%); }
+  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border-2); transition: all 0.18s; }
+  .btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
+  .label { font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--orange); }
+  article h2 { font-family: 'Cinzel', serif; font-size: 1.6rem; font-weight: 600; margin: 2.5rem 0 1rem; color: var(--text); }
+  article p { margin-bottom: 1rem; color: var(--text-2); }
+  article p strong { color: var(--text); font-weight: 600; }
+  article ul { margin: 0 0 1.25rem 1.5rem; }
+  article ul li { margin-bottom: 0.5rem; color: var(--text-2); }
+  article ul li::marker { color: var(--orange); }
+  article a { color: var(--orange); border-bottom: 1px solid rgba(247,147,26,0.4); }
+  .alert-card { background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.4); border-left: 3px solid var(--red); padding: 1.25rem; border-radius: 4px; margin: 1.5rem 0; }
+  .help-card { background: rgba(247,147,26,0.06); border: 1px solid rgba(247,147,26,0.3); border-left: 3px solid var(--orange); padding: 1.25rem; border-radius: 4px; margin: 1.5rem 0; }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border-2), transparent); }
+</style>
+</head>
+<body>
+<div class="promo-strip text-center text-xs py-2 text-2"><span class="hidden sm:inline">📨</span> Subscribe to the newsletter and get the <span class="orange font-semibold">free quarterly digest</span> delivered to your inbox</div>
+<header class="border-b border-soft sticky top-0 z-50" style="background: rgba(10,10,10,0.92); backdrop-filter: blur(12px);">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3"><div class="font-serif text-2xl orange leading-none">A</div><div><div class="font-serif text-sm tracking-[0.18em] leading-none">ACESLIVE<span class="orange">PH</span></div><div class="text-[10px] uppercase tracking-[0.20em] text-3 mt-1">The #1 Poker Hub of the Philippines</div></div></a>
+    <div class="hidden md:flex items-center gap-7 text-xs uppercase tracking-[0.16em] text-2"><a href="/" class="hover:text-white">News</a>
+      <a href="/rooms" class="hover:text-white">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white">Online</a>
+      <a href="/tournaments" class="hover:text-white">Tourneys</a>
+      <a href="/poy" class="hover:text-white">POY</a>
+      <a href="/tools" class="hover:text-white">Tools</a></div>
+    <a href="/" class="btn-ghost text-xs px-4 py-2 rounded">Home</a>
+  </div>
+</header>
+
+<article class="max-w-3xl mx-auto px-6 py-16">
+  <div class="text-xs text-3 mb-4"><a href="/" class="hover:text-white">Home</a> › <span class="text-2">Responsible Play</span></div>
+  <div class="label mb-3">Player Safety</div>
+  <h1 class="font-serif text-4xl md:text-5xl font-semibold leading-[1.1] mb-6">Responsible Play</h1>
+  <p class="text-lg text-2 mb-8">
+    Poker is entertainment. For most players it's a fun, skill-based pursuit that pays its own way over time or costs the price of an evening out.
+    For some players, it stops being either of those things and becomes harmful. This page exists because we want our readers to recognize that line and stay on the right side of it.
+  </p>
+
+  <div class="alert-card">
+    <p class="text-sm m-0"><strong style="color: var(--red);">If you need help right now:</strong> contact the <strong>PAGCOR Responsible Gaming Hotline</strong> at <strong>(02) 8525-7332</strong> or email <a href="mailto:rgep@pagcor.ph">rgep@pagcor.ph</a>. International readers can contact the <a href="https://www.gamblingtherapy.org/">Gambling Therapy</a> 24/7 free helpline.</p>
+  </div>
+
+  <h2>Warning signs of problem gambling</h2>
+  <p>The line between recreational and problem play is rarely clear in the moment. These are the patterns to watch for in yourself or someone you care about:</p>
+  <ul>
+    <li>Playing with money you can't afford to lose, or money meant for bills, rent, or family expenses</li>
+    <li>Chasing losses — playing longer or higher to try to win back what you've lost</li>
+    <li>Lying to family or friends about how much you're playing or losing</li>
+    <li>Borrowing money to play, especially repeatedly</li>
+    <li>Feeling restless, irritable, or anxious when you're not playing</li>
+    <li>Skipping work, family events, or sleep to play</li>
+    <li>Selling possessions, taking cash advances, or hitting credit limits to fund play</li>
+    <li>Feeling like you "deserve" a win or that one is coming soon based on losses</li>
+    <li>Increasing time and money spent over weeks or months</li>
+  </ul>
+  <p>One sign by itself doesn't mean a problem. Multiple signs together, or any one sign that's escalating, is the warning that matters.</p>
+
+  <h2>If poker is hurting you or someone you love</h2>
+
+  <div class="help-card">
+    <h3 class="font-serif text-lg orange mb-2">Philippines (PAGCOR)</h3>
+    <p class="text-sm text-2 m-0">
+      <strong>PAGCOR Responsible Gaming Hotline:</strong> (02) 8525-7332<br />
+      <strong>Email:</strong> <a href="mailto:rgep@pagcor.ph">rgep@pagcor.ph</a><br />
+      <strong>Self-exclusion programs</strong> are available at every PAGCOR-licensed casino on request. You sign a form and the venue is legally required to deny you entry for the period you set (6 months, 1 year, 5 years, or permanent).
+    </p>
+  </div>
+
+  <div class="help-card">
+    <h3 class="font-serif text-lg orange mb-2">International (24/7)</h3>
+    <p class="text-sm text-2 m-0">
+      <strong>Gambling Therapy:</strong> <a href="https://www.gamblingtherapy.org/">gamblingtherapy.org</a> — free helpline, online groups, multilingual support<br />
+      <strong>GamCare (UK):</strong> <a href="https://www.gamcare.org.uk/">gamcare.org.uk</a> — UK-focused but accepts international callers<br />
+      <strong>National Council on Problem Gambling (US):</strong> 1-800-GAMBLER<br />
+      <strong>Gamblers Anonymous:</strong> <a href="https://www.gamblersanonymous.org/">gamblersanonymous.org</a> — peer-support meetings online and in person worldwide
+    </p>
+  </div>
+
+  <h2>Self-exclusion at major Philippine venues</h2>
+  <p>If you want to remove yourself from temptation at a specific casino, every PAGCOR-licensed venue runs a Self Exclusion Program. The standard process:</p>
+  <ul>
+    <li>Visit the venue's Responsible Gaming desk (located near the main entrance at all major resorts).</li>
+    <li>Bring a valid government ID.</li>
+    <li>Sign a self-exclusion form specifying duration (6 months, 1 year, 5 years, or permanent).</li>
+    <li>Submit your photo for the venue's recognition system.</li>
+  </ul>
+  <p>Once enrolled, the venue is required by PAGCOR regulation to deny you entry for the duration. You cannot reverse the decision until the period ends. Major venues include:</p>
+  <ul>
+    <li>Okada Manila</li>
+    <li>Solaire Resort Manila</li>
+    <li>Resorts World Manila</li>
+    <li>City of Dreams Manila</li>
+    <li>Newport World Resorts</li>
+    <li>Hann Casino Resort (Clark)</li>
+    <li>NUStar Cebu</li>
+    <li>Waterfront Cebu</li>
+  </ul>
+
+  <h2>Healthy play guidelines</h2>
+  <p>If you don't have a problem and want to keep it that way, the following habits work for most players:</p>
+  <ul>
+    <li><strong>Set a session loss limit before you sit down.</strong> Stand up when you hit it. No exceptions.</li>
+    <li><strong>Set a session time limit.</strong> Live cash sessions over 8 hours rarely end well; tournament sessions are different.</li>
+    <li><strong>Maintain a separate poker bankroll</strong> from your living expenses. Use our <a href="/tools">Required Bankroll calculator</a> to figure out a healthy size for your stakes.</li>
+    <li><strong>Track your sessions.</strong> Players who track their P&L play more soberly. Players who don't usually overestimate their results.</li>
+    <li><strong>Take breaks during sessions.</strong> 5 minutes off the table every hour, real food and water during long sessions.</li>
+    <li><strong>Don't play tilted.</strong> If you've just taken a brutal beat, lost a buy-in to a cooler, or had a rough day at work — don't sit down. The session that follows tilt is the session that breaks bankrolls.</li>
+    <li><strong>Don't play impaired.</strong> Alcohol, exhaustion, emotional distress — all of these compound losses.</li>
+    <li><strong>Take real time off.</strong> A week off the felt every few months is healthy. A month off after a major series is recommended.</li>
+  </ul>
+
+  <h2>For families and partners</h2>
+  <p>If you're worried about someone in your life, the best support you can offer is:</p>
+  <ul>
+    <li>Don't lend them money to play. It always becomes more.</li>
+    <li>Don't make excuses for them or cover their losses.</li>
+    <li>Express concern directly, calmly, with specifics (not "you have a problem" but "I noticed you played eight hours yesterday and skipped dinner").</li>
+    <li>Encourage them to call the PAGCOR helpline or use one of the international resources above.</li>
+    <li>Take care of your own wellbeing. Living with a problem gambler is itself a hardship — Gam-Anon and Gambling Therapy both have family support resources.</li>
+  </ul>
+
+  <h2>ACESLIVEPH's commitment</h2>
+  <p>As a poker media platform with affiliate relationships, we have a financial interest in our readers playing online poker. We take this responsibility seriously:</p>
+  <ul>
+    <li>We will never glamorize losses, chasing, or playing beyond means.</li>
+    <li>Our review criteria explicitly include responsible-gaming features (self-exclusion tools, deposit limits, time-out functions) when evaluating online operators.</li>
+    <li>We display this responsible-play notice on every page and in every newsletter footer.</li>
+    <li>We do not target minors or vulnerable populations in our marketing.</li>
+    <li>We support self-exclusion at the operator level — if you've self-excluded from one of our affiliate partners, we cannot facilitate your re-entry.</li>
+  </ul>
+
+  <p class="text-xs text-3 mt-12 pt-6 border-t border-soft">
+    Last updated April 29, 2026. Must be 21+ to gamble in the Philippines. Play responsibly.
+  </p>
+</article>
+
+<footer class="border-t border-soft">
+  <div class="max-w-6xl mx-auto px-6 py-10">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+      <div class="flex items-center gap-3"><div class="font-serif text-2xl orange leading-none">A</div><div class="font-serif text-sm tracking-[0.18em]">ACESLIVE<span class="orange">PH</span></div></div>
+      <div class="flex items-center gap-5 text-xs text-2 flex-wrap"><a href="/" class="hover:text-white">News</a>
+      <a href="/rooms" class="hover:text-white">Rooms</a>
+      <a href="/poker-sites" class="hover:text-white">Online</a>
+      <a href="/tournaments" class="hover:text-white">Tourneys</a>
+      <a href="/poy" class="hover:text-white">POY</a>
+      <a href="/tools" class="hover:text-white">Tools</a></div>
+    </div>
+    <div class="divider mb-6"></div>
+    <div class="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-3">
+      <div>© 2026 ACESLIVEPH · Angeles City, Philippines</div>
+      <div class="flex items-center gap-5 flex-wrap"><a href="/about" class="hover:text-white">About</a><a href="/contact" class="hover:text-white">Contact</a><a href="/affiliate" class="hover:text-white">Affiliate</a><a href="/editorial" class="hover:text-white">Editorial</a><a href="/privacy" class="hover:text-white">Privacy</a><a href="/terms" class="hover:text-white">Terms</a><a href="/responsible-play" class="hover:text-white">Responsible Play</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
